@@ -1,2 +1,1 @@
-# demo
-WPOnion Framework Demo Plugin
+## WPOnion Framework Demo Plugin
