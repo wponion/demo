@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $instance = wponion_settings( array(
 	'option_name'     => '_wponion_settings',
-	'theme'           => 'fresh',
+	'theme'           => 'modern',
 	'is_single_page'  => false,
 	'framework_title' => __( 'WPOnion Settings Demo' ),
 	'framework_desc'  => __( 'This is a demo of WPOnion Settings module with all field types & it stores values in DB as <code>_wponion_settings</code>' ),
@@ -33,26 +33,31 @@ $instance = wponion_settings( array(
 	array(
 		'title'  => __( 'Features' ),
 		'name'   => 'features',
+		'icon'   => 'dashicons dashicons-admin-generic',
 		'fields' => $wpof['features'],
 	),
 
 	array(
 		'title'    => __( 'User Inputs' ),
 		'name'     => 'userinputs',
+		'icon'     => 'dashicons dashicons-admin-generic',
 		'sections' => array(
 			array(
 				'title'  => __( 'Text' ),
 				'name'   => 'text',
+				'icon'   => 'dashicons dashicons-admin-generic',
 				'fields' => $wpof['text'],
 			),
 			array(
 				'title'  => __( 'Textarea' ),
 				'name'   => 'textarea',
+				'icon'   => 'dashicons dashicons-admin-generic',
 				'fields' => $wpof['textarea'],
 			),
 			array(
 				'title'  => __( 'Checkbox' ),
 				'name'   => 'checkbox',
+				'icon'   => 'dashicons dashicons-admin-generic',
 				'fields' => $wpof['checkbox'],
 			),
 			array(
@@ -154,6 +159,42 @@ $instance = wponion_settings( array(
 				'title'  => __( 'Group' ),
 				'name'   => 'group',
 				'fields' => $wpof['group'],
+			),
+			array(
+				'title'  => __( 'Cloner' ),
+				'name'   => 'clone',
+				'fields' => array(
+					array(
+						'title'      => __( 'Available Sender ID\'s' ),
+						'type'       => 'text',
+						'clone'      => array( 'sort' => false, ),
+						'id'         => 'senderids',
+						'desc_field' => __( 'You Can enter multiple sender ids and will allow you to set sender for each and every order message.' ),
+					),
+				),
+			),
+			array(
+				'title'  => __( 'Group WPEditor' ),
+				'name'   => 'clone-wpeditor',
+				'fields' => array(
+					array(
+						'title'  => 'WP Editor Group',
+						'id'     => 'group-wp-editor',
+						'type'   => 'group',
+						'fields' => array(
+							array(
+								'title'    => __( 'Admin SMS Template' ),
+								'id'       => 'sms_admin_template',
+								'desc'     => __( 'Write your custom message. When an order is create then you get this type of format message.' ),
+								'type'     => 'wp_editor',
+								'settings' => array(
+									'editor_class' => 'wc_isms_sms_templates',
+									'quicktags'   => false,
+								),
+							),
+						),
+					),
+				),
 			),
 		),
 	),

@@ -13,6 +13,7 @@
  * @license GPLV3 Or Greater (https://www.gnu.org/licenses/gpl-3.0.txt)
  */
 
+
 $wpof_all_colors              = \WPOnion\Helper::get_material_design_colors( 'all' );
 $wpof_color_1                 = \WPOnion\Helper::get_material_design_colors( 100 );
 $wpof_color_2                 = \WPOnion\Helper::get_material_design_colors( 200 );
@@ -243,6 +244,1180 @@ $wpof['checkbox']             = array(
 			),
 		),
 	),
+
+	array(
+		'type'    => 'heading',
+		'content' => __( 'Pretty Checkbox' ),
+	),
+	array(
+		'id'     => 'pretty_checkbox_1',
+		'type'   => 'checkbox',
+		'title'  => __( 'Basic checkbox 1' ),
+		'pretty' => 'pretty p-default',
+		'label'  => __( 'Are you sure ?' ),
+	),
+
+
+	array( 'content' => 'Pretty Checkbox default', 'type' => 'subheading', ),
+	array(
+		'id'      => 'pretty_checkbox_default',
+		'title'   => 'Pretty Checkbox default',
+		'type'    => 'checkbox',
+		'options' => array( 'option1' => 'Option 1', 'option2' => 'Option 2', 'option3' => 'Option 3', ),
+		'pretty'  => 'pretty p-default',
+	),
+	array(
+		'id'      => 'pretty_checkbox_default_default',
+		'title'   => 'Pretty Checkbox default default',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_default_default'         => array(
+				'label'  => 'OP default default',
+				'pretty' => 'pretty p-default p-default',
+			),
+			'op_default_default_primary' => array(
+				'label'  => 'OP default default primary',
+				'pretty' => 'pretty p-default p-default p-primary',
+			),
+			'op_default_default_success' => array(
+				'label'  => 'OP default default success',
+				'pretty' => 'pretty p-default p-default p-success',
+			),
+			'op_default_default_info'    => array(
+				'label'  => 'OP default default info',
+				'pretty' => 'pretty p-default p-default p-info',
+			),
+			'op_default_default_warning' => array(
+				'label'  => 'OP default default warning',
+				'pretty' => 'pretty p-default p-default p-warning',
+			),
+			'op_default_default_danger'  => array(
+				'label'  => 'OP default default danger',
+				'pretty' => 'pretty p-default p-default p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_default_fill',
+		'title'   => 'Pretty Checkbox default fill',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_default_fill'         => array(
+				'label'  => 'OP default fill',
+				'pretty' => 'pretty p-default p-fill',
+			),
+			'op_default_fill_primary' => array(
+				'label'  => 'OP default fill primary',
+				'pretty' => 'pretty p-default p-fill p-primary',
+			),
+			'op_default_fill_success' => array(
+				'label'  => 'OP default fill success',
+				'pretty' => 'pretty p-default p-fill p-success',
+			),
+			'op_default_fill_info'    => array(
+				'label'  => 'OP default fill info',
+				'pretty' => 'pretty p-default p-fill p-info',
+			),
+			'op_default_fill_warning' => array(
+				'label'  => 'OP default fill warning',
+				'pretty' => 'pretty p-default p-fill p-warning',
+			),
+			'op_default_fill_danger'  => array(
+				'label'  => 'OP default fill danger',
+				'pretty' => 'pretty p-default p-fill p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_default_thick',
+		'title'   => 'Pretty Checkbox default thick',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_default_thick'         => array(
+				'label'  => 'OP default thick',
+				'pretty' => 'pretty p-default p-thick',
+			),
+			'op_default_thick_primary' => array(
+				'label'  => 'OP default thick primary',
+				'pretty' => 'pretty p-default p-thick p-primary',
+			),
+			'op_default_thick_success' => array(
+				'label'  => 'OP default thick success',
+				'pretty' => 'pretty p-default p-thick p-success',
+			),
+			'op_default_thick_info'    => array(
+				'label'  => 'OP default thick info',
+				'pretty' => 'pretty p-default p-thick p-info',
+			),
+			'op_default_thick_warning' => array(
+				'label'  => 'OP default thick warning',
+				'pretty' => 'pretty p-default p-thick p-warning',
+			),
+			'op_default_thick_danger'  => array(
+				'label'  => 'OP default thick danger',
+				'pretty' => 'pretty p-default p-thick p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_default_slim',
+		'title'   => 'Pretty Checkbox default slim',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_default_slim'         => array(
+				'label'  => 'OP default slim',
+				'pretty' => 'pretty p-default p-slim',
+			),
+			'op_default_slim_primary' => array(
+				'label'  => 'OP default slim primary',
+				'pretty' => 'pretty p-default p-slim p-primary',
+			),
+			'op_default_slim_success' => array(
+				'label'  => 'OP default slim success',
+				'pretty' => 'pretty p-default p-slim p-success',
+			),
+			'op_default_slim_info'    => array(
+				'label'  => 'OP default slim info',
+				'pretty' => 'pretty p-default p-slim p-info',
+			),
+			'op_default_slim_warning' => array(
+				'label'  => 'OP default slim warning',
+				'pretty' => 'pretty p-default p-slim p-warning',
+			),
+			'op_default_slim_danger'  => array(
+				'label'  => 'OP default slim danger',
+				'pretty' => 'pretty p-default p-slim p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_default_outline',
+		'title'   => 'Pretty Checkbox default outline',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_default_outline'         => array(
+				'label'  => 'OP default outline',
+				'pretty' => 'pretty p-default p-outline',
+			),
+			'op_default_outline_primary' => array(
+				'label'  => 'OP default outline primary',
+				'pretty' => 'pretty p-default p-outline p-primary',
+			),
+			'op_default_outline_success' => array(
+				'label'  => 'OP default outline success',
+				'pretty' => 'pretty p-default p-outline p-success',
+			),
+			'op_default_outline_info'    => array(
+				'label'  => 'OP default outline info',
+				'pretty' => 'pretty p-default p-outline p-info',
+			),
+			'op_default_outline_warning' => array(
+				'label'  => 'OP default outline warning',
+				'pretty' => 'pretty p-default p-outline p-warning',
+			),
+			'op_default_outline_danger'  => array(
+				'label'  => 'OP default outline danger',
+				'pretty' => 'pretty p-default p-outline p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_default_all',
+		'title'   => 'Pretty Checkbox default ALL',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_default_default'         => array(
+				'label'  => 'OP default default',
+				'pretty' => 'pretty p-default p-default',
+			),
+			'op_default_default_primary' => array(
+				'label'  => 'OP default default primary',
+				'pretty' => 'pretty p-default p-default p-primary',
+			),
+			'op_default_default_success' => array(
+				'label'  => 'OP default default success',
+				'pretty' => 'pretty p-default p-default p-success',
+			),
+			'op_default_default_info'    => array(
+				'label'  => 'OP default default info',
+				'pretty' => 'pretty p-default p-default p-info',
+			),
+			'op_default_default_warning' => array(
+				'label'  => 'OP default default warning',
+				'pretty' => 'pretty p-default p-default p-warning',
+			),
+			'op_default_default_danger'  => array(
+				'label'  => 'OP default default danger',
+				'pretty' => 'pretty p-default p-default p-danger',
+			),
+			'op_default_fill'            => array(
+				'label'  => 'OP default fill',
+				'pretty' => 'pretty p-default p-fill',
+			),
+			'op_default_fill_primary'    => array(
+				'label'  => 'OP default fill primary',
+				'pretty' => 'pretty p-default p-fill p-primary',
+			),
+			'op_default_fill_success'    => array(
+				'label'  => 'OP default fill success',
+				'pretty' => 'pretty p-default p-fill p-success',
+			),
+			'op_default_fill_info'       => array(
+				'label'  => 'OP default fill info',
+				'pretty' => 'pretty p-default p-fill p-info',
+			),
+			'op_default_fill_warning'    => array(
+				'label'  => 'OP default fill warning',
+				'pretty' => 'pretty p-default p-fill p-warning',
+			),
+			'op_default_fill_danger'     => array(
+				'label'  => 'OP default fill danger',
+				'pretty' => 'pretty p-default p-fill p-danger',
+			),
+			'op_default_thick'           => array(
+				'label'  => 'OP default thick',
+				'pretty' => 'pretty p-default p-thick',
+			),
+			'op_default_thick_primary'   => array(
+				'label'  => 'OP default thick primary',
+				'pretty' => 'pretty p-default p-thick p-primary',
+			),
+			'op_default_thick_success'   => array(
+				'label'  => 'OP default thick success',
+				'pretty' => 'pretty p-default p-thick p-success',
+			),
+			'op_default_thick_info'      => array(
+				'label'  => 'OP default thick info',
+				'pretty' => 'pretty p-default p-thick p-info',
+			),
+			'op_default_thick_warning'   => array(
+				'label'  => 'OP default thick warning',
+				'pretty' => 'pretty p-default p-thick p-warning',
+			),
+			'op_default_thick_danger'    => array(
+				'label'  => 'OP default thick danger',
+				'pretty' => 'pretty p-default p-thick p-danger',
+			),
+			'op_default_slim'            => array(
+				'label'  => 'OP default slim',
+				'pretty' => 'pretty p-default p-slim',
+			),
+			'op_default_slim_primary'    => array(
+				'label'  => 'OP default slim primary',
+				'pretty' => 'pretty p-default p-slim p-primary',
+			),
+			'op_default_slim_success'    => array(
+				'label'  => 'OP default slim success',
+				'pretty' => 'pretty p-default p-slim p-success',
+			),
+			'op_default_slim_info'       => array(
+				'label'  => 'OP default slim info',
+				'pretty' => 'pretty p-default p-slim p-info',
+			),
+			'op_default_slim_warning'    => array(
+				'label'  => 'OP default slim warning',
+				'pretty' => 'pretty p-default p-slim p-warning',
+			),
+			'op_default_slim_danger'     => array(
+				'label'  => 'OP default slim danger',
+				'pretty' => 'pretty p-default p-slim p-danger',
+			),
+			'op_default_outline'         => array(
+				'label'  => 'OP default outline',
+				'pretty' => 'pretty p-default p-outline',
+			),
+			'op_default_outline_primary' => array(
+				'label'  => 'OP default outline primary',
+				'pretty' => 'pretty p-default p-outline p-primary',
+			),
+			'op_default_outline_success' => array(
+				'label'  => 'OP default outline success',
+				'pretty' => 'pretty p-default p-outline p-success',
+			),
+			'op_default_outline_info'    => array(
+				'label'  => 'OP default outline info',
+				'pretty' => 'pretty p-default p-outline p-info',
+			),
+			'op_default_outline_warning' => array(
+				'label'  => 'OP default outline warning',
+				'pretty' => 'pretty p-default p-outline p-warning',
+			),
+			'op_default_outline_danger'  => array(
+				'label'  => 'OP default outline danger',
+				'pretty' => 'pretty p-default p-outline p-danger',
+			),
+		),
+	),
+	array( 'content' => 'Pretty Checkbox curve', 'type' => 'subheading', ),
+	array(
+		'id'      => 'pretty_checkbox_curve',
+		'title'   => 'Pretty Checkbox curve',
+		'type'    => 'checkbox',
+		'options' => array( 'option1' => 'Option 1', 'option2' => 'Option 2', 'option3' => 'Option 3', ),
+		'pretty'  => 'pretty p-curve',
+	),
+	array(
+		'id'      => 'pretty_checkbox_curve_default',
+		'title'   => 'Pretty Checkbox curve default',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_curve_default'         => array(
+				'label'  => 'OP curve default',
+				'pretty' => 'pretty p-curve p-default',
+			),
+			'op_curve_default_primary' => array(
+				'label'  => 'OP curve default primary',
+				'pretty' => 'pretty p-curve p-default p-primary',
+			),
+			'op_curve_default_success' => array(
+				'label'  => 'OP curve default success',
+				'pretty' => 'pretty p-curve p-default p-success',
+			),
+			'op_curve_default_info'    => array(
+				'label'  => 'OP curve default info',
+				'pretty' => 'pretty p-curve p-default p-info',
+			),
+			'op_curve_default_warning' => array(
+				'label'  => 'OP curve default warning',
+				'pretty' => 'pretty p-curve p-default p-warning',
+			),
+			'op_curve_default_danger'  => array(
+				'label'  => 'OP curve default danger',
+				'pretty' => 'pretty p-curve p-default p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_curve_fill',
+		'title'   => 'Pretty Checkbox curve fill',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_curve_fill'         => array(
+				'label'  => 'OP curve fill',
+				'pretty' => 'pretty p-curve p-fill',
+			),
+			'op_curve_fill_primary' => array(
+				'label'  => 'OP curve fill primary',
+				'pretty' => 'pretty p-curve p-fill p-primary',
+			),
+			'op_curve_fill_success' => array(
+				'label'  => 'OP curve fill success',
+				'pretty' => 'pretty p-curve p-fill p-success',
+			),
+			'op_curve_fill_info'    => array(
+				'label'  => 'OP curve fill info',
+				'pretty' => 'pretty p-curve p-fill p-info',
+			),
+			'op_curve_fill_warning' => array(
+				'label'  => 'OP curve fill warning',
+				'pretty' => 'pretty p-curve p-fill p-warning',
+			),
+			'op_curve_fill_danger'  => array(
+				'label'  => 'OP curve fill danger',
+				'pretty' => 'pretty p-curve p-fill p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_curve_thick',
+		'title'   => 'Pretty Checkbox curve thick',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_curve_thick'         => array(
+				'label'  => 'OP curve thick',
+				'pretty' => 'pretty p-curve p-thick',
+			),
+			'op_curve_thick_primary' => array(
+				'label'  => 'OP curve thick primary',
+				'pretty' => 'pretty p-curve p-thick p-primary',
+			),
+			'op_curve_thick_success' => array(
+				'label'  => 'OP curve thick success',
+				'pretty' => 'pretty p-curve p-thick p-success',
+			),
+			'op_curve_thick_info'    => array(
+				'label'  => 'OP curve thick info',
+				'pretty' => 'pretty p-curve p-thick p-info',
+			),
+			'op_curve_thick_warning' => array(
+				'label'  => 'OP curve thick warning',
+				'pretty' => 'pretty p-curve p-thick p-warning',
+			),
+			'op_curve_thick_danger'  => array(
+				'label'  => 'OP curve thick danger',
+				'pretty' => 'pretty p-curve p-thick p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_curve_slim',
+		'title'   => 'Pretty Checkbox curve slim',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_curve_slim'         => array(
+				'label'  => 'OP curve slim',
+				'pretty' => 'pretty p-curve p-slim',
+			),
+			'op_curve_slim_primary' => array(
+				'label'  => 'OP curve slim primary',
+				'pretty' => 'pretty p-curve p-slim p-primary',
+			),
+			'op_curve_slim_success' => array(
+				'label'  => 'OP curve slim success',
+				'pretty' => 'pretty p-curve p-slim p-success',
+			),
+			'op_curve_slim_info'    => array(
+				'label'  => 'OP curve slim info',
+				'pretty' => 'pretty p-curve p-slim p-info',
+			),
+			'op_curve_slim_warning' => array(
+				'label'  => 'OP curve slim warning',
+				'pretty' => 'pretty p-curve p-slim p-warning',
+			),
+			'op_curve_slim_danger'  => array(
+				'label'  => 'OP curve slim danger',
+				'pretty' => 'pretty p-curve p-slim p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_curve_outline',
+		'title'   => 'Pretty Checkbox curve outline',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_curve_outline'         => array(
+				'label'  => 'OP curve outline',
+				'pretty' => 'pretty p-curve p-outline',
+			),
+			'op_curve_outline_primary' => array(
+				'label'  => 'OP curve outline primary',
+				'pretty' => 'pretty p-curve p-outline p-primary',
+			),
+			'op_curve_outline_success' => array(
+				'label'  => 'OP curve outline success',
+				'pretty' => 'pretty p-curve p-outline p-success',
+			),
+			'op_curve_outline_info'    => array(
+				'label'  => 'OP curve outline info',
+				'pretty' => 'pretty p-curve p-outline p-info',
+			),
+			'op_curve_outline_warning' => array(
+				'label'  => 'OP curve outline warning',
+				'pretty' => 'pretty p-curve p-outline p-warning',
+			),
+			'op_curve_outline_danger'  => array(
+				'label'  => 'OP curve outline danger',
+				'pretty' => 'pretty p-curve p-outline p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_curve_all',
+		'title'   => 'Pretty Checkbox curve ALL',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_curve_default'         => array(
+				'label'  => 'OP curve default',
+				'pretty' => 'pretty p-curve p-default',
+			),
+			'op_curve_default_primary' => array(
+				'label'  => 'OP curve default primary',
+				'pretty' => 'pretty p-curve p-default p-primary',
+			),
+			'op_curve_default_success' => array(
+				'label'  => 'OP curve default success',
+				'pretty' => 'pretty p-curve p-default p-success',
+			),
+			'op_curve_default_info'    => array(
+				'label'  => 'OP curve default info',
+				'pretty' => 'pretty p-curve p-default p-info',
+			),
+			'op_curve_default_warning' => array(
+				'label'  => 'OP curve default warning',
+				'pretty' => 'pretty p-curve p-default p-warning',
+			),
+			'op_curve_default_danger'  => array(
+				'label'  => 'OP curve default danger',
+				'pretty' => 'pretty p-curve p-default p-danger',
+			),
+			'op_curve_fill'            => array(
+				'label'  => 'OP curve fill',
+				'pretty' => 'pretty p-curve p-fill',
+			),
+			'op_curve_fill_primary'    => array(
+				'label'  => 'OP curve fill primary',
+				'pretty' => 'pretty p-curve p-fill p-primary',
+			),
+			'op_curve_fill_success'    => array(
+				'label'  => 'OP curve fill success',
+				'pretty' => 'pretty p-curve p-fill p-success',
+			),
+			'op_curve_fill_info'       => array(
+				'label'  => 'OP curve fill info',
+				'pretty' => 'pretty p-curve p-fill p-info',
+			),
+			'op_curve_fill_warning'    => array(
+				'label'  => 'OP curve fill warning',
+				'pretty' => 'pretty p-curve p-fill p-warning',
+			),
+			'op_curve_fill_danger'     => array(
+				'label'  => 'OP curve fill danger',
+				'pretty' => 'pretty p-curve p-fill p-danger',
+			),
+			'op_curve_thick'           => array(
+				'label'  => 'OP curve thick',
+				'pretty' => 'pretty p-curve p-thick',
+			),
+			'op_curve_thick_primary'   => array(
+				'label'  => 'OP curve thick primary',
+				'pretty' => 'pretty p-curve p-thick p-primary',
+			),
+			'op_curve_thick_success'   => array(
+				'label'  => 'OP curve thick success',
+				'pretty' => 'pretty p-curve p-thick p-success',
+			),
+			'op_curve_thick_info'      => array(
+				'label'  => 'OP curve thick info',
+				'pretty' => 'pretty p-curve p-thick p-info',
+			),
+			'op_curve_thick_warning'   => array(
+				'label'  => 'OP curve thick warning',
+				'pretty' => 'pretty p-curve p-thick p-warning',
+			),
+			'op_curve_thick_danger'    => array(
+				'label'  => 'OP curve thick danger',
+				'pretty' => 'pretty p-curve p-thick p-danger',
+			),
+			'op_curve_slim'            => array(
+				'label'  => 'OP curve slim',
+				'pretty' => 'pretty p-curve p-slim',
+			),
+			'op_curve_slim_primary'    => array(
+				'label'  => 'OP curve slim primary',
+				'pretty' => 'pretty p-curve p-slim p-primary',
+			),
+			'op_curve_slim_success'    => array(
+				'label'  => 'OP curve slim success',
+				'pretty' => 'pretty p-curve p-slim p-success',
+			),
+			'op_curve_slim_info'       => array(
+				'label'  => 'OP curve slim info',
+				'pretty' => 'pretty p-curve p-slim p-info',
+			),
+			'op_curve_slim_warning'    => array(
+				'label'  => 'OP curve slim warning',
+				'pretty' => 'pretty p-curve p-slim p-warning',
+			),
+			'op_curve_slim_danger'     => array(
+				'label'  => 'OP curve slim danger',
+				'pretty' => 'pretty p-curve p-slim p-danger',
+			),
+			'op_curve_outline'         => array(
+				'label'  => 'OP curve outline',
+				'pretty' => 'pretty p-curve p-outline',
+			),
+			'op_curve_outline_primary' => array(
+				'label'  => 'OP curve outline primary',
+				'pretty' => 'pretty p-curve p-outline p-primary',
+			),
+			'op_curve_outline_success' => array(
+				'label'  => 'OP curve outline success',
+				'pretty' => 'pretty p-curve p-outline p-success',
+			),
+			'op_curve_outline_info'    => array(
+				'label'  => 'OP curve outline info',
+				'pretty' => 'pretty p-curve p-outline p-info',
+			),
+			'op_curve_outline_warning' => array(
+				'label'  => 'OP curve outline warning',
+				'pretty' => 'pretty p-curve p-outline p-warning',
+			),
+			'op_curve_outline_danger'  => array(
+				'label'  => 'OP curve outline danger',
+				'pretty' => 'pretty p-curve p-outline p-danger',
+			),
+		),
+	),
+	array( 'content' => 'Pretty Checkbox round', 'type' => 'subheading', ),
+	array(
+		'id'      => 'pretty_checkbox_round',
+		'title'   => 'Pretty Checkbox round',
+		'type'    => 'checkbox',
+		'options' => array( 'option1' => 'Option 1', 'option2' => 'Option 2', 'option3' => 'Option 3', ),
+		'pretty'  => 'pretty p-round',
+	),
+	array(
+		'id'      => 'pretty_checkbox_round_default',
+		'title'   => 'Pretty Checkbox round default',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_round_default'         => array(
+				'label'  => 'OP round default',
+				'pretty' => 'pretty p-round p-default',
+			),
+			'op_round_default_primary' => array(
+				'label'  => 'OP round default primary',
+				'pretty' => 'pretty p-round p-default p-primary',
+			),
+			'op_round_default_success' => array(
+				'label'  => 'OP round default success',
+				'pretty' => 'pretty p-round p-default p-success',
+			),
+			'op_round_default_info'    => array(
+				'label'  => 'OP round default info',
+				'pretty' => 'pretty p-round p-default p-info',
+			),
+			'op_round_default_warning' => array(
+				'label'  => 'OP round default warning',
+				'pretty' => 'pretty p-round p-default p-warning',
+			),
+			'op_round_default_danger'  => array(
+				'label'  => 'OP round default danger',
+				'pretty' => 'pretty p-round p-default p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_round_fill',
+		'title'   => 'Pretty Checkbox round fill',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_round_fill'         => array(
+				'label'  => 'OP round fill',
+				'pretty' => 'pretty p-round p-fill',
+			),
+			'op_round_fill_primary' => array(
+				'label'  => 'OP round fill primary',
+				'pretty' => 'pretty p-round p-fill p-primary',
+			),
+			'op_round_fill_success' => array(
+				'label'  => 'OP round fill success',
+				'pretty' => 'pretty p-round p-fill p-success',
+			),
+			'op_round_fill_info'    => array(
+				'label'  => 'OP round fill info',
+				'pretty' => 'pretty p-round p-fill p-info',
+			),
+			'op_round_fill_warning' => array(
+				'label'  => 'OP round fill warning',
+				'pretty' => 'pretty p-round p-fill p-warning',
+			),
+			'op_round_fill_danger'  => array(
+				'label'  => 'OP round fill danger',
+				'pretty' => 'pretty p-round p-fill p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_round_thick',
+		'title'   => 'Pretty Checkbox round thick',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_round_thick'         => array(
+				'label'  => 'OP round thick',
+				'pretty' => 'pretty p-round p-thick',
+			),
+			'op_round_thick_primary' => array(
+				'label'  => 'OP round thick primary',
+				'pretty' => 'pretty p-round p-thick p-primary',
+			),
+			'op_round_thick_success' => array(
+				'label'  => 'OP round thick success',
+				'pretty' => 'pretty p-round p-thick p-success',
+			),
+			'op_round_thick_info'    => array(
+				'label'  => 'OP round thick info',
+				'pretty' => 'pretty p-round p-thick p-info',
+			),
+			'op_round_thick_warning' => array(
+				'label'  => 'OP round thick warning',
+				'pretty' => 'pretty p-round p-thick p-warning',
+			),
+			'op_round_thick_danger'  => array(
+				'label'  => 'OP round thick danger',
+				'pretty' => 'pretty p-round p-thick p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_round_slim',
+		'title'   => 'Pretty Checkbox round slim',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_round_slim'         => array(
+				'label'  => 'OP round slim',
+				'pretty' => 'pretty p-round p-slim',
+			),
+			'op_round_slim_primary' => array(
+				'label'  => 'OP round slim primary',
+				'pretty' => 'pretty p-round p-slim p-primary',
+			),
+			'op_round_slim_success' => array(
+				'label'  => 'OP round slim success',
+				'pretty' => 'pretty p-round p-slim p-success',
+			),
+			'op_round_slim_info'    => array(
+				'label'  => 'OP round slim info',
+				'pretty' => 'pretty p-round p-slim p-info',
+			),
+			'op_round_slim_warning' => array(
+				'label'  => 'OP round slim warning',
+				'pretty' => 'pretty p-round p-slim p-warning',
+			),
+			'op_round_slim_danger'  => array(
+				'label'  => 'OP round slim danger',
+				'pretty' => 'pretty p-round p-slim p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_round_outline',
+		'title'   => 'Pretty Checkbox round outline',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_round_outline'         => array(
+				'label'  => 'OP round outline',
+				'pretty' => 'pretty p-round p-outline',
+			),
+			'op_round_outline_primary' => array(
+				'label'  => 'OP round outline primary',
+				'pretty' => 'pretty p-round p-outline p-primary',
+			),
+			'op_round_outline_success' => array(
+				'label'  => 'OP round outline success',
+				'pretty' => 'pretty p-round p-outline p-success',
+			),
+			'op_round_outline_info'    => array(
+				'label'  => 'OP round outline info',
+				'pretty' => 'pretty p-round p-outline p-info',
+			),
+			'op_round_outline_warning' => array(
+				'label'  => 'OP round outline warning',
+				'pretty' => 'pretty p-round p-outline p-warning',
+			),
+			'op_round_outline_danger'  => array(
+				'label'  => 'OP round outline danger',
+				'pretty' => 'pretty p-round p-outline p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_round_all',
+		'title'   => 'Pretty Checkbox round ALL',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_round_default'         => array(
+				'label'  => 'OP round default',
+				'pretty' => 'pretty p-round p-default',
+			),
+			'op_round_default_primary' => array(
+				'label'  => 'OP round default primary',
+				'pretty' => 'pretty p-round p-default p-primary',
+			),
+			'op_round_default_success' => array(
+				'label'  => 'OP round default success',
+				'pretty' => 'pretty p-round p-default p-success',
+			),
+			'op_round_default_info'    => array(
+				'label'  => 'OP round default info',
+				'pretty' => 'pretty p-round p-default p-info',
+			),
+			'op_round_default_warning' => array(
+				'label'  => 'OP round default warning',
+				'pretty' => 'pretty p-round p-default p-warning',
+			),
+			'op_round_default_danger'  => array(
+				'label'  => 'OP round default danger',
+				'pretty' => 'pretty p-round p-default p-danger',
+			),
+			'op_round_fill'            => array(
+				'label'  => 'OP round fill',
+				'pretty' => 'pretty p-round p-fill',
+			),
+			'op_round_fill_primary'    => array(
+				'label'  => 'OP round fill primary',
+				'pretty' => 'pretty p-round p-fill p-primary',
+			),
+			'op_round_fill_success'    => array(
+				'label'  => 'OP round fill success',
+				'pretty' => 'pretty p-round p-fill p-success',
+			),
+			'op_round_fill_info'       => array(
+				'label'  => 'OP round fill info',
+				'pretty' => 'pretty p-round p-fill p-info',
+			),
+			'op_round_fill_warning'    => array(
+				'label'  => 'OP round fill warning',
+				'pretty' => 'pretty p-round p-fill p-warning',
+			),
+			'op_round_fill_danger'     => array(
+				'label'  => 'OP round fill danger',
+				'pretty' => 'pretty p-round p-fill p-danger',
+			),
+			'op_round_thick'           => array(
+				'label'  => 'OP round thick',
+				'pretty' => 'pretty p-round p-thick',
+			),
+			'op_round_thick_primary'   => array(
+				'label'  => 'OP round thick primary',
+				'pretty' => 'pretty p-round p-thick p-primary',
+			),
+			'op_round_thick_success'   => array(
+				'label'  => 'OP round thick success',
+				'pretty' => 'pretty p-round p-thick p-success',
+			),
+			'op_round_thick_info'      => array(
+				'label'  => 'OP round thick info',
+				'pretty' => 'pretty p-round p-thick p-info',
+			),
+			'op_round_thick_warning'   => array(
+				'label'  => 'OP round thick warning',
+				'pretty' => 'pretty p-round p-thick p-warning',
+			),
+			'op_round_thick_danger'    => array(
+				'label'  => 'OP round thick danger',
+				'pretty' => 'pretty p-round p-thick p-danger',
+			),
+			'op_round_slim'            => array(
+				'label'  => 'OP round slim',
+				'pretty' => 'pretty p-round p-slim',
+			),
+			'op_round_slim_primary'    => array(
+				'label'  => 'OP round slim primary',
+				'pretty' => 'pretty p-round p-slim p-primary',
+			),
+			'op_round_slim_success'    => array(
+				'label'  => 'OP round slim success',
+				'pretty' => 'pretty p-round p-slim p-success',
+			),
+			'op_round_slim_info'       => array(
+				'label'  => 'OP round slim info',
+				'pretty' => 'pretty p-round p-slim p-info',
+			),
+			'op_round_slim_warning'    => array(
+				'label'  => 'OP round slim warning',
+				'pretty' => 'pretty p-round p-slim p-warning',
+			),
+			'op_round_slim_danger'     => array(
+				'label'  => 'OP round slim danger',
+				'pretty' => 'pretty p-round p-slim p-danger',
+			),
+			'op_round_outline'         => array(
+				'label'  => 'OP round outline',
+				'pretty' => 'pretty p-round p-outline',
+			),
+			'op_round_outline_primary' => array(
+				'label'  => 'OP round outline primary',
+				'pretty' => 'pretty p-round p-outline p-primary',
+			),
+			'op_round_outline_success' => array(
+				'label'  => 'OP round outline success',
+				'pretty' => 'pretty p-round p-outline p-success',
+			),
+			'op_round_outline_info'    => array(
+				'label'  => 'OP round outline info',
+				'pretty' => 'pretty p-round p-outline p-info',
+			),
+			'op_round_outline_warning' => array(
+				'label'  => 'OP round outline warning',
+				'pretty' => 'pretty p-round p-outline p-warning',
+			),
+			'op_round_outline_danger'  => array(
+				'label'  => 'OP round outline danger',
+				'pretty' => 'pretty p-round p-outline p-danger',
+			),
+		),
+	),
+	array( 'content' => 'Pretty Checkbox switch', 'type' => 'subheading', ),
+	array(
+		'id'      => 'pretty_checkbox_switch',
+		'title'   => 'Pretty Checkbox switch',
+		'type'    => 'checkbox',
+		'options' => array( 'option1' => 'Option 1', 'option2' => 'Option 2', 'option3' => 'Option 3', ),
+		'pretty'  => 'pretty p-switch',
+	),
+	array(
+		'id'      => 'pretty_checkbox_switch_default',
+		'title'   => 'Pretty Checkbox switch default',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_switch_default'         => array(
+				'label'  => 'OP switch default',
+				'pretty' => 'pretty p-switch p-default',
+			),
+			'op_switch_default_primary' => array(
+				'label'  => 'OP switch default primary',
+				'pretty' => 'pretty p-switch p-default p-primary',
+			),
+			'op_switch_default_success' => array(
+				'label'  => 'OP switch default success',
+				'pretty' => 'pretty p-switch p-default p-success',
+			),
+			'op_switch_default_info'    => array(
+				'label'  => 'OP switch default info',
+				'pretty' => 'pretty p-switch p-default p-info',
+			),
+			'op_switch_default_warning' => array(
+				'label'  => 'OP switch default warning',
+				'pretty' => 'pretty p-switch p-default p-warning',
+			),
+			'op_switch_default_danger'  => array(
+				'label'  => 'OP switch default danger',
+				'pretty' => 'pretty p-switch p-default p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_switch_fill',
+		'title'   => 'Pretty Checkbox switch fill',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_switch_fill'         => array(
+				'label'  => 'OP switch fill',
+				'pretty' => 'pretty p-switch p-fill',
+			),
+			'op_switch_fill_primary' => array(
+				'label'  => 'OP switch fill primary',
+				'pretty' => 'pretty p-switch p-fill p-primary',
+			),
+			'op_switch_fill_success' => array(
+				'label'  => 'OP switch fill success',
+				'pretty' => 'pretty p-switch p-fill p-success',
+			),
+			'op_switch_fill_info'    => array(
+				'label'  => 'OP switch fill info',
+				'pretty' => 'pretty p-switch p-fill p-info',
+			),
+			'op_switch_fill_warning' => array(
+				'label'  => 'OP switch fill warning',
+				'pretty' => 'pretty p-switch p-fill p-warning',
+			),
+			'op_switch_fill_danger'  => array(
+				'label'  => 'OP switch fill danger',
+				'pretty' => 'pretty p-switch p-fill p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_switch_thick',
+		'title'   => 'Pretty Checkbox switch thick',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_switch_thick'         => array(
+				'label'  => 'OP switch thick',
+				'pretty' => 'pretty p-switch p-thick',
+			),
+			'op_switch_thick_primary' => array(
+				'label'  => 'OP switch thick primary',
+				'pretty' => 'pretty p-switch p-thick p-primary',
+			),
+			'op_switch_thick_success' => array(
+				'label'  => 'OP switch thick success',
+				'pretty' => 'pretty p-switch p-thick p-success',
+			),
+			'op_switch_thick_info'    => array(
+				'label'  => 'OP switch thick info',
+				'pretty' => 'pretty p-switch p-thick p-info',
+			),
+			'op_switch_thick_warning' => array(
+				'label'  => 'OP switch thick warning',
+				'pretty' => 'pretty p-switch p-thick p-warning',
+			),
+			'op_switch_thick_danger'  => array(
+				'label'  => 'OP switch thick danger',
+				'pretty' => 'pretty p-switch p-thick p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_switch_slim',
+		'title'   => 'Pretty Checkbox switch slim',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_switch_slim'         => array(
+				'label'  => 'OP switch slim',
+				'pretty' => 'pretty p-switch p-slim',
+			),
+			'op_switch_slim_primary' => array(
+				'label'  => 'OP switch slim primary',
+				'pretty' => 'pretty p-switch p-slim p-primary',
+			),
+			'op_switch_slim_success' => array(
+				'label'  => 'OP switch slim success',
+				'pretty' => 'pretty p-switch p-slim p-success',
+			),
+			'op_switch_slim_info'    => array(
+				'label'  => 'OP switch slim info',
+				'pretty' => 'pretty p-switch p-slim p-info',
+			),
+			'op_switch_slim_warning' => array(
+				'label'  => 'OP switch slim warning',
+				'pretty' => 'pretty p-switch p-slim p-warning',
+			),
+			'op_switch_slim_danger'  => array(
+				'label'  => 'OP switch slim danger',
+				'pretty' => 'pretty p-switch p-slim p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_switch_outline',
+		'title'   => 'Pretty Checkbox switch outline',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_switch_outline'         => array(
+				'label'  => 'OP switch outline',
+				'pretty' => 'pretty p-switch p-outline',
+			),
+			'op_switch_outline_primary' => array(
+				'label'  => 'OP switch outline primary',
+				'pretty' => 'pretty p-switch p-outline p-primary',
+			),
+			'op_switch_outline_success' => array(
+				'label'  => 'OP switch outline success',
+				'pretty' => 'pretty p-switch p-outline p-success',
+			),
+			'op_switch_outline_info'    => array(
+				'label'  => 'OP switch outline info',
+				'pretty' => 'pretty p-switch p-outline p-info',
+			),
+			'op_switch_outline_warning' => array(
+				'label'  => 'OP switch outline warning',
+				'pretty' => 'pretty p-switch p-outline p-warning',
+			),
+			'op_switch_outline_danger'  => array(
+				'label'  => 'OP switch outline danger',
+				'pretty' => 'pretty p-switch p-outline p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_checkbox_switch_all',
+		'title'   => 'Pretty Checkbox switch ALL',
+		'type'    => 'checkbox',
+		'options' => array(
+			'op_switch_default'         => array(
+				'label'  => 'OP switch default',
+				'pretty' => 'pretty p-switch p-default',
+			),
+			'op_switch_default_primary' => array(
+				'label'  => 'OP switch default primary',
+				'pretty' => 'pretty p-switch p-default p-primary',
+			),
+			'op_switch_default_success' => array(
+				'label'  => 'OP switch default success',
+				'pretty' => 'pretty p-switch p-default p-success',
+			),
+			'op_switch_default_info'    => array(
+				'label'  => 'OP switch default info',
+				'pretty' => 'pretty p-switch p-default p-info',
+			),
+			'op_switch_default_warning' => array(
+				'label'  => 'OP switch default warning',
+				'pretty' => 'pretty p-switch p-default p-warning',
+			),
+			'op_switch_default_danger'  => array(
+				'label'  => 'OP switch default danger',
+				'pretty' => 'pretty p-switch p-default p-danger',
+			),
+			'op_switch_fill'            => array(
+				'label'  => 'OP switch fill',
+				'pretty' => 'pretty p-switch p-fill',
+			),
+			'op_switch_fill_primary'    => array(
+				'label'  => 'OP switch fill primary',
+				'pretty' => 'pretty p-switch p-fill p-primary',
+			),
+			'op_switch_fill_success'    => array(
+				'label'  => 'OP switch fill success',
+				'pretty' => 'pretty p-switch p-fill p-success',
+			),
+			'op_switch_fill_info'       => array(
+				'label'  => 'OP switch fill info',
+				'pretty' => 'pretty p-switch p-fill p-info',
+			),
+			'op_switch_fill_warning'    => array(
+				'label'  => 'OP switch fill warning',
+				'pretty' => 'pretty p-switch p-fill p-warning',
+			),
+			'op_switch_fill_danger'     => array(
+				'label'  => 'OP switch fill danger',
+				'pretty' => 'pretty p-switch p-fill p-danger',
+			),
+			'op_switch_thick'           => array(
+				'label'  => 'OP switch thick',
+				'pretty' => 'pretty p-switch p-thick',
+			),
+			'op_switch_thick_primary'   => array(
+				'label'  => 'OP switch thick primary',
+				'pretty' => 'pretty p-switch p-thick p-primary',
+			),
+			'op_switch_thick_success'   => array(
+				'label'  => 'OP switch thick success',
+				'pretty' => 'pretty p-switch p-thick p-success',
+			),
+			'op_switch_thick_info'      => array(
+				'label'  => 'OP switch thick info',
+				'pretty' => 'pretty p-switch p-thick p-info',
+			),
+			'op_switch_thick_warning'   => array(
+				'label'  => 'OP switch thick warning',
+				'pretty' => 'pretty p-switch p-thick p-warning',
+			),
+			'op_switch_thick_danger'    => array(
+				'label'  => 'OP switch thick danger',
+				'pretty' => 'pretty p-switch p-thick p-danger',
+			),
+			'op_switch_slim'            => array(
+				'label'  => 'OP switch slim',
+				'pretty' => 'pretty p-switch p-slim',
+			),
+			'op_switch_slim_primary'    => array(
+				'label'  => 'OP switch slim primary',
+				'pretty' => 'pretty p-switch p-slim p-primary',
+			),
+			'op_switch_slim_success'    => array(
+				'label'  => 'OP switch slim success',
+				'pretty' => 'pretty p-switch p-slim p-success',
+			),
+			'op_switch_slim_info'       => array(
+				'label'  => 'OP switch slim info',
+				'pretty' => 'pretty p-switch p-slim p-info',
+			),
+			'op_switch_slim_warning'    => array(
+				'label'  => 'OP switch slim warning',
+				'pretty' => 'pretty p-switch p-slim p-warning',
+			),
+			'op_switch_slim_danger'     => array(
+				'label'  => 'OP switch slim danger',
+				'pretty' => 'pretty p-switch p-slim p-danger',
+			),
+			'op_switch_outline'         => array(
+				'label'  => 'OP switch outline',
+				'pretty' => 'pretty p-switch p-outline',
+			),
+			'op_switch_outline_primary' => array(
+				'label'  => 'OP switch outline primary',
+				'pretty' => 'pretty p-switch p-outline p-primary',
+			),
+			'op_switch_outline_success' => array(
+				'label'  => 'OP switch outline success',
+				'pretty' => 'pretty p-switch p-outline p-success',
+			),
+			'op_switch_outline_info'    => array(
+				'label'  => 'OP switch outline info',
+				'pretty' => 'pretty p-switch p-outline p-info',
+			),
+			'op_switch_outline_warning' => array(
+				'label'  => 'OP switch outline warning',
+				'pretty' => 'pretty p-switch p-outline p-warning',
+			),
+			'op_switch_outline_danger'  => array(
+				'label'  => 'OP switch outline danger',
+				'pretty' => 'pretty p-switch p-outline p-danger',
+			),
+		),
+	),
 );
 $wpof['radio']                = array(
 	array(
@@ -293,6 +1468,1172 @@ $wpof['radio']                = array(
 			'option2' => array(
 				'label'   => __( 'Option With Image' ),
 				'tooltip' => 'http://s3.wponion.com/placeholder/250/10.jpg',
+			),
+		),
+	),
+
+
+	array(
+		'type'    => 'heading',
+		'content' => __( 'Pretty Radio' ),
+	),
+	array( 'content' => 'Pretty radio default', 'type' => 'subheading', ),
+	array(
+		'id'      => 'pretty_radio_default',
+		'title'   => 'Pretty radio default',
+		'type'    => 'radio',
+		'options' => array( 'option1' => 'Option 1', 'option2' => 'Option 2', 'option3' => 'Option 3', ),
+		'pretty'  => 'pretty p-default',
+	),
+	array(
+		'id'      => 'pretty_radio_default_default',
+		'title'   => 'Pretty radio default default',
+		'type'    => 'radio',
+		'options' => array(
+			'op_default_default'         => array(
+				'label'  => 'OP default default',
+				'pretty' => 'pretty p-default p-default',
+			),
+			'op_default_default_primary' => array(
+				'label'  => 'OP default default primary',
+				'pretty' => 'pretty p-default p-default p-primary',
+			),
+			'op_default_default_success' => array(
+				'label'  => 'OP default default success',
+				'pretty' => 'pretty p-default p-default p-success',
+			),
+			'op_default_default_info'    => array(
+				'label'  => 'OP default default info',
+				'pretty' => 'pretty p-default p-default p-info',
+			),
+			'op_default_default_warning' => array(
+				'label'  => 'OP default default warning',
+				'pretty' => 'pretty p-default p-default p-warning',
+			),
+			'op_default_default_danger'  => array(
+				'label'  => 'OP default default danger',
+				'pretty' => 'pretty p-default p-default p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_default_fill',
+		'title'   => 'Pretty radio default fill',
+		'type'    => 'radio',
+		'options' => array(
+			'op_default_fill'         => array(
+				'label'  => 'OP default fill',
+				'pretty' => 'pretty p-default p-fill',
+			),
+			'op_default_fill_primary' => array(
+				'label'  => 'OP default fill primary',
+				'pretty' => 'pretty p-default p-fill p-primary',
+			),
+			'op_default_fill_success' => array(
+				'label'  => 'OP default fill success',
+				'pretty' => 'pretty p-default p-fill p-success',
+			),
+			'op_default_fill_info'    => array(
+				'label'  => 'OP default fill info',
+				'pretty' => 'pretty p-default p-fill p-info',
+			),
+			'op_default_fill_warning' => array(
+				'label'  => 'OP default fill warning',
+				'pretty' => 'pretty p-default p-fill p-warning',
+			),
+			'op_default_fill_danger'  => array(
+				'label'  => 'OP default fill danger',
+				'pretty' => 'pretty p-default p-fill p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_default_thick',
+		'title'   => 'Pretty radio default thick',
+		'type'    => 'radio',
+		'options' => array(
+			'op_default_thick'         => array(
+				'label'  => 'OP default thick',
+				'pretty' => 'pretty p-default p-thick',
+			),
+			'op_default_thick_primary' => array(
+				'label'  => 'OP default thick primary',
+				'pretty' => 'pretty p-default p-thick p-primary',
+			),
+			'op_default_thick_success' => array(
+				'label'  => 'OP default thick success',
+				'pretty' => 'pretty p-default p-thick p-success',
+			),
+			'op_default_thick_info'    => array(
+				'label'  => 'OP default thick info',
+				'pretty' => 'pretty p-default p-thick p-info',
+			),
+			'op_default_thick_warning' => array(
+				'label'  => 'OP default thick warning',
+				'pretty' => 'pretty p-default p-thick p-warning',
+			),
+			'op_default_thick_danger'  => array(
+				'label'  => 'OP default thick danger',
+				'pretty' => 'pretty p-default p-thick p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_default_slim',
+		'title'   => 'Pretty radio default slim',
+		'type'    => 'radio',
+		'options' => array(
+			'op_default_slim'         => array(
+				'label'  => 'OP default slim',
+				'pretty' => 'pretty p-default p-slim',
+			),
+			'op_default_slim_primary' => array(
+				'label'  => 'OP default slim primary',
+				'pretty' => 'pretty p-default p-slim p-primary',
+			),
+			'op_default_slim_success' => array(
+				'label'  => 'OP default slim success',
+				'pretty' => 'pretty p-default p-slim p-success',
+			),
+			'op_default_slim_info'    => array(
+				'label'  => 'OP default slim info',
+				'pretty' => 'pretty p-default p-slim p-info',
+			),
+			'op_default_slim_warning' => array(
+				'label'  => 'OP default slim warning',
+				'pretty' => 'pretty p-default p-slim p-warning',
+			),
+			'op_default_slim_danger'  => array(
+				'label'  => 'OP default slim danger',
+				'pretty' => 'pretty p-default p-slim p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_default_outline',
+		'title'   => 'Pretty radio default outline',
+		'type'    => 'radio',
+		'options' => array(
+			'op_default_outline'         => array(
+				'label'  => 'OP default outline',
+				'pretty' => 'pretty p-default p-outline',
+			),
+			'op_default_outline_primary' => array(
+				'label'  => 'OP default outline primary',
+				'pretty' => 'pretty p-default p-outline p-primary',
+			),
+			'op_default_outline_success' => array(
+				'label'  => 'OP default outline success',
+				'pretty' => 'pretty p-default p-outline p-success',
+			),
+			'op_default_outline_info'    => array(
+				'label'  => 'OP default outline info',
+				'pretty' => 'pretty p-default p-outline p-info',
+			),
+			'op_default_outline_warning' => array(
+				'label'  => 'OP default outline warning',
+				'pretty' => 'pretty p-default p-outline p-warning',
+			),
+			'op_default_outline_danger'  => array(
+				'label'  => 'OP default outline danger',
+				'pretty' => 'pretty p-default p-outline p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_default_all',
+		'title'   => 'Pretty radio default ALL',
+		'type'    => 'radio',
+		'options' => array(
+			'op_default_default'         => array(
+				'label'  => 'OP default default',
+				'pretty' => 'pretty p-default p-default',
+			),
+			'op_default_default_primary' => array(
+				'label'  => 'OP default default primary',
+				'pretty' => 'pretty p-default p-default p-primary',
+			),
+			'op_default_default_success' => array(
+				'label'  => 'OP default default success',
+				'pretty' => 'pretty p-default p-default p-success',
+			),
+			'op_default_default_info'    => array(
+				'label'  => 'OP default default info',
+				'pretty' => 'pretty p-default p-default p-info',
+			),
+			'op_default_default_warning' => array(
+				'label'  => 'OP default default warning',
+				'pretty' => 'pretty p-default p-default p-warning',
+			),
+			'op_default_default_danger'  => array(
+				'label'  => 'OP default default danger',
+				'pretty' => 'pretty p-default p-default p-danger',
+			),
+			'op_default_fill'            => array(
+				'label'  => 'OP default fill',
+				'pretty' => 'pretty p-default p-fill',
+			),
+			'op_default_fill_primary'    => array(
+				'label'  => 'OP default fill primary',
+				'pretty' => 'pretty p-default p-fill p-primary',
+			),
+			'op_default_fill_success'    => array(
+				'label'  => 'OP default fill success',
+				'pretty' => 'pretty p-default p-fill p-success',
+			),
+			'op_default_fill_info'       => array(
+				'label'  => 'OP default fill info',
+				'pretty' => 'pretty p-default p-fill p-info',
+			),
+			'op_default_fill_warning'    => array(
+				'label'  => 'OP default fill warning',
+				'pretty' => 'pretty p-default p-fill p-warning',
+			),
+			'op_default_fill_danger'     => array(
+				'label'  => 'OP default fill danger',
+				'pretty' => 'pretty p-default p-fill p-danger',
+			),
+			'op_default_thick'           => array(
+				'label'  => 'OP default thick',
+				'pretty' => 'pretty p-default p-thick',
+			),
+			'op_default_thick_primary'   => array(
+				'label'  => 'OP default thick primary',
+				'pretty' => 'pretty p-default p-thick p-primary',
+			),
+			'op_default_thick_success'   => array(
+				'label'  => 'OP default thick success',
+				'pretty' => 'pretty p-default p-thick p-success',
+			),
+			'op_default_thick_info'      => array(
+				'label'  => 'OP default thick info',
+				'pretty' => 'pretty p-default p-thick p-info',
+			),
+			'op_default_thick_warning'   => array(
+				'label'  => 'OP default thick warning',
+				'pretty' => 'pretty p-default p-thick p-warning',
+			),
+			'op_default_thick_danger'    => array(
+				'label'  => 'OP default thick danger',
+				'pretty' => 'pretty p-default p-thick p-danger',
+			),
+			'op_default_slim'            => array(
+				'label'  => 'OP default slim',
+				'pretty' => 'pretty p-default p-slim',
+			),
+			'op_default_slim_primary'    => array(
+				'label'  => 'OP default slim primary',
+				'pretty' => 'pretty p-default p-slim p-primary',
+			),
+			'op_default_slim_success'    => array(
+				'label'  => 'OP default slim success',
+				'pretty' => 'pretty p-default p-slim p-success',
+			),
+			'op_default_slim_info'       => array(
+				'label'  => 'OP default slim info',
+				'pretty' => 'pretty p-default p-slim p-info',
+			),
+			'op_default_slim_warning'    => array(
+				'label'  => 'OP default slim warning',
+				'pretty' => 'pretty p-default p-slim p-warning',
+			),
+			'op_default_slim_danger'     => array(
+				'label'  => 'OP default slim danger',
+				'pretty' => 'pretty p-default p-slim p-danger',
+			),
+			'op_default_outline'         => array(
+				'label'  => 'OP default outline',
+				'pretty' => 'pretty p-default p-outline',
+			),
+			'op_default_outline_primary' => array(
+				'label'  => 'OP default outline primary',
+				'pretty' => 'pretty p-default p-outline p-primary',
+			),
+			'op_default_outline_success' => array(
+				'label'  => 'OP default outline success',
+				'pretty' => 'pretty p-default p-outline p-success',
+			),
+			'op_default_outline_info'    => array(
+				'label'  => 'OP default outline info',
+				'pretty' => 'pretty p-default p-outline p-info',
+			),
+			'op_default_outline_warning' => array(
+				'label'  => 'OP default outline warning',
+				'pretty' => 'pretty p-default p-outline p-warning',
+			),
+			'op_default_outline_danger'  => array(
+				'label'  => 'OP default outline danger',
+				'pretty' => 'pretty p-default p-outline p-danger',
+			),
+		),
+	),
+	array( 'content' => 'Pretty radio curve', 'type' => 'subheading', ),
+	array(
+		'id'      => 'pretty_radio_curve',
+		'title'   => 'Pretty radio curve',
+		'type'    => 'radio',
+		'options' => array( 'option1' => 'Option 1', 'option2' => 'Option 2', 'option3' => 'Option 3', ),
+		'pretty'  => 'pretty p-curve',
+	),
+	array(
+		'id'      => 'pretty_radio_curve_default',
+		'title'   => 'Pretty radio curve default',
+		'type'    => 'radio',
+		'options' => array(
+			'op_curve_default'         => array(
+				'label'  => 'OP curve default',
+				'pretty' => 'pretty p-curve p-default',
+			),
+			'op_curve_default_primary' => array(
+				'label'  => 'OP curve default primary',
+				'pretty' => 'pretty p-curve p-default p-primary',
+			),
+			'op_curve_default_success' => array(
+				'label'  => 'OP curve default success',
+				'pretty' => 'pretty p-curve p-default p-success',
+			),
+			'op_curve_default_info'    => array(
+				'label'  => 'OP curve default info',
+				'pretty' => 'pretty p-curve p-default p-info',
+			),
+			'op_curve_default_warning' => array(
+				'label'  => 'OP curve default warning',
+				'pretty' => 'pretty p-curve p-default p-warning',
+			),
+			'op_curve_default_danger'  => array(
+				'label'  => 'OP curve default danger',
+				'pretty' => 'pretty p-curve p-default p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_curve_fill',
+		'title'   => 'Pretty radio curve fill',
+		'type'    => 'radio',
+		'options' => array(
+			'op_curve_fill'         => array(
+				'label'  => 'OP curve fill',
+				'pretty' => 'pretty p-curve p-fill',
+			),
+			'op_curve_fill_primary' => array(
+				'label'  => 'OP curve fill primary',
+				'pretty' => 'pretty p-curve p-fill p-primary',
+			),
+			'op_curve_fill_success' => array(
+				'label'  => 'OP curve fill success',
+				'pretty' => 'pretty p-curve p-fill p-success',
+			),
+			'op_curve_fill_info'    => array(
+				'label'  => 'OP curve fill info',
+				'pretty' => 'pretty p-curve p-fill p-info',
+			),
+			'op_curve_fill_warning' => array(
+				'label'  => 'OP curve fill warning',
+				'pretty' => 'pretty p-curve p-fill p-warning',
+			),
+			'op_curve_fill_danger'  => array(
+				'label'  => 'OP curve fill danger',
+				'pretty' => 'pretty p-curve p-fill p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_curve_thick',
+		'title'   => 'Pretty radio curve thick',
+		'type'    => 'radio',
+		'options' => array(
+			'op_curve_thick'         => array(
+				'label'  => 'OP curve thick',
+				'pretty' => 'pretty p-curve p-thick',
+			),
+			'op_curve_thick_primary' => array(
+				'label'  => 'OP curve thick primary',
+				'pretty' => 'pretty p-curve p-thick p-primary',
+			),
+			'op_curve_thick_success' => array(
+				'label'  => 'OP curve thick success',
+				'pretty' => 'pretty p-curve p-thick p-success',
+			),
+			'op_curve_thick_info'    => array(
+				'label'  => 'OP curve thick info',
+				'pretty' => 'pretty p-curve p-thick p-info',
+			),
+			'op_curve_thick_warning' => array(
+				'label'  => 'OP curve thick warning',
+				'pretty' => 'pretty p-curve p-thick p-warning',
+			),
+			'op_curve_thick_danger'  => array(
+				'label'  => 'OP curve thick danger',
+				'pretty' => 'pretty p-curve p-thick p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_curve_slim',
+		'title'   => 'Pretty radio curve slim',
+		'type'    => 'radio',
+		'options' => array(
+			'op_curve_slim'         => array(
+				'label'  => 'OP curve slim',
+				'pretty' => 'pretty p-curve p-slim',
+			),
+			'op_curve_slim_primary' => array(
+				'label'  => 'OP curve slim primary',
+				'pretty' => 'pretty p-curve p-slim p-primary',
+			),
+			'op_curve_slim_success' => array(
+				'label'  => 'OP curve slim success',
+				'pretty' => 'pretty p-curve p-slim p-success',
+			),
+			'op_curve_slim_info'    => array(
+				'label'  => 'OP curve slim info',
+				'pretty' => 'pretty p-curve p-slim p-info',
+			),
+			'op_curve_slim_warning' => array(
+				'label'  => 'OP curve slim warning',
+				'pretty' => 'pretty p-curve p-slim p-warning',
+			),
+			'op_curve_slim_danger'  => array(
+				'label'  => 'OP curve slim danger',
+				'pretty' => 'pretty p-curve p-slim p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_curve_outline',
+		'title'   => 'Pretty radio curve outline',
+		'type'    => 'radio',
+		'options' => array(
+			'op_curve_outline'         => array(
+				'label'  => 'OP curve outline',
+				'pretty' => 'pretty p-curve p-outline',
+			),
+			'op_curve_outline_primary' => array(
+				'label'  => 'OP curve outline primary',
+				'pretty' => 'pretty p-curve p-outline p-primary',
+			),
+			'op_curve_outline_success' => array(
+				'label'  => 'OP curve outline success',
+				'pretty' => 'pretty p-curve p-outline p-success',
+			),
+			'op_curve_outline_info'    => array(
+				'label'  => 'OP curve outline info',
+				'pretty' => 'pretty p-curve p-outline p-info',
+			),
+			'op_curve_outline_warning' => array(
+				'label'  => 'OP curve outline warning',
+				'pretty' => 'pretty p-curve p-outline p-warning',
+			),
+			'op_curve_outline_danger'  => array(
+				'label'  => 'OP curve outline danger',
+				'pretty' => 'pretty p-curve p-outline p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_curve_all',
+		'title'   => 'Pretty radio curve ALL',
+		'type'    => 'radio',
+		'options' => array(
+			'op_curve_default'         => array(
+				'label'  => 'OP curve default',
+				'pretty' => 'pretty p-curve p-default',
+			),
+			'op_curve_default_primary' => array(
+				'label'  => 'OP curve default primary',
+				'pretty' => 'pretty p-curve p-default p-primary',
+			),
+			'op_curve_default_success' => array(
+				'label'  => 'OP curve default success',
+				'pretty' => 'pretty p-curve p-default p-success',
+			),
+			'op_curve_default_info'    => array(
+				'label'  => 'OP curve default info',
+				'pretty' => 'pretty p-curve p-default p-info',
+			),
+			'op_curve_default_warning' => array(
+				'label'  => 'OP curve default warning',
+				'pretty' => 'pretty p-curve p-default p-warning',
+			),
+			'op_curve_default_danger'  => array(
+				'label'  => 'OP curve default danger',
+				'pretty' => 'pretty p-curve p-default p-danger',
+			),
+			'op_curve_fill'            => array(
+				'label'  => 'OP curve fill',
+				'pretty' => 'pretty p-curve p-fill',
+			),
+			'op_curve_fill_primary'    => array(
+				'label'  => 'OP curve fill primary',
+				'pretty' => 'pretty p-curve p-fill p-primary',
+			),
+			'op_curve_fill_success'    => array(
+				'label'  => 'OP curve fill success',
+				'pretty' => 'pretty p-curve p-fill p-success',
+			),
+			'op_curve_fill_info'       => array(
+				'label'  => 'OP curve fill info',
+				'pretty' => 'pretty p-curve p-fill p-info',
+			),
+			'op_curve_fill_warning'    => array(
+				'label'  => 'OP curve fill warning',
+				'pretty' => 'pretty p-curve p-fill p-warning',
+			),
+			'op_curve_fill_danger'     => array(
+				'label'  => 'OP curve fill danger',
+				'pretty' => 'pretty p-curve p-fill p-danger',
+			),
+			'op_curve_thick'           => array(
+				'label'  => 'OP curve thick',
+				'pretty' => 'pretty p-curve p-thick',
+			),
+			'op_curve_thick_primary'   => array(
+				'label'  => 'OP curve thick primary',
+				'pretty' => 'pretty p-curve p-thick p-primary',
+			),
+			'op_curve_thick_success'   => array(
+				'label'  => 'OP curve thick success',
+				'pretty' => 'pretty p-curve p-thick p-success',
+			),
+			'op_curve_thick_info'      => array(
+				'label'  => 'OP curve thick info',
+				'pretty' => 'pretty p-curve p-thick p-info',
+			),
+			'op_curve_thick_warning'   => array(
+				'label'  => 'OP curve thick warning',
+				'pretty' => 'pretty p-curve p-thick p-warning',
+			),
+			'op_curve_thick_danger'    => array(
+				'label'  => 'OP curve thick danger',
+				'pretty' => 'pretty p-curve p-thick p-danger',
+			),
+			'op_curve_slim'            => array(
+				'label'  => 'OP curve slim',
+				'pretty' => 'pretty p-curve p-slim',
+			),
+			'op_curve_slim_primary'    => array(
+				'label'  => 'OP curve slim primary',
+				'pretty' => 'pretty p-curve p-slim p-primary',
+			),
+			'op_curve_slim_success'    => array(
+				'label'  => 'OP curve slim success',
+				'pretty' => 'pretty p-curve p-slim p-success',
+			),
+			'op_curve_slim_info'       => array(
+				'label'  => 'OP curve slim info',
+				'pretty' => 'pretty p-curve p-slim p-info',
+			),
+			'op_curve_slim_warning'    => array(
+				'label'  => 'OP curve slim warning',
+				'pretty' => 'pretty p-curve p-slim p-warning',
+			),
+			'op_curve_slim_danger'     => array(
+				'label'  => 'OP curve slim danger',
+				'pretty' => 'pretty p-curve p-slim p-danger',
+			),
+			'op_curve_outline'         => array(
+				'label'  => 'OP curve outline',
+				'pretty' => 'pretty p-curve p-outline',
+			),
+			'op_curve_outline_primary' => array(
+				'label'  => 'OP curve outline primary',
+				'pretty' => 'pretty p-curve p-outline p-primary',
+			),
+			'op_curve_outline_success' => array(
+				'label'  => 'OP curve outline success',
+				'pretty' => 'pretty p-curve p-outline p-success',
+			),
+			'op_curve_outline_info'    => array(
+				'label'  => 'OP curve outline info',
+				'pretty' => 'pretty p-curve p-outline p-info',
+			),
+			'op_curve_outline_warning' => array(
+				'label'  => 'OP curve outline warning',
+				'pretty' => 'pretty p-curve p-outline p-warning',
+			),
+			'op_curve_outline_danger'  => array(
+				'label'  => 'OP curve outline danger',
+				'pretty' => 'pretty p-curve p-outline p-danger',
+			),
+		),
+	),
+	array( 'content' => 'Pretty radio round', 'type' => 'subheading', ),
+	array(
+		'id'      => 'pretty_radio_round',
+		'title'   => 'Pretty radio round',
+		'type'    => 'radio',
+		'options' => array( 'option1' => 'Option 1', 'option2' => 'Option 2', 'option3' => 'Option 3', ),
+		'pretty'  => 'pretty p-round',
+	),
+	array(
+		'id'      => 'pretty_radio_round_default',
+		'title'   => 'Pretty radio round default',
+		'type'    => 'radio',
+		'options' => array(
+			'op_round_default'         => array(
+				'label'  => 'OP round default',
+				'pretty' => 'pretty p-round p-default',
+			),
+			'op_round_default_primary' => array(
+				'label'  => 'OP round default primary',
+				'pretty' => 'pretty p-round p-default p-primary',
+			),
+			'op_round_default_success' => array(
+				'label'  => 'OP round default success',
+				'pretty' => 'pretty p-round p-default p-success',
+			),
+			'op_round_default_info'    => array(
+				'label'  => 'OP round default info',
+				'pretty' => 'pretty p-round p-default p-info',
+			),
+			'op_round_default_warning' => array(
+				'label'  => 'OP round default warning',
+				'pretty' => 'pretty p-round p-default p-warning',
+			),
+			'op_round_default_danger'  => array(
+				'label'  => 'OP round default danger',
+				'pretty' => 'pretty p-round p-default p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_round_fill',
+		'title'   => 'Pretty radio round fill',
+		'type'    => 'radio',
+		'options' => array(
+			'op_round_fill'         => array(
+				'label'  => 'OP round fill',
+				'pretty' => 'pretty p-round p-fill',
+			),
+			'op_round_fill_primary' => array(
+				'label'  => 'OP round fill primary',
+				'pretty' => 'pretty p-round p-fill p-primary',
+			),
+			'op_round_fill_success' => array(
+				'label'  => 'OP round fill success',
+				'pretty' => 'pretty p-round p-fill p-success',
+			),
+			'op_round_fill_info'    => array(
+				'label'  => 'OP round fill info',
+				'pretty' => 'pretty p-round p-fill p-info',
+			),
+			'op_round_fill_warning' => array(
+				'label'  => 'OP round fill warning',
+				'pretty' => 'pretty p-round p-fill p-warning',
+			),
+			'op_round_fill_danger'  => array(
+				'label'  => 'OP round fill danger',
+				'pretty' => 'pretty p-round p-fill p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_round_thick',
+		'title'   => 'Pretty radio round thick',
+		'type'    => 'radio',
+		'options' => array(
+			'op_round_thick'         => array(
+				'label'  => 'OP round thick',
+				'pretty' => 'pretty p-round p-thick',
+			),
+			'op_round_thick_primary' => array(
+				'label'  => 'OP round thick primary',
+				'pretty' => 'pretty p-round p-thick p-primary',
+			),
+			'op_round_thick_success' => array(
+				'label'  => 'OP round thick success',
+				'pretty' => 'pretty p-round p-thick p-success',
+			),
+			'op_round_thick_info'    => array(
+				'label'  => 'OP round thick info',
+				'pretty' => 'pretty p-round p-thick p-info',
+			),
+			'op_round_thick_warning' => array(
+				'label'  => 'OP round thick warning',
+				'pretty' => 'pretty p-round p-thick p-warning',
+			),
+			'op_round_thick_danger'  => array(
+				'label'  => 'OP round thick danger',
+				'pretty' => 'pretty p-round p-thick p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_round_slim',
+		'title'   => 'Pretty radio round slim',
+		'type'    => 'radio',
+		'options' => array(
+			'op_round_slim'         => array(
+				'label'  => 'OP round slim',
+				'pretty' => 'pretty p-round p-slim',
+			),
+			'op_round_slim_primary' => array(
+				'label'  => 'OP round slim primary',
+				'pretty' => 'pretty p-round p-slim p-primary',
+			),
+			'op_round_slim_success' => array(
+				'label'  => 'OP round slim success',
+				'pretty' => 'pretty p-round p-slim p-success',
+			),
+			'op_round_slim_info'    => array(
+				'label'  => 'OP round slim info',
+				'pretty' => 'pretty p-round p-slim p-info',
+			),
+			'op_round_slim_warning' => array(
+				'label'  => 'OP round slim warning',
+				'pretty' => 'pretty p-round p-slim p-warning',
+			),
+			'op_round_slim_danger'  => array(
+				'label'  => 'OP round slim danger',
+				'pretty' => 'pretty p-round p-slim p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_round_outline',
+		'title'   => 'Pretty radio round outline',
+		'type'    => 'radio',
+		'options' => array(
+			'op_round_outline'         => array(
+				'label'  => 'OP round outline',
+				'pretty' => 'pretty p-round p-outline',
+			),
+			'op_round_outline_primary' => array(
+				'label'  => 'OP round outline primary',
+				'pretty' => 'pretty p-round p-outline p-primary',
+			),
+			'op_round_outline_success' => array(
+				'label'  => 'OP round outline success',
+				'pretty' => 'pretty p-round p-outline p-success',
+			),
+			'op_round_outline_info'    => array(
+				'label'  => 'OP round outline info',
+				'pretty' => 'pretty p-round p-outline p-info',
+			),
+			'op_round_outline_warning' => array(
+				'label'  => 'OP round outline warning',
+				'pretty' => 'pretty p-round p-outline p-warning',
+			),
+			'op_round_outline_danger'  => array(
+				'label'  => 'OP round outline danger',
+				'pretty' => 'pretty p-round p-outline p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_round_all',
+		'title'   => 'Pretty radio round ALL',
+		'type'    => 'radio',
+		'options' => array(
+			'op_round_default'         => array(
+				'label'  => 'OP round default',
+				'pretty' => 'pretty p-round p-default',
+			),
+			'op_round_default_primary' => array(
+				'label'  => 'OP round default primary',
+				'pretty' => 'pretty p-round p-default p-primary',
+			),
+			'op_round_default_success' => array(
+				'label'  => 'OP round default success',
+				'pretty' => 'pretty p-round p-default p-success',
+			),
+			'op_round_default_info'    => array(
+				'label'  => 'OP round default info',
+				'pretty' => 'pretty p-round p-default p-info',
+			),
+			'op_round_default_warning' => array(
+				'label'  => 'OP round default warning',
+				'pretty' => 'pretty p-round p-default p-warning',
+			),
+			'op_round_default_danger'  => array(
+				'label'  => 'OP round default danger',
+				'pretty' => 'pretty p-round p-default p-danger',
+			),
+			'op_round_fill'            => array(
+				'label'  => 'OP round fill',
+				'pretty' => 'pretty p-round p-fill',
+			),
+			'op_round_fill_primary'    => array(
+				'label'  => 'OP round fill primary',
+				'pretty' => 'pretty p-round p-fill p-primary',
+			),
+			'op_round_fill_success'    => array(
+				'label'  => 'OP round fill success',
+				'pretty' => 'pretty p-round p-fill p-success',
+			),
+			'op_round_fill_info'       => array(
+				'label'  => 'OP round fill info',
+				'pretty' => 'pretty p-round p-fill p-info',
+			),
+			'op_round_fill_warning'    => array(
+				'label'  => 'OP round fill warning',
+				'pretty' => 'pretty p-round p-fill p-warning',
+			),
+			'op_round_fill_danger'     => array(
+				'label'  => 'OP round fill danger',
+				'pretty' => 'pretty p-round p-fill p-danger',
+			),
+			'op_round_thick'           => array(
+				'label'  => 'OP round thick',
+				'pretty' => 'pretty p-round p-thick',
+			),
+			'op_round_thick_primary'   => array(
+				'label'  => 'OP round thick primary',
+				'pretty' => 'pretty p-round p-thick p-primary',
+			),
+			'op_round_thick_success'   => array(
+				'label'  => 'OP round thick success',
+				'pretty' => 'pretty p-round p-thick p-success',
+			),
+			'op_round_thick_info'      => array(
+				'label'  => 'OP round thick info',
+				'pretty' => 'pretty p-round p-thick p-info',
+			),
+			'op_round_thick_warning'   => array(
+				'label'  => 'OP round thick warning',
+				'pretty' => 'pretty p-round p-thick p-warning',
+			),
+			'op_round_thick_danger'    => array(
+				'label'  => 'OP round thick danger',
+				'pretty' => 'pretty p-round p-thick p-danger',
+			),
+			'op_round_slim'            => array(
+				'label'  => 'OP round slim',
+				'pretty' => 'pretty p-round p-slim',
+			),
+			'op_round_slim_primary'    => array(
+				'label'  => 'OP round slim primary',
+				'pretty' => 'pretty p-round p-slim p-primary',
+			),
+			'op_round_slim_success'    => array(
+				'label'  => 'OP round slim success',
+				'pretty' => 'pretty p-round p-slim p-success',
+			),
+			'op_round_slim_info'       => array(
+				'label'  => 'OP round slim info',
+				'pretty' => 'pretty p-round p-slim p-info',
+			),
+			'op_round_slim_warning'    => array(
+				'label'  => 'OP round slim warning',
+				'pretty' => 'pretty p-round p-slim p-warning',
+			),
+			'op_round_slim_danger'     => array(
+				'label'  => 'OP round slim danger',
+				'pretty' => 'pretty p-round p-slim p-danger',
+			),
+			'op_round_outline'         => array(
+				'label'  => 'OP round outline',
+				'pretty' => 'pretty p-round p-outline',
+			),
+			'op_round_outline_primary' => array(
+				'label'  => 'OP round outline primary',
+				'pretty' => 'pretty p-round p-outline p-primary',
+			),
+			'op_round_outline_success' => array(
+				'label'  => 'OP round outline success',
+				'pretty' => 'pretty p-round p-outline p-success',
+			),
+			'op_round_outline_info'    => array(
+				'label'  => 'OP round outline info',
+				'pretty' => 'pretty p-round p-outline p-info',
+			),
+			'op_round_outline_warning' => array(
+				'label'  => 'OP round outline warning',
+				'pretty' => 'pretty p-round p-outline p-warning',
+			),
+			'op_round_outline_danger'  => array(
+				'label'  => 'OP round outline danger',
+				'pretty' => 'pretty p-round p-outline p-danger',
+			),
+		),
+	),
+	array( 'content' => 'Pretty radio switch', 'type' => 'subheading', ),
+	array(
+		'id'      => 'pretty_radio_switch',
+		'title'   => 'Pretty radio switch',
+		'type'    => 'radio',
+		'options' => array( 'option1' => 'Option 1', 'option2' => 'Option 2', 'option3' => 'Option 3', ),
+		'pretty'  => 'pretty p-switch',
+	),
+	array(
+		'id'      => 'pretty_radio_switch_default',
+		'title'   => 'Pretty radio switch default',
+		'type'    => 'radio',
+		'options' => array(
+			'op_switch_default'         => array(
+				'label'  => 'OP switch default',
+				'pretty' => 'pretty p-switch p-default',
+			),
+			'op_switch_default_primary' => array(
+				'label'  => 'OP switch default primary',
+				'pretty' => 'pretty p-switch p-default p-primary',
+			),
+			'op_switch_default_success' => array(
+				'label'  => 'OP switch default success',
+				'pretty' => 'pretty p-switch p-default p-success',
+			),
+			'op_switch_default_info'    => array(
+				'label'  => 'OP switch default info',
+				'pretty' => 'pretty p-switch p-default p-info',
+			),
+			'op_switch_default_warning' => array(
+				'label'  => 'OP switch default warning',
+				'pretty' => 'pretty p-switch p-default p-warning',
+			),
+			'op_switch_default_danger'  => array(
+				'label'  => 'OP switch default danger',
+				'pretty' => 'pretty p-switch p-default p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_switch_fill',
+		'title'   => 'Pretty radio switch fill',
+		'type'    => 'radio',
+		'options' => array(
+			'op_switch_fill'         => array(
+				'label'  => 'OP switch fill',
+				'pretty' => 'pretty p-switch p-fill',
+			),
+			'op_switch_fill_primary' => array(
+				'label'  => 'OP switch fill primary',
+				'pretty' => 'pretty p-switch p-fill p-primary',
+			),
+			'op_switch_fill_success' => array(
+				'label'  => 'OP switch fill success',
+				'pretty' => 'pretty p-switch p-fill p-success',
+			),
+			'op_switch_fill_info'    => array(
+				'label'  => 'OP switch fill info',
+				'pretty' => 'pretty p-switch p-fill p-info',
+			),
+			'op_switch_fill_warning' => array(
+				'label'  => 'OP switch fill warning',
+				'pretty' => 'pretty p-switch p-fill p-warning',
+			),
+			'op_switch_fill_danger'  => array(
+				'label'  => 'OP switch fill danger',
+				'pretty' => 'pretty p-switch p-fill p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_switch_thick',
+		'title'   => 'Pretty radio switch thick',
+		'type'    => 'radio',
+		'options' => array(
+			'op_switch_thick'         => array(
+				'label'  => 'OP switch thick',
+				'pretty' => 'pretty p-switch p-thick',
+			),
+			'op_switch_thick_primary' => array(
+				'label'  => 'OP switch thick primary',
+				'pretty' => 'pretty p-switch p-thick p-primary',
+			),
+			'op_switch_thick_success' => array(
+				'label'  => 'OP switch thick success',
+				'pretty' => 'pretty p-switch p-thick p-success',
+			),
+			'op_switch_thick_info'    => array(
+				'label'  => 'OP switch thick info',
+				'pretty' => 'pretty p-switch p-thick p-info',
+			),
+			'op_switch_thick_warning' => array(
+				'label'  => 'OP switch thick warning',
+				'pretty' => 'pretty p-switch p-thick p-warning',
+			),
+			'op_switch_thick_danger'  => array(
+				'label'  => 'OP switch thick danger',
+				'pretty' => 'pretty p-switch p-thick p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_switch_slim',
+		'title'   => 'Pretty radio switch slim',
+		'type'    => 'radio',
+		'options' => array(
+			'op_switch_slim'         => array(
+				'label'  => 'OP switch slim',
+				'pretty' => 'pretty p-switch p-slim',
+			),
+			'op_switch_slim_primary' => array(
+				'label'  => 'OP switch slim primary',
+				'pretty' => 'pretty p-switch p-slim p-primary',
+			),
+			'op_switch_slim_success' => array(
+				'label'  => 'OP switch slim success',
+				'pretty' => 'pretty p-switch p-slim p-success',
+			),
+			'op_switch_slim_info'    => array(
+				'label'  => 'OP switch slim info',
+				'pretty' => 'pretty p-switch p-slim p-info',
+			),
+			'op_switch_slim_warning' => array(
+				'label'  => 'OP switch slim warning',
+				'pretty' => 'pretty p-switch p-slim p-warning',
+			),
+			'op_switch_slim_danger'  => array(
+				'label'  => 'OP switch slim danger',
+				'pretty' => 'pretty p-switch p-slim p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_switch_outline',
+		'title'   => 'Pretty radio switch outline',
+		'type'    => 'radio',
+		'options' => array(
+			'op_switch_outline'         => array(
+				'label'  => 'OP switch outline',
+				'pretty' => 'pretty p-switch p-outline',
+			),
+			'op_switch_outline_primary' => array(
+				'label'  => 'OP switch outline primary',
+				'pretty' => 'pretty p-switch p-outline p-primary',
+			),
+			'op_switch_outline_success' => array(
+				'label'  => 'OP switch outline success',
+				'pretty' => 'pretty p-switch p-outline p-success',
+			),
+			'op_switch_outline_info'    => array(
+				'label'  => 'OP switch outline info',
+				'pretty' => 'pretty p-switch p-outline p-info',
+			),
+			'op_switch_outline_warning' => array(
+				'label'  => 'OP switch outline warning',
+				'pretty' => 'pretty p-switch p-outline p-warning',
+			),
+			'op_switch_outline_danger'  => array(
+				'label'  => 'OP switch outline danger',
+				'pretty' => 'pretty p-switch p-outline p-danger',
+			),
+		),
+	),
+	array(
+		'id'      => 'pretty_radio_switch_all',
+		'title'   => 'Pretty radio switch ALL',
+		'type'    => 'radio',
+		'options' => array(
+			'op_switch_default'         => array(
+				'label'  => 'OP switch default',
+				'pretty' => 'pretty p-switch p-default',
+			),
+			'op_switch_default_primary' => array(
+				'label'  => 'OP switch default primary',
+				'pretty' => 'pretty p-switch p-default p-primary',
+			),
+			'op_switch_default_success' => array(
+				'label'  => 'OP switch default success',
+				'pretty' => 'pretty p-switch p-default p-success',
+			),
+			'op_switch_default_info'    => array(
+				'label'  => 'OP switch default info',
+				'pretty' => 'pretty p-switch p-default p-info',
+			),
+			'op_switch_default_warning' => array(
+				'label'  => 'OP switch default warning',
+				'pretty' => 'pretty p-switch p-default p-warning',
+			),
+			'op_switch_default_danger'  => array(
+				'label'  => 'OP switch default danger',
+				'pretty' => 'pretty p-switch p-default p-danger',
+			),
+			'op_switch_fill'            => array(
+				'label'  => 'OP switch fill',
+				'pretty' => 'pretty p-switch p-fill',
+			),
+			'op_switch_fill_primary'    => array(
+				'label'  => 'OP switch fill primary',
+				'pretty' => 'pretty p-switch p-fill p-primary',
+			),
+			'op_switch_fill_success'    => array(
+				'label'  => 'OP switch fill success',
+				'pretty' => 'pretty p-switch p-fill p-success',
+			),
+			'op_switch_fill_info'       => array(
+				'label'  => 'OP switch fill info',
+				'pretty' => 'pretty p-switch p-fill p-info',
+			),
+			'op_switch_fill_warning'    => array(
+				'label'  => 'OP switch fill warning',
+				'pretty' => 'pretty p-switch p-fill p-warning',
+			),
+			'op_switch_fill_danger'     => array(
+				'label'  => 'OP switch fill danger',
+				'pretty' => 'pretty p-switch p-fill p-danger',
+			),
+			'op_switch_thick'           => array(
+				'label'  => 'OP switch thick',
+				'pretty' => 'pretty p-switch p-thick',
+			),
+			'op_switch_thick_primary'   => array(
+				'label'  => 'OP switch thick primary',
+				'pretty' => 'pretty p-switch p-thick p-primary',
+			),
+			'op_switch_thick_success'   => array(
+				'label'  => 'OP switch thick success',
+				'pretty' => 'pretty p-switch p-thick p-success',
+			),
+			'op_switch_thick_info'      => array(
+				'label'  => 'OP switch thick info',
+				'pretty' => 'pretty p-switch p-thick p-info',
+			),
+			'op_switch_thick_warning'   => array(
+				'label'  => 'OP switch thick warning',
+				'pretty' => 'pretty p-switch p-thick p-warning',
+			),
+			'op_switch_thick_danger'    => array(
+				'label'  => 'OP switch thick danger',
+				'pretty' => 'pretty p-switch p-thick p-danger',
+			),
+			'op_switch_slim'            => array(
+				'label'  => 'OP switch slim',
+				'pretty' => 'pretty p-switch p-slim',
+			),
+			'op_switch_slim_primary'    => array(
+				'label'  => 'OP switch slim primary',
+				'pretty' => 'pretty p-switch p-slim p-primary',
+			),
+			'op_switch_slim_success'    => array(
+				'label'  => 'OP switch slim success',
+				'pretty' => 'pretty p-switch p-slim p-success',
+			),
+			'op_switch_slim_info'       => array(
+				'label'  => 'OP switch slim info',
+				'pretty' => 'pretty p-switch p-slim p-info',
+			),
+			'op_switch_slim_warning'    => array(
+				'label'  => 'OP switch slim warning',
+				'pretty' => 'pretty p-switch p-slim p-warning',
+			),
+			'op_switch_slim_danger'     => array(
+				'label'  => 'OP switch slim danger',
+				'pretty' => 'pretty p-switch p-slim p-danger',
+			),
+			'op_switch_outline'         => array(
+				'label'  => 'OP switch outline',
+				'pretty' => 'pretty p-switch p-outline',
+			),
+			'op_switch_outline_primary' => array(
+				'label'  => 'OP switch outline primary',
+				'pretty' => 'pretty p-switch p-outline p-primary',
+			),
+			'op_switch_outline_success' => array(
+				'label'  => 'OP switch outline success',
+				'pretty' => 'pretty p-switch p-outline p-success',
+			),
+			'op_switch_outline_info'    => array(
+				'label'  => 'OP switch outline info',
+				'pretty' => 'pretty p-switch p-outline p-info',
+			),
+			'op_switch_outline_warning' => array(
+				'label'  => 'OP switch outline warning',
+				'pretty' => 'pretty p-switch p-outline p-warning',
+			),
+			'op_switch_outline_danger'  => array(
+				'label'  => 'OP switch outline danger',
+				'pretty' => 'pretty p-switch p-outline p-danger',
 			),
 		),
 	),
@@ -803,10 +3144,156 @@ $wpof['wp_links']             = array(
 );
 $wpof['switcher']             = array(
 	array(
-		'title' => __( 'Switcher' ),
-		'type'  => 'switcher',
-		'id'    => 'switcher',
+		'title'        => __( 'Switcher 1' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_1',
+		'switch_style' => 'style-1',
 	),
+	array(
+		'title'        => __( 'Switcher 2' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_2',
+		'switch_style' => 'style-2',
+	),
+	array(
+		'title'        => __( 'Switcher 3' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_3',
+		'switch_style' => 'style-3',
+	),
+	array(
+		'title'        => __( 'Switcher 4' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_4',
+		'switch_style' => 'style-4',
+	),
+	array(
+		'title'        => __( 'Switcher 5' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_5',
+		'switch_style' => 'style-5',
+	),
+	array(
+		'title'        => __( 'Switcher 6' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_6',
+		'switch_style' => 'style-6',
+	),
+	array(
+		'title'        => __( 'Switcher 7' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_7',
+		'switch_style' => 'style-7',
+	),
+	array(
+		'title'        => __( 'Switcher 8' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_8',
+		'switch_style' => 'style-8',
+	),
+	array(
+		'title'        => __( 'Switcher 9' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_9',
+		'switch_style' => 'style-9',
+	),
+	array(
+		'title'        => __( 'Switcher 10' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_10',
+		'switch_style' => 'style-10',
+	),
+	array(
+		'title'        => __( 'Switcher 11' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_11',
+		'switch_style' => 'style-11',
+	),
+	array(
+		'title'        => __( 'Switcher 12' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_12',
+		'switch_style' => 'style-12',
+	),
+	array(
+		'title'        => __( 'Switcher 13' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_13',
+		'switch_style' => 'style-13',
+	),
+	array(
+		'title'        => __( 'Switcher 14' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_14',
+		'switch_style' => 'style-14',
+	),
+	array(
+		'title'        => __( 'Switcher 15' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_15',
+		'switch_style' => 'style-15',
+	),
+	array(
+		'title'        => __( 'Switcher 16' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_16',
+		'switch_style' => 'style-16',
+	),
+	array(
+		'title'        => __( 'Switcher 17' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_17',
+		'switch_style' => 'style-17',
+	),
+	array(
+		'title'        => __( 'Switcher 1' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_circle_1',
+		'switch_style' => 'circle-1',
+	),
+	array(
+		'title'        => __( 'Switcher 2' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_circle_2',
+		'switch_style' => 'circle-2',
+	),
+	array(
+		'title'        => __( 'Switcher 3' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_circle_3',
+		'switch_style' => 'circle-3',
+	),
+	array(
+		'title'        => __( 'Switcher 4' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_circle_4',
+		'switch_style' => 'circle-4',
+	),
+	array(
+		'title'        => __( 'Switcher 1' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_square_1',
+		'switch_style' => 'square-1',
+	),
+	array(
+		'title'        => __( 'Switcher 2' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_square_2',
+		'switch_style' => 'square-2',
+	),
+	array(
+		'title'        => __( 'Switcher 3' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_square_3',
+		'switch_style' => 'square-3',
+	),
+	array(
+		'title'        => __( 'Switcher 4' ),
+		'type'         => 'switcher',
+		'id'           => 'switcher_square_4',
+		'switch_style' => 'square-4',
+	),
+
 );
 $wpof['key_value']            = array(
 	array(
