@@ -20,7 +20,7 @@ global $wpof, $wpof_page_fields_args;
 
 $settings_fields = $wpof_page_fields_args;
 
-if ( ! wponion_is_debug() ) {
+if ( wponion_is_debug() ) {
 	$settings_fields[] = array(
 		'title'    => __( 'Development' ),
 		'name'     => 'development',

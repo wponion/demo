@@ -17,12 +17,14 @@ add_action( 'wponion_loaded', function () {
 	global $wpof;
 	require_once _DIR_ . '/functions.php';
 	require_once _DIR_ . '/fields.php';
+	require_once _DIR_ . '/dashboard-widgets.php';
 	require_once _DIR_ . '/admin-page.php';
 	require_once _DIR_ . '/settings.php';
 	require_once __DIR__ . '/metabox.php';
 	require_once __DIR__ . '/user_profile.php';
 	require_once __DIR__ . '/taxonomy.php';
 	require_once __DIR__ . '/help_tabs.php';
+	require_once __DIR__ . '/woocommerce.php';
 
 } );
 
