@@ -18,15 +18,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
-$tax_fields = array();
-
-foreach ( $wpof as $fields ) {
-	$tax_fields = array_merge( $tax_fields, $fields );
-}
-
 
 $instance = wponion_taxonomy( array(
 	'option_name' => '_wponion_taxonomy',
-	'taxonomy'    => 'product_cat',
-	'theme'       => 'wp',
-), $tax_fields );
+	'taxonomy'    => array( 'category', 'post_tag' ),
+), array(
+	array(
+		'title' => 'Taxonomy Field',
+		'type'  => 'text',
+		'id'    => 'taxonomy',
+	),
+	array(
+		'title' => 'Taxonomy Field 2',
+		'type'  => 'textarea',
+		'id'    => 'taxonomy2',
+	),
+	array(
+		'id'      => 'image_select_checkbox',
+		'title'   => __( 'Image Select' ),
+		'desc'    => __( 'You can select multiple images' ),
+		'type'    => 'image_select',
+		'options' => array(
+			'image1' => 'https://s3.wponion.com/placeholder/75/1.jpg',
+			'image2' => 'https://s3.wponion.com/placeholder/75/2.jpg',
+			'image3' => 'https://s3.wponion.com/placeholder/75/3.jpg',
+			'image4' => 'https://s3.wponion.com/placeholder/75/4.jpg',
+			'image5' => 'https://s3.wponion.com/placeholder/75/5.jpg',
+		),
+	),
+) );
+
+if ( wponion_is_debug() ) {
+	wponion_taxonomy( array(
+		'option_name' => '_wponion_taxonomy_dev',
+		'taxonomy'    => array( 'category', 'post_tag' ),
+	), wponion_demo_get_all_fields( 'all' ) );
+}

@@ -17,131 +17,308 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
-$instance = wponion_metabox( array(
-	'metabox_title' => __( 'WPOnion : Only Fields' ),
-	'metabox_id'    => 'wponion_only_fields',
-	'screens'       => 'post',
-	'context'       => 'normal',
-	'theme_color'   => false,
-	'ajax'          => true,
-	'option_name'   => '_wponion_metabox_only_fields',
-), $wpof['features'] );
+global $wpof_page_fields_args;
 
-$instance = wponion_metabox( array(
-	'metabox_title' => __( 'WPOnion : Fields' ),
-	'metabox_id'    => 'wponion_group_fields',
-	'screens'       => 'post',
+wponion_metabox( array(
+	'option_name'   => '_wponion_metabox_posts',
+	'metabox_title' => __( 'Custom Post Option' ),
+	'metabox_id'    => 'custom-post-option-by-wponion',
+	'screens'       => array( 'post' ),
 	'context'       => 'normal',
 	'ajax'          => true,
-	'option_name'   => '_wponion_metabox_group_fields',
 ), array(
 	array(
-		'title'  => __( 'Features' ),
-		'name'   => 'features',
-		'fields' => $wpof['features'],
-	),
-
-	array(
-		'title'    => __( 'User Inputs' ),
-		'name'     => 'userinputs',
-		'sections' => array(
+		'name'   => 'page1',
+		'fields' => array(
 			array(
-				'title'  => __( 'Text' ),
-				'name'   => 'text',
-				'fields' => $wpof['text'],
+				'type'  => 'text',
+				'title' => __( 'Text Field' ),
+				'id'    => 'textfield',
 			),
 			array(
-				'title'  => __( 'Textarea' ),
-				'name'   => 'textarea',
-				'fields' => $wpof['textarea'],
+				'type'  => 'textarea',
+				'title' => __( 'Textarea Field' ),
+				'id'    => 'textarea',
 			),
 			array(
-				'title'  => __( 'Checkbox' ),
-				'name'   => 'checkbox',
-				'fields' => $wpof['checkbox'],
-			),
-			array(
-				'title'  => __( 'Radio' ),
-				'name'   => 'radio',
-				'fields' => $wpof['radio'],
-			),
-			array(
-				'title'  => __( 'Select' ),
-				'name'   => 'select',
-				'fields' => $wpof['select'],
-			),
-			array(
-				'title'  => __( 'Background' ),
-				'name'   => 'background',
-				'fields' => $wpof['background'],
-			),
-			array(
-				'title'  => __( 'Upload' ),
-				'name'   => 'upload',
-				'fields' => $wpof['upload'],
-			),
-			array(
-				'title'  => __( 'Icon Picker' ),
-				'name'   => 'icon_picker',
-				'fields' => $wpof['icon_picker'],
-			),
-			array(
-				'title'  => __( 'Font Picker' ),
-				'name'   => 'font_picker',
-				'fields' => $wpof['font_picker'],
-			),
-			array(
-				'title'  => __( 'Image Select' ),
-				'name'   => 'image_select',
-				'fields' => $wpof['image_select'],
-			),
-			array(
-				'title'  => __( 'WP Links' ),
-				'name'   => 'wp_links',
-				'fields' => $wpof['wp_links'],
-			),
-			array(
-				'title'  => __( 'Switcher' ),
-				'name'   => 'switcher',
-				'fields' => $wpof['switcher'],
-			),
-			array(
-				'title'  => __( 'Key Value' ),
-				'name'   => 'key_value',
-				'fields' => $wpof['key_value'],
-			),
-			array(
-				'title'  => __( 'Color Picker & Palette' ),
-				'name'   => 'color_picker_palette',
-				'fields' => $wpof['color_picker_palette'],
-			),
-			array(
-				'title'  => __( 'Image & Gallery' ),
-				'name'   => 'image_picker',
-				'fields' => $wpof['image_picker'],
-			),
-			array(
-				'title'  => __( 'Date Picker' ),
-				'name'   => 'date_picker',
-				'fields' => $wpof['date_picker'],
-			),
-			array(
-				'title'  => __( 'WP Editor' ),
-				'name'   => 'wp_editor',
-				'fields' => $wpof['wp_editor'],
+				'title'        => __( 'Style 3' ),
+				'type'         => 'switcher',
+				'id'           => 'switcher_3',
+				'switch_style' => 'style-12',
 			),
 		),
 	),
 ) );
 
-foreach ( $wpof as $_key => $_fields ) {
-	$instance = wponion_metabox( array(
-		'metabox_title' => __( 'WPOnion : ' ) . $_key,
-		'metabox_id'    => 'wponion_only_fields_' . $_key,
-		'screens'       => 'post',
-		'context'       => 'side',
-		'theme_color'   => false,
-		'ajax'          => true,
-		'option_name'   => '_wponion_metabox_only_fields_' . $_key,
-	), $_fields );
-}
+
+wponion_metabox( array(
+	'option_name'   => '_wponion_metabox_posts_side',
+	'metabox_title' => __( 'Custom Post Option' ),
+	'metabox_id'    => 'custom-post-option-by-wponion-2',
+	'screens'       => array( 'post', 'page' ),
+	'context'       => 'side',
+	'ajax'          => true,
+), array(
+	array(
+		'title'  => __( 'Some Title' ),
+		'name'   => 'omg',
+		'fields' => array(
+			array(
+				'type'    => 'content',
+				'content' => __( 'This Metabox is shown in both Post & Page Post Types' ),
+			),
+			array(
+				'type'    => 'image_select',
+				'id'      => 'image_select',
+				'options' => array(
+					'image1' => 'http://s3.wponion.com/placeholder/75/1.jpg',
+					'image2' => 'http://s3.wponion.com/placeholder/75/2.jpg',
+					'image3' => 'http://s3.wponion.com/placeholder/75/3.jpg',
+				),
+			),
+			array(
+				'type'  => 'textarea',
+				'title' => __( 'Textarea Field' ),
+				'id'    => 'textarea',
+			),
+			array(
+				'title'        => __( 'Style 3' ),
+				'type'         => 'switcher',
+				'id'           => 'switcher_3',
+				'switch_style' => 'style-12',
+			),
+		),
+	),
+) );
+wponion_metabox( array(
+	'option_name'   => '_wponion_metabox_main_metabox',
+	'metabox_title' => __( 'Custom Post/Page Option' ),
+	'metabox_id'    => 'custom-post-option-by-wponion-3',
+	'screens'       => array( 'post', 'page' ),
+	'ajax'          => true,
+), array(
+	array(
+		'title'  => __( 'Section 1' ),
+		'name'   => 'section1',
+		'icon'   => 'dashicons  dashicons-admin-generic',
+		'fields' => array(
+			array(
+				'type'  => 'text',
+				'title' => __( 'Text Field' ),
+				'id'    => 'textfield',
+			),
+			array(
+				'type'  => 'textarea',
+				'title' => __( 'Textarea Field' ),
+				'id'    => 'textarea',
+			),
+			array(
+				'title'        => __( 'Style 3' ),
+				'type'         => 'switcher',
+				'id'           => 'switcher_3',
+				'switch_style' => 'style-12',
+			),
+		),
+	),
+	array(
+		'title'  => __( 'Section 2' ),
+		'name'   => 'section2',
+		'icon'   => 'dashicons  dashicons-admin-generic',
+		'fields' => array(
+			array(
+				'type'  => 'color_picker',
+				'title' => __( 'Color Picker' ),
+				'id'    => 'color_picker',
+			),
+		),
+	),
+	array(
+		'title'    => __( 'Page' ),
+		'name'     => 'page',
+		'icon'     => 'dashicons  dashicons-admin-generic',
+		'sections' => array(
+			array(
+				'title'  => __( 'Section 1' ),
+				'name'   => 'section1',
+				'icon'   => 'dashicons  dashicons-admin-generic',
+				'fields' => array(
+					array(
+						'type'  => 'text',
+						'title' => __( 'Text Field' ),
+						'id'    => 'page_section_textfield',
+					),
+					array(
+						'type'  => 'textarea',
+						'title' => __( 'Textarea Field' ),
+						'id'    => 'page_section_textarea',
+					),
+					array(
+						'title'        => __( 'Style 3' ),
+						'type'         => 'switcher',
+						'id'           => 'page_section_switcher_3',
+						'switch_style' => 'style-12',
+					),
+				),
+			),
+
+			array(
+				'title'  => __( 'Section 2' ),
+				'name'   => 'section2',
+				'icon'   => 'dashicons  dashicons-admin-generic',
+				'fields' => array(
+					array(
+						'type'  => 'color_picker',
+						'title' => __( 'Color Picker' ),
+						'id'    => 'page_section_color_picker',
+					),
+					array(
+						'type'  => 'icon_picker',
+						'title' => __( 'Icon Picker' ),
+						'id'    => 'page_section_icon_picker',
+					),
+				),
+			),
+		),
+	),
+) );
+
+/*
+wponion_metabox( array(
+	'option_name'   => '_wponion_metabox_custom_theme',
+	'metabox_title' => __( 'Metabox in custom color' ),
+	'metabox_id'    => 'custom-post-option-by-wponion-4',
+	'screens'       => array( 'post', 'page' ),
+	'theme_color'   => '#4393e1',
+	'ajax'          => true,
+), array(
+	array(
+		'title'  => __( 'Section 1' ),
+		'name'   => 'section1',
+		'icon'   => 'dashicons  dashicons-admin-generic',
+		'fields' => array(
+			array(
+				'type'  => 'text',
+				'title' => __( 'Text Field' ),
+				'id'    => 'textfield',
+			),
+			array(
+				'type'  => 'textarea',
+				'title' => __( 'Textarea Field' ),
+				'id'    => 'textarea',
+			),
+			array(
+				'title'        => __( 'Style 3' ),
+				'type'         => 'switcher',
+				'id'           => 'switcher_3',
+				'switch_style' => 'style-12',
+			),
+		),
+	),
+	array(
+		'title'  => __( 'Section 2' ),
+		'name'   => 'section2',
+		'icon'   => 'dashicons  dashicons-admin-generic',
+		'fields' => array(
+			array(
+				'type'  => 'color_picker',
+				'title' => __( 'Color Picker' ),
+				'id'    => 'color_picker',
+			),
+		),
+	),
+	array(
+		'title'    => __( 'Page' ),
+		'name'     => 'page',
+		'icon'     => 'dashicons  dashicons-admin-generic',
+		'sections' => array(
+			array(
+				'title'  => __( 'Section 1' ),
+				'name'   => 'section1',
+				'icon'   => 'dashicons  dashicons-admin-generic',
+				'fields' => array(
+					array(
+						'type'  => 'text',
+						'title' => __( 'Text Field' ),
+						'id'    => 'page_section_textfield',
+					),
+					array(
+						'type'  => 'textarea',
+						'title' => __( 'Textarea Field' ),
+						'id'    => 'page_section_textarea',
+					),
+					array(
+						'title'        => __( 'Style 3' ),
+						'type'         => 'switcher',
+						'id'           => 'page_section_switcher_3',
+						'switch_style' => 'style-12',
+					),
+				),
+			),
+
+			array(
+				'title'  => __( 'Section 2' ),
+				'name'   => 'section2',
+				'icon'   => 'dashicons  dashicons-admin-generic',
+				'fields' => array(
+					array(
+						'type'  => 'color_picker',
+						'title' => __( 'Color Picker' ),
+						'id'    => 'page_section_color_picker',
+					),
+					array(
+						'type'  => 'icon_picker',
+						'title' => __( 'Icon Picker' ),
+						'id'    => 'page_section_icon_picker',
+					),
+				),
+			),
+		),
+	),
+) );
+
+if ( wponion_is_debug() ) {
+	wponion_metabox( array(
+		'option_name'   => 'wponion_development_metabox_all_fields',
+		'metabox_id'    => 'metabox_all_fields',
+		'metabox_title' => __( 'WPOnion Metabox With All Options' ),
+		'screens'       => array( 'post', 'page' ),
+		'ajax'          => false,
+	), $wpof_page_fields_args );
+
+	foreach ( $wpof_page_fields_args as $data ) {
+		if ( isset( $data['sections'] ) ) {
+			foreach ( $data['sections'] as $sec ) {
+				if ( isset( $sec['fields'] ) ) {
+					wponion_metabox( array(
+						'option_name'   => 'wponion_single_field_' . $sec['name'] . '_side',
+						'metabox_id'    => 'wponion_single_field_' . $sec['name'] . '_side',
+						'metabox_title' => 'WPOnion Field : ' . $sec['title'] . ' Side',
+						'screens'       => array( 'posts' ),
+						'context'       => 'side',
+					), $sec['fields'] );
+
+					wponion_metabox( array(
+						'option_name'   => 'wponion_single_field_' . $sec['name'],
+						'metabox_id'    => 'wponion_single_field_' . $sec['name'],
+						'metabox_title' => 'WPOnion Field : ' . $sec['title'],
+						'screens'       => array( 'posts' ),
+					), $sec['fields'] );
+				}
+			}
+		} elseif ( isset( $data['fields'] ) ) {
+			wponion_metabox( array(
+				'option_name'   => 'wponion_single_field_' . $data['name'] . '_side',
+				'metabox_id'    => 'wponion_single_field_' . $data['name'] . '_side',
+				'metabox_title' => 'WPOnion Field : ' . $data['title'] . ' Side',
+				'screens'       => array( 'posts' ),
+				'context'       => 'side',
+			), $data['fields'] );
+			wponion_metabox( array(
+				'option_name'   => 'wponion_single_field_' . $data['name'],
+				'metabox_id'    => 'wponion_single_field_' . $data['name'],
+				'metabox_title' => 'WPOnion Field : ' . $data['title'],
+				'screens'       => array( 'posts' ),
+			), $data['fields'] );
+		}
+	}
+}*/

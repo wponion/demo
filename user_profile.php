@@ -19,4 +19,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $instance = wponion_user_profile( array(
 	'option_name' => '_wponion_user_profile',
-), $tax_fields );
+), array(
+	array(
+		'title' => 'Profile Field',
+		'type'  => 'text',
+		'id'    => 'profile',
+	),
+	array(
+		'title' => 'Profile Field 2',
+		'type'  => 'textarea',
+		'id'    => 'profile2',
+	),
+	array(
+		'id'      => 'image_select_checkbox',
+		'title'   => __( 'Image Select' ),
+		'desc'    => __( 'You can select multiple images' ),
+		'type'    => 'image_select',
+		'options' => array(
+			'image1' => 'https://s3.wponion.com/placeholder/75/1.jpg',
+			'image2' => 'https://s3.wponion.com/placeholder/75/2.jpg',
+			'image3' => 'https://s3.wponion.com/placeholder/75/3.jpg',
+			'image4' => 'https://s3.wponion.com/placeholder/75/4.jpg',
+			'image5' => 'https://s3.wponion.com/placeholder/75/5.jpg',
+		),
+	),
+) );
+
+if ( wponion_is_debug() ) {
+	wponion_user_profile( array( 'option_name' => '_wponion_user_profile_dev' ), wponion_demo_get_all_fields( 'all' ) );
+}
