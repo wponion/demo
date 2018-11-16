@@ -25,12 +25,12 @@ return array(
 		'type'        => 'text',
 		'placeholder' => __( 'Placeholder Text Here' ),
 	),
-	array(
+	/*array(
 		'id'      => 'typography',
 		'type'    => 'typography',
 		'title'   => __( 'Font Picker' ),
 		'content' => 'Some Text',
-	),
+	),*/
 	array(
 		'id'       => 'text_3',
 		'title'    => __( 'Disabled Input' ),

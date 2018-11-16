@@ -62,7 +62,6 @@ return array(
 		'title'       => __( 'Select' ),
 		'js_validate' => 'required',
 		'type'        => 'select',
-		'select2'     => true,
 		'options'     => array(
 			''        => __( 'Choose Any' ),
 			'option1' => __( 'Option 1' ),
@@ -94,6 +93,82 @@ return array(
 		'js_validate' => array(
 			'value' => 'required',
 		),
+	),
+
+	array(
+		'id'          => 'validate_fieldset',
+		'type'        => 'fieldset',
+		'js_validate' => 'required',
+		'title'       => __( 'Fieldset' ),
+		'fields'      => array(
+			array(
+				'id'          => 'text_1',
+				'title'       => __( 'Simple Text Field' ),
+				'type'        => 'text',
+				'js_validate' => array(
+					'minlength' => 4,
+				),
+			),
+			array(
+				'id'    => 'textarea',
+				'title' => __( 'Textarea' ),
+				'type'  => 'textarea',
+			),
+		),
+	),
+
+	array(
+		'id'          => 'validate_group',
+		'type'        => 'group',
+		'js_validate' => 'required',
+		'title'       => __( 'Group' ),
+		'fields'      => array(
+			array(
+				'id'          => 'text_1',
+				'title'       => __( 'Simple Text Field' ),
+				'type'        => 'text',
+				'js_validate' => array(
+					'minlength' => 4,
+				),
+			),
+			array(
+				'id'    => 'textarea',
+				'title' => __( 'Textarea' ),
+				'type'  => 'textarea',
+			),
+		),
+	),
+
+	array(
+		'id'          => 'validate_accordion',
+		'type'        => 'accordion',
+		'js_validate' => 'required',
+		'title'       => __( 'Accordion' ),
+		'fields'      => array(
+			array(
+				'id'          => 'text_1',
+				'title'       => __( 'Simple Text Field' ),
+				'type'        => 'text',
+				'js_validate' => array(
+					'minlength' => 4,
+				),
+			),
+			array(
+				'id'    => 'textarea',
+				'title' => __( 'Textarea' ),
+				'type'  => 'textarea',
+			),
+		),
+	),
+
+
+	array(
+		'id'          => 'validation_text_cloneable',
+		'title'       => __( 'Clone Text' ),
+		'clone'       => true,
+		'js_validate' => 'required',
+		'desc'        => __( 'This field cannot be empty' ),
+		'type'        => 'text',
 	),
 
 );
