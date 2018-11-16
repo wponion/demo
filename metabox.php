@@ -289,17 +289,18 @@ if ( wponion_is_debug() ) {
 		if ( isset( $data['sections'] ) ) {
 			foreach ( $data['sections'] as $sec ) {
 				if ( isset( $sec['fields'] ) ) {
+					$name = ( isset( $sec['name'] ) ) ? $sec['name'] : sanitize_title( $sec['title'] );
 					wponion_metabox( array(
-						'option_name'   => 'wponion_single_field_' . $sec['name'] . '_side',
-						'metabox_id'    => 'wponion_single_field_' . $sec['name'] . '_side',
+						'option_name'   => 'wponion_single_field_' . $name . '_side',
+						'metabox_id'    => 'wponion_single_field_' . $name . '_side',
 						'metabox_title' => 'WPOnion Field : ' . $sec['title'] . ' Side',
 						'screens'       => array( 'posts' ),
 						'context'       => 'side',
 					), $sec['fields'] );
 
 					wponion_metabox( array(
-						'option_name'   => 'wponion_single_field_' . $sec['name'],
-						'metabox_id'    => 'wponion_single_field_' . $sec['name'],
+						'option_name'   => 'wponion_single_field_' .$name,
+						'metabox_id'    => 'wponion_single_field_' . $name,
 						'metabox_title' => 'WPOnion Field : ' . $sec['title'],
 						'screens'       => array( 'posts' ),
 					), $sec['fields'] );

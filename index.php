@@ -3,7 +3,7 @@
  * Plugin Name: WPOnion Demo
  * Plugin URI: https://github.com/wponion/demo/
  * Description: Simple Demo Plugin For WPOnion
- * Version: 0.0.2
+ * Version: 161120180115
  * Author: WPOnion,VarunSridharan
  * Author URI: https://github.com/wponion/
  * Text Domain: wponion
