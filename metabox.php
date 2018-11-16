@@ -182,7 +182,7 @@ wponion_metabox( array(
 	),
 ) );
 
-/*
+
 wponion_metabox( array(
 	'option_name'   => '_wponion_metabox_custom_theme',
 	'metabox_title' => __( 'Metabox in custom color' ),
@@ -321,4 +321,4 @@ if ( wponion_is_debug() ) {
 			), $data['fields'] );
 		}
 	}
-}*/
+}

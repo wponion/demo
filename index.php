@@ -27,4 +27,6 @@ add_action( 'wponion_loaded', function () {
 	require_once __DIR__ . '/woocommerce.php';
 
 } );
-
+add_action( 'widgets_init', function () {
+	require_once __DIR__ . '/widgets.php';
+}, 10 );

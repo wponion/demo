@@ -58,6 +58,9 @@ $wpof['tab']           = wponion_field_files( 'tab.php' );
 $wpof['sorter']        = wponion_field_files( 'sorter.php' );
 $wpof['clone']         = wponion_field_files( 'clone.php' );
 $wpof['markdown']      = wponion_field_files( 'content_markdown.php' );
+$wpof['validation-js'] = wponion_field_files( 'validation-js.php' );
+$wpof['oembed']        = wponion_field_files( 'oembed.php' );
+$wpof['wplisttable']   = wponion_field_files( 'wplisttable.php' );
 
 if ( wponion_is_debug() ) {
 	$wpof['full_fieldset']  = array(
@@ -277,6 +280,18 @@ $wpof_page_fields_args = array(
 				'title'  => __( 'WP Link' ),
 				'fields' => $wpof['wp_link'],
 			),
+			array(
+				'name'   => 'oembed',
+				'icon'   => 'dashicons dashicons-welcome-view-site',
+				'title'  => __( 'OEmbed' ),
+				'fields' => $wpof['oembed'],
+			),
+			array(
+				'name'   => 'wp-list-table',
+				'icon'   => 'dashicons dashicons-welcome-view-site',
+				'title'  => __( 'WP List Table' ),
+				'fields' => $wpof['wplisttable'],
+			),
 
 		),
 	),
@@ -325,6 +340,17 @@ $wpof_page_fields_args = array(
 				'name'     => 'section3',
 				'title'    => __( 'Section 3' ),
 				'callback' => 'wponion_render_callback_menu',
+			),
+		),
+	),
+	array(
+		'name'     => 'validation',
+		'title'    => __( 'Input Validations' ),
+		'sections' => array(
+			array(
+				'name'   => 'validation-js',
+				'title'  => __( 'JS Validation' ),
+				'fields' => $wpof['validation-js'],
 			),
 		),
 	),
