@@ -169,7 +169,6 @@ $wpof_page_fields_args = array(
 				'fields' => $wpof['key_value'],
 				'icon'   => 'dashicons dashicons-admin-links',
 			),
-
 		),
 	),
 	array(
