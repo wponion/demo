@@ -50,7 +50,6 @@ wponion_metabox( array(
 	),
 ) );
 
-
 wponion_metabox( array(
 	'option_name'   => '_wponion_metabox_posts_side',
 	'metabox_title' => __( 'Custom Post Option' ),
@@ -90,6 +89,7 @@ wponion_metabox( array(
 		),
 	),
 ) );
+
 wponion_metabox( array(
 	'option_name'   => '_wponion_metabox_main_metabox',
 	'metabox_title' => __( 'Custom Post/Page Option' ),
@@ -181,7 +181,6 @@ wponion_metabox( array(
 		),
 	),
 ) );
-
 
 wponion_metabox( array(
 	'option_name'   => '_wponion_metabox_custom_theme',
@@ -299,7 +298,7 @@ if ( wponion_is_debug() ) {
 					), $sec['fields'] );
 
 					wponion_metabox( array(
-						'option_name'   => 'wponion_single_field_' .$name,
+						'option_name'   => 'wponion_single_field_' . $name,
 						'metabox_id'    => 'wponion_single_field_' . $name,
 						'metabox_title' => 'WPOnion Field : ' . $sec['title'],
 						'screens'       => array( 'posts' ),
