@@ -27,7 +27,7 @@ if ( ! function_exists( 'wponion_demo_get_all_fields' ) ) {
 	 */
 	function wponion_demo_get_all_fields( $without = array() ) {
 		global $wpof;
-		$exclude = array( 'full_tab', 'full_fieldset', 'full_accordion', 'full_group' );
+		$exclude = array( 'full_tab', 'full_fieldset', 'full_accordion', 'full_group', 'wplisttable' );
 		$without = is_array( $without ) ? $without : array( $without );
 		if ( is_string( $without ) && 'all' === $without ) {
 			$without = $exclude;
