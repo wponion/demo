@@ -28,4 +28,16 @@ return array(
 			'class' => 'button button-secondary',
 		),
 	),
+	array(
+		'id'       => 'wp_link_3',
+		'title'    => __( 'WP Link Selector' ),
+		'desc'     => __( 'This Field Has Only URL Selector And Shows Actual Input' ),
+		'type'     => 'wp_link',
+		'settings' => array(
+			'title'      => false,
+			'target'     => false,
+			'show_input' => true,
+			'example'    => false,
+		),
+	),
 );
