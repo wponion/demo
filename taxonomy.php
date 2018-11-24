@@ -18,39 +18,59 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
-
-$instance = wponion_taxonomy( array(
-	'option_name' => '_wponion_taxonomy',
+wponion_taxonomy( array(
+	'option_name' => '_wponion_taxonomy_1',
+	'metabox'     => __( 'WPOnion Taxonomy Metabox' ),
+	'theme'       => 'fresh',
 	'taxonomy'    => array( 'category', 'post_tag' ),
 ), array(
 	array(
-		'title' => 'Taxonomy Field',
-		'type'  => 'text',
-		'id'    => 'taxonomy',
+		'name'   => 'page1',
+		'title'  => __( 'Page Config' ),
+		'fields' => array(
+			array(
+				'title' => __( 'Show Heading' ),
+				'id'    => 'show_heading',
+				'type'  => 'switcher',
+			),
+			array(
+				'id'         => 'heading_text',
+				'title'      => __( 'Heading Text' ),
+				'type'       => 'text',
+				'dependency' => array( 'show_heading', '==', 'true' ),
+			),
+		),
 	),
 	array(
-		'title' => 'Taxonomy Field 2',
-		'type'  => 'textarea',
-		'id'    => 'taxonomy2',
-	),
-	array(
-		'id'      => 'image_select_checkbox',
-		'title'   => __( 'Image Select' ),
-		'desc'    => __( 'You can select multiple images' ),
-		'type'    => 'image_select',
-		'options' => array(
-			'image1' => 'https://s3.wponion.com/placeholder/75/1.jpg',
-			'image2' => 'https://s3.wponion.com/placeholder/75/2.jpg',
-			'image3' => 'https://s3.wponion.com/placeholder/75/3.jpg',
-			'image4' => 'https://s3.wponion.com/placeholder/75/4.jpg',
-			'image5' => 'https://s3.wponion.com/placeholder/75/5.jpg',
+		'name'   => 'page2',
+		'title'  => __( 'Layout Config' ),
+		'fields' => array(
+			array(
+				'id'      => 'image_select_checkbox',
+				'title'   => __( 'Image Select' ),
+				'desc'    => __( 'You can select multiple images' ),
+				'type'    => 'image_select',
+				'options' => array(
+					'image1' => 'https://s3.wponion.com/placeholder/75/1.jpg',
+					'image2' => 'https://s3.wponion.com/placeholder/75/2.jpg',
+					'image3' => 'https://s3.wponion.com/placeholder/75/3.jpg',
+					'image4' => 'https://s3.wponion.com/placeholder/75/4.jpg',
+					'image5' => 'https://s3.wponion.com/placeholder/75/5.jpg',
+				),
+			),
 		),
 	),
 ) );
 
-if ( wponion_is_debug() ) {
-	wponion_taxonomy( array(
-		'option_name' => '_wponion_taxonomy_dev',
-		'taxonomy'    => array( 'category', 'post_tag' ),
-	), wponion_demo_get_all_fields( 'all' ) );
-}
+wponion_taxonomy( array(
+	'option_name' => '_wponion_taxonomy_2',
+	'metabox'     => false,
+	'theme'       => 'wp',
+	'taxonomy'    => array( 'category', 'post_tag' ),
+), array(
+	array(
+		'id'    => 'featured_image',
+		'type'  => 'image',
+		'title' => __( 'Term Image' ),
+	),
+) );
