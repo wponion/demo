@@ -11,7 +11,6 @@
  */
 define( 'WPONION_FRONTEND', true );
 
-
 add_action( 'wponion_loaded', function () {
 
 	require_once __DIR__ . '/functions.php';
@@ -28,6 +27,8 @@ add_action( 'wponion_loaded', function () {
 	require_once __DIR__ . '/help_tabs.php';
 	require_once __DIR__ . '/woocommerce.php';
 	require_once __DIR__ . '/admin-bar.php';
+	require_once __DIR__ . '/nav_menu.php';
+
 } );
 add_action( 'widgets_init', function () {
 	require_once __DIR__ . '/widgets.php';
