@@ -26,6 +26,7 @@ wponion_metabox( array(
 	'screens'       => array( 'post' ),
 	'context'       => 'normal',
 	'ajax'          => true,
+	'theme'         => 'fresh',
 ), array(
 	array(
 		'name'   => 'page1',
@@ -57,6 +58,7 @@ wponion_metabox( array(
 	'screens'       => array( 'post', 'page' ),
 	'context'       => 'side',
 	'ajax'          => true,
+	'theme'         => 'fresh',
 ), array(
 	array(
 		'title'  => __( 'Some Title' ),
@@ -96,6 +98,7 @@ wponion_metabox( array(
 	'metabox_id'    => 'custom-post-option-by-wponion-3',
 	'screens'       => array( 'post', 'page' ),
 	'ajax'          => true,
+	'theme'         => 'fresh',
 ), array(
 	array(
 		'title'  => __( 'Section 1' ),
@@ -189,6 +192,7 @@ wponion_metabox( array(
 	'screens'       => array( 'post', 'page' ),
 	'theme_color'   => '#4393e1',
 	'ajax'          => true,
+	'theme'         => 'modern',
 ), array(
 	array(
 		'title'  => __( 'Section 1' ),
@@ -274,51 +278,3 @@ wponion_metabox( array(
 		),
 	),
 ) );
-
-if ( wponion_is_debug() ) {
-	wponion_metabox( array(
-		'option_name'   => 'wponion_development_metabox_all_fields',
-		'metabox_id'    => 'metabox_all_fields',
-		'metabox_title' => __( 'WPOnion Metabox With All Options' ),
-		'screens'       => array( 'post', 'page' ),
-		'ajax'          => false,
-	), $wpof_page_fields_args );
-
-	foreach ( $wpof_page_fields_args as $data ) {
-		if ( isset( $data['sections'] ) ) {
-			foreach ( $data['sections'] as $sec ) {
-				if ( isset( $sec['fields'] ) ) {
-					$name = ( isset( $sec['name'] ) ) ? $sec['name'] : sanitize_title( $sec['title'] );
-					wponion_metabox( array(
-						'option_name'   => 'wponion_single_field_' . $name . '_side',
-						'metabox_id'    => 'wponion_single_field_' . $name . '_side',
-						'metabox_title' => 'WPOnion Field : ' . $sec['title'] . ' Side',
-						'screens'       => array( 'posts' ),
-						'context'       => 'side',
-					), $sec['fields'] );
-
-					wponion_metabox( array(
-						'option_name'   => 'wponion_single_field_' . $name,
-						'metabox_id'    => 'wponion_single_field_' . $name,
-						'metabox_title' => 'WPOnion Field : ' . $sec['title'],
-						'screens'       => array( 'posts' ),
-					), $sec['fields'] );
-				}
-			}
-		} elseif ( isset( $data['fields'] ) ) {
-			wponion_metabox( array(
-				'option_name'   => 'wponion_single_field_' . $data['name'] . '_side',
-				'metabox_id'    => 'wponion_single_field_' . $data['name'] . '_side',
-				'metabox_title' => 'WPOnion Field : ' . $data['title'] . ' Side',
-				'screens'       => array( 'posts' ),
-				'context'       => 'side',
-			), $data['fields'] );
-			wponion_metabox( array(
-				'option_name'   => 'wponion_single_field_' . $data['name'],
-				'metabox_id'    => 'wponion_single_field_' . $data['name'],
-				'metabox_title' => 'WPOnion Field : ' . $data['title'],
-				'screens'       => array( 'posts' ),
-			), $data['fields'] );
-		}
-	}
-}
