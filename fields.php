@@ -61,6 +61,7 @@ $wpof['markdown']      = wponion_field_files( 'content_markdown.php' );
 $wpof['validation-js'] = wponion_field_files( 'validation-js.php' );
 $wpof['oembed']        = wponion_field_files( 'oembed.php' );
 $wpof['wplisttable']   = wponion_field_files( 'wplisttable.php' );
+$wpof['dependancy']    = wponion_field_files( 'dependancy.php' );
 
 if ( wponion_is_debug() ) {
 	$wpof['full_fieldset']  = array(
@@ -204,12 +205,12 @@ $wpof_page_fields_args = array(
 				'fields' => $wpof['group'],
 				'icon'   => 'dashicons-admin-settings dashicons',
 			),
-			array(
+			/*array(
 				'name'   => 'tab',
 				'title'  => __( 'Tab' ),
 				'fields' => $wpof['tab'],
 				'icon'   => 'dashicons-admin-settings dashicons',
-			),
+			),*/
 		),
 	),
 	array(
@@ -285,12 +286,12 @@ $wpof_page_fields_args = array(
 				'title'  => __( 'OEmbed' ),
 				'fields' => $wpof['oembed'],
 			),
-			array(
+			/*array(
 				'name'   => 'wp-list-table',
 				'icon'   => 'dashicons dashicons-welcome-view-site',
 				'title'  => __( 'WP List Table' ),
 				'fields' => $wpof['wplisttable'],
-			),
+			),*/
 
 		),
 	),
@@ -352,6 +353,11 @@ $wpof_page_fields_args = array(
 				'fields' => $wpof['validation-js'],
 			),
 		),
+	),
+	array(
+		'name'   => 'dependancy',
+		'title'  => __( 'Input dependancy' ),
+		'fields' => $wpof['dependancy'],
 	),
 	array(
 		'title' => __( 'Support' ),
