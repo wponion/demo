@@ -19,10 +19,11 @@ return array(
 		'content' => __( 'WPOnion Supports All The Fields Inside Group' ),
 	),
 	array(
-		'id'     => 'group',
-		'type'   => 'group',
-		'title'  => __( 'Group' ),
-		'fields' => array(
+		'id'      => 'group',
+		'type'    => 'group',
+		'heading' => 'Product : textarea ,  text_1 | #[count] ',
+		'title'   => __( 'Group' ),
+		'fields'  => array(
 			array(
 				'id'    => 'text_1',
 				'title' => __( 'Simple Text Field' ),
