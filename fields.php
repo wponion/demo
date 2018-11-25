@@ -15,19 +15,6 @@
 global $wpof, $wpof_page_fields_args;
 $wpof                  = array();
 $wpof_page_fields_args = array();
-/*
-* defaults = array(
-	'placeholder'     => false,
-	'dependency'      => array(), # dependency for showing and hiding fields
-	'sanitize'        => null,    #sanitize of field. can be enabled or disabled
-	'validate'        => null,    #validate of field. can be enabled or disabled
-	'only_field'      => false,
-	'name'            => false,
-	'clone'           => false,
-	'clone_settings'  => array(),
-);
- */
-
 
 $wpof['basic_feature'] = wponion_field_files( 'basic_features.php' );
 $wpof['text']          = wponion_field_files( 'text.php' );
@@ -62,6 +49,7 @@ $wpof['validation-js'] = wponion_field_files( 'validation-js.php' );
 $wpof['oembed']        = wponion_field_files( 'oembed.php' );
 $wpof['wplisttable']   = wponion_field_files( 'wplisttable.php' );
 $wpof['dependancy']    = wponion_field_files( 'dependancy.php' );
+$wpof['query_args']    = wponion_field_files( 'query_args.php' );
 
 if ( wponion_is_debug() ) {
 	$wpof['full_fieldset']  = array(
@@ -318,6 +306,28 @@ $wpof_page_fields_args = array(
 		'icon'     => 'dashicons dashicons-building',
 	),
 	array(
+		'name'     => 'others',
+		'title'    => __( 'Other Features' ),
+		'sections' => array(
+			array(
+				'name'   => 'validation-js',
+				'title'  => __( 'JS Validation' ),
+				'fields' => $wpof['validation-js'],
+			),
+
+			array(
+				'name'   => 'dependancy',
+				'title'  => __( 'Input dependancy' ),
+				'fields' => $wpof['dependancy'],
+			),
+			array(
+				'name'   => 'query_args',
+				'title'  => __( 'Query Args' ),
+				'fields' => $wpof['query_args'],
+			),
+		),
+	),
+	array(
 		'name'     => 'custom-1',
 		'title'    => __( 'Custom Page' ),
 		'callback' => 'wponion_render_callback_menu',
@@ -342,22 +352,6 @@ $wpof_page_fields_args = array(
 				'callback' => 'wponion_render_callback_menu',
 			),
 		),
-	),
-	array(
-		'name'     => 'validation',
-		'title'    => __( 'Input Validations' ),
-		'sections' => array(
-			array(
-				'name'   => 'validation-js',
-				'title'  => __( 'JS Validation' ),
-				'fields' => $wpof['validation-js'],
-			),
-		),
-	),
-	array(
-		'name'   => 'dependancy',
-		'title'  => __( 'Input dependancy' ),
-		'fields' => $wpof['dependancy'],
 	),
 	array(
 		'title' => __( 'Support' ),
