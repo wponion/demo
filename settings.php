@@ -49,30 +49,41 @@ if ( wponion_is_debug() ) {
 	);
 }
 
+wponion_network_settings( array(
+	'framework_title' => __( 'Fresh Theme Network' ),
+	'option_name'     => '_wponion_network',
+	'theme'           => 'fresh',
+	'menu'            => array(
+		'menu_title' => __( 'Network WPOnion' ),
+		'menu_slug'  => 'network-wponion',
+		'submenu'    => false,
+	),
+), array(
+	array(
+		'name'     => 'validation',
+		'title'    => __( 'Input Validations' ),
+		'sections' => array(
+			array(
+				'name'   => 'validation-js',
+				'title'  => __( 'JS Validation' ),
+				'fields' => $wpof['basic_feature'],
+			),
+		),
+	),
+) );
+
 $instance = wponion_settings( array(
-	'framework_title' => __( 'WPOnion Settings Demo' ),
+	'framework_title' => __( 'Fresh Theme Demo' ),
 	'framework_desc'  => __( 'This is a demo of WPOnion Settings module with all field types & it stores values in DB as <code>_wponion_settings</code>' ),
 	'option_name'     => '_wponion_settings',
 	'plugin_id'       => 'wponion_demo_plugin',
-	'theme'           => 'modern',
+	'theme'           => 'fresh',
 	'is_single_page'  => false,
 	'menu'            => array(
 		'menu_title' => __( 'WPOnion' ),
-		'menu_slug'  => 'wponion',
-		'submenu'    => array(
-			'menu_title' => __( 'WOW' ),
-			'menu_slug'  => 'wopw',
-			'render'     => function () {
-				echo 'HI';
-			},
-		),
+		'menu_slug'  => 'wponion-fresh-theme',
+		'submenu'    => false,
 	),
 	'extra_css'       => array(), // An Array of CSS To be loaded in settings page.
 	'extra_js'        => array(), // An Array of JS To be loaded in settings page.
-	'buttons'         => array(
-		'save'    => __( 'Save Settings' ),
-		'restore' => false,
-		'reset'   => false,
-	),
 ), $settings_fields );
-
