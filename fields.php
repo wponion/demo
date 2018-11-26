@@ -328,8 +328,22 @@ $wpof_page_fields_args = array(
 		),
 	),
 	array(
+		'name'           => 'sysinfo',
+		'title'          => __( 'Sysinfo' ),
+		'callback'       => 'wponion_sysinfo',
+		'reports'        => array(/*'Server Information' => false,*/ ),
+		'custom_reports' => function () {
+			return array(
+				__( 'Custom Acc Title' ) => array(
+					__( 'Loaded Path' ) => WPONION_PATH,
+				),
+			);
+		},
+	),
+	array(
 		'name'     => 'custom-1',
 		'title'    => __( 'Custom Page' ),
+		'show_wp'  => true,
 		'callback' => 'wponion_render_callback_menu',
 	),
 	array(

@@ -36,4 +36,9 @@ return array(
 		'content' => '<h1 class="display-4">Jumbotron</h1><p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>',
 		'type'    => 'jambo_content',
 	),
+	array(
+		'url'    => 'https://www.youtube.com/embed/A9JV0EvCkMI',
+		'type'   => 'iframe',
+		'height' => '350px',
+	),
 );

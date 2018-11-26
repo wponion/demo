@@ -13,6 +13,9 @@
  * @license GPLV3 Or Greater (https://www.gnu.org/licenses/gpl-3.0.txt)
  */
 
+/**
+ * Sample Admin Page in Dashboard Menu.
+ */
 wponion_admin_page( array(
 	'menu_title' => __( 'Custom Submenu' ),
 	'page_title' => __( 'Custom Page By WPOnion' ),
@@ -42,10 +45,55 @@ wponion_admin_page( array(
 
 
 wponion_admin_page( array(
-	'menu_title' => __( 'Single Page' ),
-	'page_title' => __( 'Custom Page By WPOnion' ),
+	'menu_title' => __( 'WP List Table' ),
+	'page_title' => __( 'WP List Table Demo' ),
 	'menu_slug'  => 'custom-wponion-page-2',
-	'render'     => 'wponion_render_callback_menu',
+	'render'     => function () {
+		echo wponion_add_element( array(
+			'type'     => 'wp_list_table',
+			'settings' => array(
+				'total_items'  => function () {
+					return 25;
+				},
+				'sortable'     => array(
+					'title' => array( 'orderby', true ),
+				),
+				'bulk_actions' => array(
+					'delete'  => __( 'Delete' ),
+					'include' => __( 'Include' ),
+				),
+				'filter_menus' => array(
+					'showpost'  => 'Show Posts',
+					'showpost2' => 'Show Posts2',
+				),
+				'columns'      => array(
+					'title' => __( 'Title' ),
+					'col_1' => __( 'Columns 1' ),
+					'col_2' => __( 'Columns 2' ),
+				),
+			),
+			'data'     => function ( $page, $instance ) {
+				$return = array();
+				$i      = 1;
+				$i      = ( 2 === $page ) ? 10 : $i;
+				$i      = ( 3 === $page ) ? 20 : $i;
+
+				$limit = 10;
+				$limit = ( 2 === $page ) ? 20 : $limit;
+				$limit = ( 3 === $page ) ? 25 : $limit;
+
+				while ( $i <= $limit ) {
+					$return[] = array(
+						'title' => "Title : " . $i,
+						'col_1' => "Col 1 : " . $i,
+						'col_2' => "Col 2 : " . $i,
+					);
+					$i++;
+				}
+				return $return;
+			}, // is a custom callback function
+		), false, false );
+	},
 ) );
 
 
