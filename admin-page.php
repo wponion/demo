@@ -24,6 +24,9 @@ wponion_admin_page( array(
 	'submenu'    => 'dashboard',
 ) );
 
+/**
+ * Network Related Pages.
+ */
 wponion_admin_page( array(
 	'menu_title' => __( 'Shows In Network Only' ),
 	'page_title' => __( 'Custom Page By WPOnion' ),
@@ -32,8 +35,6 @@ wponion_admin_page( array(
 	'submenu'    => 'dashboard',
 	'network'    => 'only',
 ) );
-
-
 wponion_admin_page( array(
 	'menu_title' => __( 'Shows In Network & Site' ),
 	'page_title' => __( 'Custom Page By WPOnion' ),
@@ -44,6 +45,9 @@ wponion_admin_page( array(
 ) );
 
 
+/**
+ * Common Features.
+ */
 wponion_admin_page( array(
 	'menu_title' => __( 'WP List Table' ),
 	'page_title' => __( 'WP List Table Demo' ),
@@ -95,8 +99,6 @@ wponion_admin_page( array(
 		), false, false );
 	},
 ) );
-
-
 wponion_admin_page( array(
 	'menu_title' => __( 'With Submenus' ),
 	'page_title' => __( 'Custom Page By WPOnion + Submenus' ),
@@ -110,8 +112,22 @@ wponion_admin_page( array(
 		),
 	),
 ) );
+wponion_admin_page( array(
+	'menu_title' => 'AjaxPlugin',
+	'page_title' => 'AjaxPlugin',
+	'menu_slug'  => 'ajaxer',
+	'render'     => function () {
+		echo '<br/>';
+		echo '<br/>';
+		echo '<button type="button" data-ajax-action="wponion-ajax&wponion-ajax=ajax-testing" data-processing-text="Ajaxing..."  data-complete-text="Completed..." class="button button-primary wponion-inline-ajax">Ajax Button</button>';
+	},
+	'assets'     => 'wponion_load_core_assets',
+) );
 
 
+/**
+ * Native WordPress Tab Options.
+ */
 wponion_admin_page( array(
 	'menu_title' => __( 'With Tabs' ),
 	'page_title' => __( 'Custom Page By WPOnion' ),
@@ -136,7 +152,6 @@ wponion_admin_page( array(
 		),
 	),
 ) );
-
 wponion_admin_page( array(
 	'menu_title' => __( 'With Submenus & Tabs' ),
 	'page_title' => __( 'Custom Page By WPOnion + Submenus' ),

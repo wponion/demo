@@ -28,6 +28,7 @@ add_action( 'wponion_loaded', function () {
 	require_once __DIR__ . '/woocommerce.php';
 	require_once __DIR__ . '/admin-bar.php';
 	require_once __DIR__ . '/nav_menu.php';
+	require_once __DIR__ . '/admin-notice.php';
 
 } );
 add_action( 'widgets_init', function () {
