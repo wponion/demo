@@ -119,7 +119,7 @@ wponion_admin_page( array(
 	'render'     => function () {
 		echo '<br/>';
 		echo '<br/>';
-		echo '<button type="button" data-ajax-action="wponion-ajax&wponion-ajax=ajax-testing" data-processing-text="Ajaxing..."  data-complete-text="Completed..." class="button button-primary wponion-inline-ajax">Ajax Button</button>';
+		echo wponion_inline_ajax( 'wponion-ajax', '<button type="button" class="button button-primary">Ajax Me.</button>' );
 	},
 	'assets'     => 'wponion_load_core_assets',
 ) );
