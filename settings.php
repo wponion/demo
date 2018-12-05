@@ -73,15 +73,16 @@ wponion_network_settings( array(
 ) );
 
 $instance = wponion_settings( array(
-	'framework_title' => __( 'Fresh Theme Demo' ),
+	'framework_title' => __( 'Your-Plugin Settings' ),
 	'framework_desc'  => __( 'This is a demo of WPOnion Settings module with all field types & it stores values in DB as <code>_wponion_settings</code>' ),
 	'option_name'     => '_wponion_settings',
 	'plugin_id'       => 'wponion_demo_plugin',
-	'theme'           => 'modern',
+	'theme'           => 'fresh',
 	'is_single_page'  => false,
 	'menu'            => array(
 		'menu_title' => __( 'WPOnion' ),
 		'menu_slug'  => 'wponion-fresh-theme',
+		'page_title' => __( 'Fresh Theme Demo' ),
 		'submenu'    => false,
 	),
 	'extra_css'       => array(), // An Array of CSS To be loaded in settings page.
