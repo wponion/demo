@@ -37,6 +37,23 @@ return array(
 		'type'     => 'text',
 		'disabled' => true,
 	),
+	array(
+		'id'      => 'text_3_1',
+		'title'   => __( 'Data List' ),
+		'type'    => 'text',
+		'options' => array(
+			'Group 1' => array(
+				'option1' => 'Option 1',
+				'option3' => 'Option 3',
+				'option2' => 'Option 2',
+			),
+			'Group 2' => array(
+				'option1' => 'Option 1',
+				'option3' => 'Option 3',
+				'option2' => 'Option 2',
+			),
+		),
+	),
 
 	/**
 	 * HTML 5 Inputs.
