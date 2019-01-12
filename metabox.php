@@ -72,9 +72,9 @@ wponion_metabox( array(
 				'type'    => 'image_select',
 				'id'      => 'image_select',
 				'options' => array(
-					'image1' => 'http://s3.wponion.com/placeholder/75/1.jpg',
-					'image2' => 'http://s3.wponion.com/placeholder/75/2.jpg',
-					'image3' => 'http://s3.wponion.com/placeholder/75/3.jpg',
+					'image1' => 'https://s3.wponion.com/placeholder/75/1.jpg',
+					'image2' => 'https://s3.wponion.com/placeholder/75/2.jpg',
+					'image3' => 'https://s3.wponion.com/placeholder/75/3.jpg',
 				),
 			),
 			array(
