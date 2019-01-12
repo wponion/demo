@@ -16,7 +16,7 @@
 return array(
 	array(
 		/* translators: Added LinkBack.*/
-		'content' => sprintf( __( 'ALL UI Fields Related Fields Code Can Be Found %1$s@wponion/demo%2$s' ), '<a href="http://github.com/wponion/demo">', '</a>' ),
+		'content' => sprintf( __( 'ALL UI Fields Related Fields Code Can Be Found %1$s@wponion/demo%2$s' ), '<a href="https://github.com/wponion/demo">', '</a>' ),
 		'type'    => 'content',
 	),
 

@@ -129,8 +129,8 @@ return array(
 		'text_type' => 'datetime',
 	),
 	array(
-		'id'        => 'text_html5_datetime - local',
-		'title'     => __( 'HTML5 datetime - local' ),
+		'id'        => 'text_html5_datetime-local',
+		'title'     => __( 'HTML5 datetime-local' ),
 		'type'      => 'text',
 		'text_type' => 'datetime-local',
 	),

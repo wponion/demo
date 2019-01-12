@@ -198,7 +198,7 @@ return array(
 		'title' => __( 'ToolTip Light Theme' ),
 		'type'  => 'text',
 		'help'  => array(
-			'content' => __( 'Simple Tooltip Content' ),
+			'content' => __( 'Simple Tooltip Content In Light' ),
 			'theme'   => 'light',
 		),
 	),
