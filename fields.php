@@ -370,6 +370,6 @@ $wpof_page_fields_args = array(
 	array(
 		'title' => __( 'Support' ),
 		'icon'  => 'dashicons-info dashicons',
-		'href'  => 'http://github.com/wponion/',
+		'href'  => 'https://github.com/wponion/',
 	),
 );
