@@ -42,12 +42,46 @@ if ( ! function_exists( 'wponion_demo_get_all_fields' ) ) {
 	}
 }
 
-
 if ( ! function_exists( 'wponion_render_callback_menu' ) ) {
 	/**
 	 * Renders A Simple Callback.
 	 */
 	function wponion_render_callback_menu() {
 		echo '<h2>' . __( 'Content From A Callback Function' ) . '</h2>';
+	}
+}
+
+if ( ! function_exists( 'wponion_vc_map' ) ) {
+	/**
+	 * @param $args
+	 */
+	function wponion_vc_map( $args ) {
+		vc_map( wp_parse_args( $args, array(
+			'category' => __( 'WPOnion Demo', 'wponion-demo' ),
+			'icon'     => plugin_dir_url( __FILE__ ) . 'icon-256x256.jpg',
+		) ) );
+	}
+}
+
+if ( ! function_exists( 'wponion_handle_vc_shortcode' ) ) {
+	/**
+	 * Visual Composer Shortcode Display Handler.
+	 *
+	 * @param $args
+	 * @param $content
+	 * @param $tag
+	 *
+	 * @return string
+	 */
+	function wponion_handle_vc_shortcode( $args, $content, $tag ) {
+		$html   = '<h4 style="margin-bottom: 0;line-height: 0;">' . $tag . '</h4>';
+		$args_o = var_export( $args, true );
+		$code   = <<<PHPCODE
+<?php
+$args_o
+?>
+PHPCODE;
+		$html   = $html . highlight_string( $code, true ) . '';
+		return '<pre>' . str_replace( array( '<code>', '</code>' ), '', $html ) . '</pre>';
 	}
 }
