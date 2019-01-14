@@ -50,6 +50,7 @@ $wpof['oembed']        = wponion_field_files( 'oembed.php' );
 $wpof['wplisttable']   = wponion_field_files( 'wplisttable.php' );
 $wpof['dependancy']    = wponion_field_files( 'dependancy.php' );
 $wpof['query_args']    = wponion_field_files( 'query_args.php' );
+$wpof['change_log']    = wponion_field_files( 'change_log.php' );
 
 if ( wponion_is_debug() ) {
 	$wpof['full_fieldset']  = array(
@@ -339,6 +340,11 @@ $wpof_page_fields_args = array(
 				),
 			);
 		},
+	),
+	array(
+		'name'   => 'changelog',
+		'title'  => __( 'Change Log' ),
+		'fields' => $wpof['change_log'],
 	),
 	array(
 		'name'     => 'custom-1',
