@@ -55,6 +55,7 @@ $wpof['button_set']    = wponion_field_files( 'button_set.php' );
 $wpof['color_group']   = wponion_field_files( 'color_group.php' );
 $wpof['link_color']    = wponion_field_files( 'link_color.php' );
 $wpof['input_group']   = wponion_field_files( 'input_group.php' );
+$wpof['spacing']       = wponion_field_files( 'spacing.php' );
 
 if ( wponion_is_debug() ) {
 	$wpof['full_fieldset']  = array(
@@ -191,6 +192,11 @@ $wpof_page_fields_args = array(
 				'name'   => 'input_group',
 				'title'  => __( 'Input Group' ),
 				'fields' => $wpof['input_group'],
+			),
+			array(
+				'name'   => 'spacing',
+				'title'  => __( 'Spacing' ),
+				'fields' => $wpof['spacing'],
 			),
 			array(
 				'name'   => 'fieldset',
