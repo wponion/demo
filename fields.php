@@ -51,6 +51,8 @@ $wpof['wplisttable']   = wponion_field_files( 'wplisttable.php' );
 $wpof['dependancy']    = wponion_field_files( 'dependancy.php' );
 $wpof['query_args']    = wponion_field_files( 'query_args.php' );
 $wpof['change_log']    = wponion_field_files( 'change_log.php' );
+$wpof['button_set']    = wponion_field_files( 'button_set.php' );
+$wpof['color_group']   = wponion_field_files( 'color_group.php' );
 
 if ( wponion_is_debug() ) {
 	$wpof['full_fieldset']  = array(
@@ -128,6 +130,13 @@ $wpof_page_fields_args = array(
 				'title'  => __( 'Switcher' ),
 				'icon'   => 'dashicons dashicons-yes',
 				'fields' => $wpof['switcher'],
+			),
+
+			array(
+				'name'   => 'button_set',
+				'title'  => __( 'Button Set' ),
+				'icon'   => 'dashicons dashicons-editor-kitchensink',
+				'fields' => $wpof['button_set'],
 			),
 			array(
 				'name'   => 'select',
@@ -219,6 +228,12 @@ $wpof_page_fields_args = array(
 				'title'  => __( 'Color Picker' ),
 				'icon'   => 'dashicons dashicons-admin-appearance',
 				'fields' => $wpof['color_picker'],
+			),
+			array(
+				'name'   => 'color_group',
+				'title'  => __( 'Color Group' ),
+				'icon'   => 'dashicons dashicons-admin-appearance',
+				'fields' => $wpof['color_group'],
 			),
 			array(
 				'name'   => 'font_picker',
