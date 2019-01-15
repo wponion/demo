@@ -53,6 +53,7 @@ $wpof['query_args']    = wponion_field_files( 'query_args.php' );
 $wpof['change_log']    = wponion_field_files( 'change_log.php' );
 $wpof['button_set']    = wponion_field_files( 'button_set.php' );
 $wpof['color_group']   = wponion_field_files( 'color_group.php' );
+$wpof['link_color']    = wponion_field_files( 'link_color.php' );
 
 if ( wponion_is_debug() ) {
 	$wpof['full_fieldset']  = array(
@@ -234,6 +235,12 @@ $wpof_page_fields_args = array(
 				'title'  => __( 'Color Group' ),
 				'icon'   => 'dashicons dashicons-admin-appearance',
 				'fields' => $wpof['color_group'],
+			),
+			array(
+				'name'   => 'link_color',
+				'title'  => __( 'Link Color' ),
+				'icon'   => 'dashicons dashicons-admin-appearance',
+				'fields' => $wpof['link_color'],
 			),
 			array(
 				'name'   => 'font_picker',
