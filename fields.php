@@ -54,6 +54,7 @@ $wpof['change_log']    = wponion_field_files( 'change_log.php' );
 $wpof['button_set']    = wponion_field_files( 'button_set.php' );
 $wpof['color_group']   = wponion_field_files( 'color_group.php' );
 $wpof['link_color']    = wponion_field_files( 'link_color.php' );
+$wpof['input_group']   = wponion_field_files( 'input_group.php' );
 
 if ( wponion_is_debug() ) {
 	$wpof['full_fieldset']  = array(
@@ -185,6 +186,11 @@ $wpof_page_fields_args = array(
 				'name'   => 'sorter',
 				'title'  => __( 'Sorter' ),
 				'fields' => $wpof['sorter'],
+			),
+			array(
+				'name'   => 'input_group',
+				'title'  => __( 'Input Group' ),
+				'fields' => $wpof['input_group'],
 			),
 			array(
 				'name'   => 'fieldset',
