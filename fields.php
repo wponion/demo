@@ -418,19 +418,6 @@ $wpof_page_fields_args[] = array(
 			'fields' => $wpof['query_args'],
 		),
 		array(
-			'name'           => 'sysinfo',
-			'title'          => __( 'Sysinfo' ),
-			'callback'       => 'wponion_sysinfo',
-			'reports'        => array(/*'Server Information' => false,*/ ),
-			'custom_reports' => function () {
-				return array(
-					__( 'Custom Acc Title' ) => array(
-						__( 'Loaded Path' ) => WPONION_PATH,
-					),
-				);
-			},
-		),
-		array(
 			'name'   => 'changelog',
 			'title'  => __( 'Change Log' ),
 			'fields' => $wpof['change_log'],
@@ -438,6 +425,20 @@ $wpof_page_fields_args[] = array(
 	),
 );
 
+$wpof_page_fields_args[] = array(
+	'name'           => 'sysinfo',
+	'title'          => __( 'System Info' ),
+	'icon'           => 'dashicons dashicons-info',
+	'callback'       => 'wponion_sysinfo',
+	'reports'        => array(/*'Server Information' => false,*/ ),
+	'custom_reports' => function () {
+		return array(
+			__( 'Custom Acc Title' ) => array(
+				__( 'Loaded Path' ) => WPONION_PATH,
+			),
+		);
+	},
+);
 
 $wpof_page_fields_args[] = array(
 	'name'     => 'custom-1',
