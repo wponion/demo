@@ -35,6 +35,7 @@ if ( ! function_exists( 'wponion_load_demo' ) ) {
 		require_once __DIR__ . '/nav_menu.php';
 		require_once __DIR__ . '/admin-notice.php';
 		require_once __DIR__ . '/media-fields.php';
+		require_once __DIR__ . '/wp_pointer.php';
 
 		if ( wp_is_plugin_active( 'js_composer/js_composer.php' ) ) {
 			require_once __DIR__ . '/visual-composer.php';
