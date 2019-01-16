@@ -83,6 +83,7 @@ $wpof['validation-js'] = wponion_field_files( 'validation-js.php' );
 $wpof['dependancy']    = wponion_field_files( 'dependancy.php' );
 $wpof['query_args']    = wponion_field_files( 'query_args.php' );
 $wpof['change_log']    = wponion_field_files( 'change_log.php' );
+$wpof['wp_pointer']    = wponion_field_files( 'wp_pointer.php' );
 
 if ( wponion_is_debug() ) {
 	$wpof['full_fieldset']  = array(

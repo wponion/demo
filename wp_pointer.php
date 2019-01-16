@@ -1,8 +1,5 @@
 <?php
 
-$ins = new \WPOnion\Modules\WP_Pointers( 'vs' );
-$ins->_reset();
-
 function custom_phpcode_thickbox() {
 	add_action( 'admin_enqueue_scripts', 'add_thickbox' );
 	echo '<div id="menu-popup" style="display:none;">
@@ -13,8 +10,12 @@ function custom_phpcode_thickbox() {
 		</div>';
 }
 
+
+$ins = new \WPOnion\Modules\WP_Pointers( 'vs' );
+$ins->reset();
 $ins->add( '#menu-settings', __( 'PointerPlus Test' ), __( 'The plugin is active and ready to start working.' ), array(
 	'width'      => 260,
+	'post_type'  => 'post',
 	'icon_class' => 'dashicons-admin-settings',
 	'jsnext'     => "button = jQuery('<a id=\"pointer-close\" class=\"button action thickbox\" href=\"#TB_inline?width=700&height=500&inlineId=menu-popup\">" . __( 'Open Popup' ) . "</a>');
                     button.bind('click.pointer', function () {
