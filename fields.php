@@ -7,6 +7,7 @@ $wpof = array();
 $wpof['basic_feature'] = wponion_field_file( 'basic-feature.php' );
 $wpof['text']          = wponion_field_file( 'text.php' );
 $wpof['textarea']      = wponion_field_file( 'textarea.php' );
+$wpof['checkbox']      = wponion_field_file( 'checkbox.php' );
 
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
@@ -19,5 +20,8 @@ $user_inputs->container( 'text', __( 'Text' ), 'dashicons dashicons-editor-textc
 
 $user_inputs->container( 'textarea', __( 'Textarea' ), 'dashicons dashicons-editor-textcolor' )
 	->set_fields( $wpof['textarea'] );
+
+$user_inputs->container( 'checkbox', __( 'Checkbox' ), 'dashicons dashicons-editor-spellcheck' )
+	->set_fields( $wpof['checkbox'] );
 
 $wpo[] = $user_inputs;
