@@ -9,3 +9,16 @@
  * Text Domain: wponion
  * Domain Path: /i18n/
  */
+
+add_action( 'wponion_loaded', 'wponion_demo_init' );
+
+if ( ! function_exists( 'wponion_demo_init' ) ) {
+	/**
+	 * Inits Demo Plugin.
+	 */
+	function wponion_demo_init() {
+		require_once __DIR__ . '/functions.php';
+		require_once __DIR__ . '/fields.php';
+		require_once __DIR__ . '/modules/settings/index.php';
+	}
+}
