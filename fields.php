@@ -29,6 +29,11 @@ $wpof['fieldset']    = wponion_field_file( 'fieldset.php' );
 $wpof['accordion']   = wponion_field_file( 'accordion.php' );
 $wpof['group']       = wponion_field_file( 'group.php' );
 
+/**
+ * Picker Fields.
+ */
+$wpof['color_picker'] = wponion_field_file( 'color-picker.php' );
+
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
 	->set_fields( $wpof['basic_feature'] );
@@ -58,6 +63,7 @@ $wpo[] = $user_inputs;
  * Advanced Fields.
  */
 //@todo create cloner demo.
+//@todo create tab demo.
 $advanced = WPO\Container::create( 'Advanced_fields', __( 'Advanced Fields' ), 'dashicons dashicons-admin-plugins' );
 $advanced->container( 'sorter', __( 'Sorter' ) )
 	->set_fields( $wpof['sorter'] );
@@ -71,3 +77,12 @@ $advanced->container( 'group', __( 'Group' ), 'dashicons dashicons-admin-setting
 	->set_fields( $wpof['group'] );
 
 $wpo[] = $advanced;
+
+/**
+ * Picker Fields.
+ */
+$pickers = \WPO\Container::create( 'pickers', __( 'Pickers' ), 'dashicons dashicons-location' );
+$pickers->container( 'color_picker', __( 'Color Picker' ), 'dashicons dashicons-admin-appearance' )
+	->set_fields( $wpof['color_picker'] );
+
+$wpo[] = $pickers;

@@ -14,6 +14,7 @@ $group->textarea( 'textarea', __( 'Textarea' ) );
 $group->checkbox( 'checkbox', __( 'Checkbox' ) )
 	->set_label( 'I Agree' );
 $return[] = $group;
+
 /**
  * Simple Group
  */
