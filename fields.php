@@ -23,7 +23,8 @@ $wpof['button_set'] = wponion_field_file( 'button-set.php' );
 /**
  * Advanced Fields.
  */
-$wpof['sorter'] = wponion_field_file( 'sorter.php' );
+$wpof['sorter']      = wponion_field_file( 'sorter.php' );
+$wpof['input_group'] = wponion_field_file( 'input-group.php' );
 
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
@@ -57,5 +58,7 @@ $wpo[] = $user_inputs;
 $advanced = WPO\Container::create( 'Advanced_fields', __( 'Advanced Fields' ), 'dashicons dashicons-admin-plugins' );
 $advanced->container( 'sorter', __( 'Sorter' ) )
 	->set_fields( $wpof['sorter'] );
+$advanced->container( 'input_group', __( 'Input Group' ) )
+	->set_fields( $wpof['input_group'] );
 
 $wpo[] = $advanced;
