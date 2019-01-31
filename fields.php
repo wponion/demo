@@ -38,6 +38,12 @@ $wpof['font_picker']  = wponion_field_file( 'font-picker.php' );
 $wpof['date_picker']  = wponion_field_file( 'date-picker.php' );
 $wpof['image_select'] = wponion_field_file( 'image-select.php' );
 
+/**
+ * WordPress Fields.
+ */
+$wpof['image']   = wponion_field_file( 'image.php' );
+$wpof['gallery'] = wponion_field_file( 'gallery.php' );
+
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
 	->set_fields( $wpof['basic_feature'] );
@@ -98,3 +104,11 @@ $pickers->container( 'image_select', __( 'Image Select' ), 'dashicons dashicons-
 	->set_fields( $wpof['image_select'] );
 
 $wpo[] = $pickers;
+
+$wp_fields = \WPO\Container::create( 'wp_fields', __( 'WP Fields' ), 'dashicons dashicons-wordpress' );
+$wp_fields->container( 'image', 'Image', 'dashicons dashicons-format-image' )
+	->set_fields( $wpof['image'] );
+$wp_fields->container( 'gallery', __( 'Gallery' ), 'dashicons dashicons-images-alt' )
+	->set_fields( $wpof['gallery'] );
+
+$wpo[] = $wp_fields;
