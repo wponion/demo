@@ -4,19 +4,34 @@ global $wpof, $wpo;
 $wpo  = array();
 $wpof = array();
 
+/**
+ * Basic Feature.
+ */
 $wpof['basic_feature'] = wponion_field_file( 'basic-feature.php' );
-$wpof['text']          = wponion_field_file( 'text.php' );
-$wpof['textarea']      = wponion_field_file( 'textarea.php' );
-$wpof['checkbox']      = wponion_field_file( 'checkbox.php' );
-$wpof['radio']         = wponion_field_file( 'radio.php' );
-$wpof['select']        = wponion_field_file( 'select.php' );
-$wpof['switcher']      = wponion_field_file( 'switcher.php' );
-$wpof['button_set']    = wponion_field_file( 'button-set.php' );
+
+/**
+ * User Inputs.
+ */
+$wpof['text']       = wponion_field_file( 'text.php' );
+$wpof['textarea']   = wponion_field_file( 'textarea.php' );
+$wpof['checkbox']   = wponion_field_file( 'checkbox.php' );
+$wpof['radio']      = wponion_field_file( 'radio.php' );
+$wpof['select']     = wponion_field_file( 'select.php' );
+$wpof['switcher']   = wponion_field_file( 'switcher.php' );
+$wpof['button_set'] = wponion_field_file( 'button-set.php' );
+
+/**
+ * Advanced Fields.
+ */
+$wpof['sorter'] = wponion_field_file( 'sorter.php' );
 
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
 	->set_fields( $wpof['basic_feature'] );
 
+/**
+ * User Input Container.
+ */
 $user_inputs = WPO\Container::create( 'user_inputs', __( 'User Inputs' ), 'dashicons  dashicons-welcome-write-blog' );
 $user_inputs->container( 'text', __( 'Text' ), 'dashicons dashicons-editor-textcolor' )
 	->set_fields( $wpof['text'] );
@@ -34,3 +49,13 @@ $user_inputs->container( 'button_set', __( 'Button Set' ), 'dashicons dashicons-
 	->set_fields( $wpof['button_set'] );
 
 $wpo[] = $user_inputs;
+
+/**
+ * Advanced Fields.
+ */
+//@todo create cloner demo.
+$advanced = WPO\Container::create( 'Advanced_fields', __( 'Advanced Fields' ), 'dashicons dashicons-admin-plugins' );
+$advanced->container( 'sorter', __( 'Sorter' ) )
+	->set_fields( $wpof['sorter'] );
+
+$wpo[] = $advanced;
