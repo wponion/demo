@@ -10,6 +10,7 @@ $wpof['textarea']      = wponion_field_file( 'textarea.php' );
 $wpof['checkbox']      = wponion_field_file( 'checkbox.php' );
 $wpof['radio']         = wponion_field_file( 'radio.php' );
 $wpof['select']        = wponion_field_file( 'select.php' );
+$wpof['switcher']      = wponion_field_file( 'switcher.php' );
 
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
@@ -26,5 +27,7 @@ $user_inputs->container( 'radio', __( 'Radio' ), 'dashicons dashicons-editor-spe
 	->set_fields( $wpof['radio'] );
 $user_inputs->container( 'select', __( 'Select' ), 'dashicons dashicons-admin-multisite' )
 	->set_fields( $wpof['select'] );
+$user_inputs->container( 'switcher', __( 'Switcher' ), 'dashicons dashicons-yes' )
+	->set_fields( $wpof['switcher'] );
 
 $wpo[] = $user_inputs;
