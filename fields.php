@@ -33,6 +33,7 @@ $wpof['group']       = wponion_field_file( 'group.php' );
  * Picker Fields.
  */
 $wpof['color_picker'] = wponion_field_file( 'color-picker.php' );
+$wpof['icon_picker']  = wponion_field_file( 'icon-picker.php' );
 
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
@@ -84,5 +85,7 @@ $wpo[] = $advanced;
 $pickers = \WPO\Container::create( 'pickers', __( 'Pickers' ), 'dashicons dashicons-location' );
 $pickers->container( 'color_picker', __( 'Color Picker' ), 'dashicons dashicons-admin-appearance' )
 	->set_fields( $wpof['color_picker'] );
+$pickers->container( 'icon_picker', __( 'Icon Picker' ), 'dashicons dashicons-admin-generic' )
+	->set_fields( $wpof['icon_picker'] );
 
 $wpo[] = $pickers;
