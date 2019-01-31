@@ -35,6 +35,7 @@ $wpof['group']       = wponion_field_file( 'group.php' );
 $wpof['color_picker'] = wponion_field_file( 'color-picker.php' );
 $wpof['icon_picker']  = wponion_field_file( 'icon-picker.php' );
 $wpof['font_picker']  = wponion_field_file( 'font-picker.php' );
+$wpof['date_picker']  = wponion_field_file( 'date-picker.php' );
 
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
@@ -86,9 +87,11 @@ $wpo[] = $advanced;
 $pickers = \WPO\Container::create( 'pickers', __( 'Pickers' ), 'dashicons dashicons-location' );
 $pickers->container( 'color_picker', __( 'Color Picker' ), 'dashicons dashicons-admin-appearance' )
 	->set_fields( $wpof['color_picker'] );
-$pickers->container( 'icon_picker', __( 'Icon Picker' ), 'dashicons dashicons-admin-generic' )
+$pickers->container( 'icon_picker', __( 'Icon Picker' ), 'dashicons dashicons-heart' )
 	->set_fields( $wpof['icon_picker'] );
 $pickers->container( 'font_picker', __( 'Font Picker' ), 'dashicons dashicons-editor-textcolor' )
 	->set_fields( $wpof['font_picker'] );
+$pickers->container( 'date_picker', __( 'Date Picker' ), 'dashicons dashicons-calendar-alt' )
+	->set_fields( $wpof['date_picker'] );
 
 $wpo[] = $pickers;
