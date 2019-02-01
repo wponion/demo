@@ -46,6 +46,7 @@ $wpof['gallery']   = wponion_field_file( 'gallery.php' );
 $wpof['upload']    = wponion_field_file( 'upload.php' );
 $wpof['wp_editor'] = wponion_field_file( 'wp-editor.php' );
 $wpof['wp_link']   = wponion_field_file( 'wp-link.php' );
+$wpof['oembed']    = wponion_field_file( 'oembed.php' );
 
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
@@ -119,5 +120,7 @@ $wp_fields->container( 'wp_editor', __( 'WP Editor' ), 'dashicons dashicons-edit
 	->set_fields( $wpof['wp_editor'] );
 $wp_fields->container( 'wp_link', __( 'WP Link' ), 'dashicons dashicons-admin-links' )
 	->set_fields( $wpof['wp_link'] );
+$wp_fields->container( 'oembed', __( 'OEmbed' ), 'dashicons dashicons-welcome-view-site' )
+	->set_fields( $wpof['oembed'] );
 
 $wpo[] = $wp_fields;
