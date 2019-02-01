@@ -52,7 +52,7 @@ $return[] = WPO\Field::create( 'wp_notice_success', '<h4 class="alert-heading">W
 	->set_large( true );
 
 
-$return[] = \WPO\Field::create( 'divider', '11' );
+$return[] = \WPO\Field::create( 'divider' );
 $return[] = \WPO\Field::create( 'subheading', __( 'Other Notice Features' ) );
 $return[] = WPO\Field::create( 'wp_notice_success', __( 'This Notice is sticky and canno\'t be hidden / closed.' ) )
 	->set_close( false );
