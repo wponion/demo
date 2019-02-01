@@ -61,8 +61,9 @@ $wpof['dimensions']  = wponion_field_file( 'dimensions.php' );
 /**
  * UI Fields.
  */
-$wpof['ui_fields'] = wponion_field_file( 'ui-fields.php' );
-//$wpof['ui_notices'] = wponion_field_file( 'ui-notices.php' );
+$wpof['ui_fields']     = wponion_field_file( 'ui-fields.php' );
+$wpof['ui_notices']    = wponion_field_file( 'ui-notices.php' );
+$wpof['ui_wp_notices'] = wponion_field_file( 'ui-wp-notices.php' );
 //$wpof['markdown']   = wponion_field_file( 'markdown.php' );
 
 
@@ -172,5 +173,9 @@ $wpo[] = $design;
 $ui_fields = WPO\Container::create( 'uifields', __( 'UI Fields' ), 'dashicons dashicons-building' );
 $ui_fields->container( 'heading_content', __( 'Heading & Content' ) )
 	->set_fields( $wpof['ui_fields'] );
+$ui_fields->container( 'notices', __( 'Notices' ) )
+	->set_fields( $wpof['ui_notices'] );
+$ui_fields->container( 'wp-notices', __( 'WP Notices' ) )
+	->set_fields( $wpof['ui_wp_notices'] );
 
 $wpo[] = $ui_fields;
