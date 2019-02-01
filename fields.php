@@ -54,7 +54,7 @@ $wpof['oembed']    = wponion_field_file( 'oembed.php' );
 //$wpof['color_palette'] = wponion_field_file( 'color-palette.php' );
 $wpof['background']  = wponion_field_file( 'background.php' );
 $wpof['color_group'] = wponion_field_file( 'color-group.php' );
-//$wpof['link_color']  = wponion_field_file( 'link-color.php' );
+$wpof['link_color']  = wponion_field_file( 'link-color.php' );
 //$wpof['spacing']     = wponion_field_file( 'spacing.php' );
 //$wpof['dimensions']  = wponion_field_file( 'dimensions.php' );
 
@@ -146,5 +146,7 @@ $design->container( 'background', __( 'Background' ) )
 	->set_fields( $wpof['background'] );
 $design->container( 'color_group', __( 'Color Group' ) )
 	->set_fields( $wpof['color_group'] );
+$design->container( 'link_color', __( 'Link Group' ) )
+	->set_fields( $wpof['link_color'] );
 
 $wpo[] = $design;
