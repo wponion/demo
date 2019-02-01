@@ -67,6 +67,10 @@ $wpof['ui_wp_notices'] = wponion_field_file( 'ui-wp-notices.php' );
 $wpof['divider']       = wponion_field_file( 'divider.php' );
 $wpof['markdown']      = wponion_field_file( 'markdown.php' );
 
+/**
+ * Others
+ */
+$wpof['js-validation'] = wponion_field_file( 'js-validation.php' );
 
 /**
  * Basic Features.
