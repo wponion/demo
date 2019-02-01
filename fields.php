@@ -41,9 +41,10 @@ $wpof['image_select'] = wponion_field_file( 'image-select.php' );
 /**
  * WordPress Fields.
  */
-$wpof['image']   = wponion_field_file( 'image.php' );
-$wpof['gallery'] = wponion_field_file( 'gallery.php' );
-$wpof['upload']  = wponion_field_file( 'upload.php' );
+$wpof['image']     = wponion_field_file( 'image.php' );
+$wpof['gallery']   = wponion_field_file( 'gallery.php' );
+$wpof['upload']    = wponion_field_file( 'upload.php' );
+$wpof['wp_editor'] = wponion_field_file( 'wp-editor.php' );
 
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
@@ -113,5 +114,7 @@ $wp_fields->container( 'gallery', __( 'Gallery' ), 'dashicons dashicons-images-a
 	->set_fields( $wpof['gallery'] );
 $wp_fields->container( 'upload', __( 'Upload' ), 'dashicons dashicons-upload' )
 	->set_fields( $wpof['upload'] );
+$wp_fields->container( 'wp_editor', __( 'WP Editor' ), 'dashicons dashicons-edit' )
+	->set_fields( $wpof['wp_editor'] );
 
 $wpo[] = $wp_fields;
