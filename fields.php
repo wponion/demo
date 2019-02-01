@@ -58,6 +58,17 @@ $wpof['link_color']  = wponion_field_file( 'link-color.php' );
 $wpof['spacing']     = wponion_field_file( 'spacing.php' );
 $wpof['dimensions']  = wponion_field_file( 'dimensions.php' );
 
+/**
+ * UI Fields.
+ */
+$wpof['ui_fields'] = wponion_field_file( 'ui-fields.php' );
+//$wpof['ui_notices'] = wponion_field_file( 'ui-notices.php' );
+//$wpof['markdown']   = wponion_field_file( 'markdown.php' );
+
+
+/**
+ * Basic Features.
+ */
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
 	->set_fields( $wpof['basic_feature'] );
 
@@ -154,3 +165,12 @@ $design->container( 'dimensions', __( 'Dimensions' ) )
 	->set_fields( $wpof['dimensions'] );
 
 $wpo[] = $design;
+
+/**
+ * UI Fields.
+ */
+$ui_fields = WPO\Container::create( 'uifields', __( 'UI Fields' ), 'dashicons dashicons-building' );
+$ui_fields->container( 'heading_content', __( 'Heading & Content' ) )
+	->set_fields( $wpof['ui_fields'] );
+
+$wpo[] = $ui_fields;
