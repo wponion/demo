@@ -64,7 +64,7 @@ $wpof['dimensions']  = wponion_field_file( 'dimensions.php' );
 $wpof['ui_fields']     = wponion_field_file( 'ui-fields.php' );
 $wpof['ui_notices']    = wponion_field_file( 'ui-notices.php' );
 $wpof['ui_wp_notices'] = wponion_field_file( 'ui-wp-notices.php' );
-//$wpof['markdown']   = wponion_field_file( 'markdown.php' );
+$wpof['markdown']      = wponion_field_file( 'markdown.php' );
 
 
 /**
@@ -177,5 +177,7 @@ $ui_fields->container( 'notices', __( 'Notices' ) )
 	->set_fields( $wpof['ui_notices'] );
 $ui_fields->container( 'wp-notices', __( 'WP Notices' ) )
 	->set_fields( $wpof['ui_wp_notices'] );
+$ui_fields->container( 'markdown', __( 'Markdown' ) )
+	->set_fields( $wpof['markdown'] );
 
 $wpo[] = $ui_fields;
