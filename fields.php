@@ -55,7 +55,7 @@ $wpof['oembed']    = wponion_field_file( 'oembed.php' );
 $wpof['background']  = wponion_field_file( 'background.php' );
 $wpof['color_group'] = wponion_field_file( 'color-group.php' );
 $wpof['link_color']  = wponion_field_file( 'link-color.php' );
-//$wpof['spacing']     = wponion_field_file( 'spacing.php' );
+$wpof['spacing']     = wponion_field_file( 'spacing.php' );
 //$wpof['dimensions']  = wponion_field_file( 'dimensions.php' );
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
@@ -148,5 +148,7 @@ $design->container( 'color_group', __( 'Color Group' ) )
 	->set_fields( $wpof['color_group'] );
 $design->container( 'link_color', __( 'Link Group' ) )
 	->set_fields( $wpof['link_color'] );
+$design->container( 'spacing', __( 'Spacing' ) )
+	->set_fields( $wpof['spacing'] );
 
 $wpo[] = $design;
