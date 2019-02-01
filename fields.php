@@ -52,8 +52,8 @@ $wpof['oembed']    = wponion_field_file( 'oembed.php' );
  * Design Fields.
  */
 //$wpof['color_palette'] = wponion_field_file( 'color-palette.php' );
-$wpof['background'] = wponion_field_file( 'background.php' );
-//$wpof['color_group'] = wponion_field_file( 'color-group.php' );
+$wpof['background']  = wponion_field_file( 'background.php' );
+$wpof['color_group'] = wponion_field_file( 'color-group.php' );
 //$wpof['link_color']  = wponion_field_file( 'link-color.php' );
 //$wpof['spacing']     = wponion_field_file( 'spacing.php' );
 //$wpof['dimensions']  = wponion_field_file( 'dimensions.php' );
@@ -144,5 +144,7 @@ $wpo[] = $wp_fields;
 $design = WPO\Container::create( 'design_fields', __( 'Design Fields' ) );
 $design->container( 'background', __( 'Background' ) )
 	->set_fields( $wpof['background'] );
+$design->container( 'color_group', __( 'Color Group' ) )
+	->set_fields( $wpof['color_group'] );
 
 $wpo[] = $design;
