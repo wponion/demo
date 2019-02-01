@@ -48,6 +48,15 @@ $wpof['wp_editor'] = wponion_field_file( 'wp-editor.php' );
 $wpof['wp_link']   = wponion_field_file( 'wp-link.php' );
 $wpof['oembed']    = wponion_field_file( 'oembed.php' );
 
+/**
+ * Design Fields.
+ */
+//$wpof['color_palette'] = wponion_field_file( 'color-palette.php' );
+$wpof['background'] = wponion_field_file( 'background.php' );
+//$wpof['color_group'] = wponion_field_file( 'color-group.php' );
+//$wpof['link_color']  = wponion_field_file( 'link-color.php' );
+//$wpof['spacing']     = wponion_field_file( 'spacing.php' );
+//$wpof['dimensions']  = wponion_field_file( 'dimensions.php' );
 
 $wpo[] = WPO\Container::create( 'basic_feature', __( 'Basic Feature' ), 'dashicons dashicons-admin-generic' )
 	->set_fields( $wpof['basic_feature'] );
@@ -109,6 +118,9 @@ $pickers->container( 'image_select', __( 'Image Select' ), 'dashicons dashicons-
 
 $wpo[] = $pickers;
 
+/**
+ * WordPress Fields.
+ */
 $wp_fields = \WPO\Container::create( 'wp_fields', __( 'WP Fields' ), 'dashicons dashicons-wordpress' );
 $wp_fields->container( 'image', 'Image', 'dashicons dashicons-format-image' )
 	->set_fields( $wpof['image'] );
@@ -124,3 +136,13 @@ $wp_fields->container( 'oembed', __( 'OEmbed' ), 'dashicons dashicons-welcome-vi
 	->set_fields( $wpof['oembed'] );
 
 $wpo[] = $wp_fields;
+
+/**
+ * Design Fields.
+ */
+//@todo Create Color Palette Field.
+$design = WPO\Container::create( 'design_fields', __( 'Design Fields' ) );
+$design->container( 'background', __( 'Background' ) )
+	->set_fields( $wpof['background'] );
+
+$wpo[] = $design;
