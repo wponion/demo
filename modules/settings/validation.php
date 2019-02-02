@@ -4,7 +4,7 @@ $builder = new WPO\Builder();
 $builder->container( 'jsvalidation', __( 'JS Validation' ), 'dashicons-admin-generic dashicons' )
 	->set_fields( $wpof['js-validation'] );
 $builder->container( 'phpvalidation', __( 'PHP Validation' ), 'dashicons-admin-generic dashicons' )
-	->set_href( 'https://github.com/wponion/' );
+	->set_fields( $wpof['php-validation'] );
 $args = array(
 	'option_name'     => '_wponion_demo_settings_validation',
 	'framework_title' => __( 'WPOnion Validation Demo' ),
