@@ -73,6 +73,7 @@ $wpof['markdown']      = wponion_field_file( 'markdown.php' );
  */
 $wpof['js-validation']  = wponion_field_file( 'js-validation.php' );
 $wpof['php-validation'] = wponion_field_file( 'php-validation.php' );
+$wpof['dependency']     = wponion_field_file( 'dependency.php' );
 
 /**
  * Basic Features.
