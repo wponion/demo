@@ -1,7 +1,7 @@
 <?php
 global $wpo;
 
-$builder = new WPO\Builder();
+$builder = wponion_builder();
 
 foreach ( $wpo as $container ) {
 	$builder->container( $container );
