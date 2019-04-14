@@ -1,4 +1,8 @@
 <?php
+function wponion_demo_select_options() {
+	return array( '1', '2', '3', '4' );
+}
+
 $options       = array(
 	'option1' => __( 'Option 1' ),
 	'option2' => __( 'Option 2' ),
@@ -49,12 +53,33 @@ $return[] = WPO\Field::create( 'select', 'select_8', __( 'WP Categories As Optio
 	->set_options( 'categories' )
 	->set_query_args( array(
 		'option_key'   => 'slug',
-		'option_value' => 'term_id',
+		'option_label' => 'term_id',
 	) )
 	->set_desc_field( 'Each Option Label Mapped To Category Term ID And its value Mapped as Term Slug' . wponion_highlight_string( var_export( array(
 			'option_key'   => 'slug',
 			'option_value' => 'term_id',
 		), true ) ) );
+
+$return[] = WPO\Field::create( 'select', 'select_8_1', __( 'Custom Callback ' ), array(
+	'select2' => true,
+	'options' => 'wponion_demo_select_options',
+) );
+$return[] = WPO\Field::create( 'select', 'select_8_2', __( 'Custom Callback (Ajax) ' ), array(
+	'select2' => true,
+	'ajax'    => true,
+	'options' => 'wponion_demo_select_options',
+) );
+
+$return[] = WPO\Field::create( 'select', 'select_8_3', __( 'Query Args With Custom Output Template' ), array(
+	'select2'    => true,
+	'ajax'       => true,
+	'options'    => 'category',
+	'query_args' => array(
+		'taxonomy'     => 'product_cat',
+		'option_label' => '#[term_id] [name] ([count])',
+	),
+) );
+
 
 /**
  * Select2 Framework
