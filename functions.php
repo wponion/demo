@@ -22,3 +22,12 @@ if ( ! function_exists( 'wponion_field_file' ) ) {
 		return include plugin_dir_path( __FILE__ ) . 'fields/' . $file;
 	}
 }
+
+if ( ! function_exists( 'wponion_demo_assets' ) ) {
+	/**
+	 * Registers WPOnion Demo Assets.
+	 */
+	function wponion_demo_assets() {
+		wp_register_script( 'wponion-demo', plugin_dir_url( __FILE__ ) . '/assets/js/ajax-demo.js', array( 'wponion-core' ) );
+	}
+}

@@ -17,8 +17,11 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 	 * Inits Demo Plugin.
 	 */
 	function wponion_demo_init() {
+		add_action( 'admin_enqueue_scripts', 'wponion_demo_assets' );
+
 		require_once __DIR__ . '/functions.php';
 		require_once __DIR__ . '/fields.php';
 		require_once __DIR__ . '/modules/settings/index.php';
+		require_once __DIR__ . '/modules/ajax-demo/index.php';
 	}
 }
