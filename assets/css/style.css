@@ -1,0 +1,12 @@
+.wpo-adminbardemo {
+	text-align: left;
+	word-break: unset;
+	word-wrap: unset;
+	display: inline-block;
+	overflow: scroll;
+	width: 95%;
+	background: #eee;
+	font-size: 12px;
+	padding: 10px;
+	overflow-y: hidden;
+}

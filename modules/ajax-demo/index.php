@@ -20,7 +20,7 @@ add_action( 'wp_ajax_wponion-demo-ajax-action4', function () {
 wponion_admin_page( array(
 	'menu_title' => __( 'Ajax Demo' ),
 	'page_title' => __( 'Ajax Demo' ),
-	'assets'     => 'wponion-demo',
+	'assets'     => 'wponion-ajax-demo',
 	'menu_slug'  => 'custom-wponion-page',
 	'render'     => function () {
 		echo <<<HTML
