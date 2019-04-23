@@ -31,6 +31,9 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 			},
 		) );
 
+		# Custom Admin Page.
+		require_once __DIR__ . '/modules/admin-page/index.php';
+
 		# Settings Module.
 		require_once __DIR__ . '/modules/settings/index.php';
 
@@ -42,5 +45,6 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 
 		# WP Admin Notice.
 		require_once __DIR__ . '/modules/admin-notice/index.php';
+
 	}
 }
