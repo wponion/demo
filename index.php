@@ -22,6 +22,15 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 		require_once __DIR__ . '/functions.php';
 		require_once __DIR__ . '/fields.php';
 
+		# Main Demo Page.
+		wponion_admin_page( array(
+			'menu_title' => __( 'WPOnion Demo' ),
+			'page_title' => __( 'Sample Page ' ),
+			'menu_slug'  => 'wponion-demo',
+			'render'     => function () {
+			},
+		) );
+
 		# Settings Module.
 		require_once __DIR__ . '/modules/settings/index.php';
 
@@ -30,5 +39,8 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 
 		# WP Admin Bar
 		require_once __DIR__ . '/modules/admin-bar/index.php';
+
+		# WP Admin Notice.
+		require_once __DIR__ . '/modules/admin-notice/index.php';
 	}
 }
