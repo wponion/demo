@@ -31,7 +31,7 @@ $args = array(
 	'menu'            => array(
 		'menu_title' => __( 'Full Fieldset' ),
 		'menu_slug'  => 'full-fieldset',
-		'submenu'    => 'wponion-demo',
+		'submenu'    => 'wponion-settings-demo',
 	),
 );
 

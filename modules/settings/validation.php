@@ -14,7 +14,7 @@ $args = array(
 	'menu'            => array(
 		'menu_title' => __( 'Validation' ),
 		'menu_slug'  => 'wponion-validation',
-		'submenu'    => 'wponion-demo',
+		'submenu'    => 'wponion-settings-demo',
 	),
 );
 

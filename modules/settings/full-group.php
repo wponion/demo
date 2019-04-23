@@ -31,7 +31,7 @@ $args = array(
 	'menu'            => array(
 		'menu_title' => __( 'Full Group' ),
 		'menu_slug'  => 'full-group',
-		'submenu'    => 'wponion-demo',
+		'submenu'    => 'wponion-settings-demo',
 	),
 );
 

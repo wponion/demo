@@ -40,8 +40,8 @@ $args = array(
 	'theme'           => 'wp_modern',
 	'is_single_page'  => false,
 	'menu'            => array(
-		'menu_title' => __( 'WPOnion Demo' ),
-		'menu_slug'  => 'wponion-demo',
+		'menu_title' => __( 'WPOnion Settings Demo' ),
+		'menu_slug'  => 'wponion-settings-demo',
 		'submenu'    => true,
 	),
 );

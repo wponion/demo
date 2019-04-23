@@ -19,9 +19,9 @@ add_action( 'wp_ajax_wponion-demo-ajax-action4', function () {
 
 wponion_admin_page( array(
 	'menu_title' => __( 'Ajax Demo' ),
-	'page_title' => __( 'Ajax Demo' ),
 	'assets'     => 'wponion-ajax-demo',
-	'menu_slug'  => 'custom-wponion-page',
+	'menu_slug'  => 'wponion-ajax-demo',
+	'submenu'    => 'wponion-demo',
 	'render'     => function () {
 		echo <<<HTML
 <div style="padding:25px; background: #eee; display: inline-block;">
@@ -46,5 +46,4 @@ wponion_admin_page( array(
 </div>
 HTML;
 	},
-	'submenu'    => 'dashboard',
 ) );

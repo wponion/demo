@@ -11,7 +11,7 @@ $args = array(
 	'menu'            => array(
 		'menu_title' => __( 'Dependency' ),
 		'menu_slug'  => 'wponion-dependency',
-		'submenu'    => 'wponion-demo',
+		'submenu'    => 'wponion-settings-demo',
 	),
 );
 

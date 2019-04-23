@@ -31,7 +31,7 @@ $args = array(
 	'menu'            => array(
 		'menu_title' => __( 'Full Accordion' ),
 		'menu_slug'  => 'full-accordion',
-		'submenu'    => 'wponion-demo',
+		'submenu'    => 'wponion-settings-demo',
 	),
 );
 
