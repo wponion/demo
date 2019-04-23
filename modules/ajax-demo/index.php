@@ -24,24 +24,24 @@ wponion_admin_page( array(
 	'submenu'    => 'wponion-demo',
 	'render'     => function () {
 		echo <<<HTML
-<div style="padding:25px; background: #eee; display: inline-block;">
-<strong style="font-size:14px; margin-bottom: 15px; display: inline-block;">Clicking This button will trigger an ajax request and block's the button.</strong><br/>
+<div style="padding:25px; background: #ddd; width:50%; margin-bottom: 15px">
+<strong style="font-size:14px; margin-bottom: 15px; display: inline-block;">Clicking this button will trigger an ajax request & block the button.</strong><br/>
 <button type="button" class="wpo-ajax-btn1 button button-primary" data-loading-text="Processing...">Button</button>
 </div>
 
-<div style="padding:25px; background: #c3c3c3; display: inline-block;">
-<strong style="font-size:14px; margin-bottom: 15px; display: inline-block;">Clicking This button will trigger an ajax request and block's the whole element.</strong><br/>
+<div style="padding:25px; background: #ddd; width:50%; margin-bottom:15px;">
+<strong style="font-size:14px; margin-bottom: 15px; display: inline-block;">Clicking this button will trigger an ajax request & block the whole element.</strong><br/>
 <button type="button" class="wpo-ajax-btn2 button button-primary" data-loading-text="Processing...">Block & Ajax</button>
 </div>
-<br/>
-<br/>
-<div style="padding:25px; background: #c3c3c3; display: inline-block; vertical-align: middle;">
-<strong style="font-size:14px; margin-bottom: 15px; display: inline-block;">Clicking the button will trigger an ajax request and the resposne will be displayed below</strong><br/>
+
+<div style="padding:25px; background: #ddd;  width:50%; vertical-align: middle; margin-bottom:15px;">
+<strong style="font-size:14px; margin-bottom: 15px; display: inline-block;">Clicking the button will trigger an ajax request & display the response below</strong><br/>
 <div class="response" style="padding:25px; background: #eaeaea; display: block;margin-bottom: 15px;"></div>
 <button type="button" class="wpo-ajax-btn3 button button-primary" data-loading-text="Processing...">Ajax</button>
 </div>
-<div style="padding:25px; background: #c3c3c3; display: inline-block; vertical-align: middle;">
-<strong style="font-size:14px; margin-bottom: 15px; display: inline-block;">Clicking the button will trigger an ajax request and will also render callback from javascript</strong><br/>
+
+<div style="padding:25px; background: #ddd;  width:50%; vertical-align: middle; margin-bottom:15px;">
+<strong style="font-size:14px; margin-bottom: 15px; display: inline-block;">Clicking the button will trigger an ajax request & render callback from javascript</strong><br/>
 <button type="button" class="wpo-ajax-btn4 button button-primary" data-loading-text="Processing...">Ajax</button>
 </div>
 HTML;

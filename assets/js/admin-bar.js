@@ -1,6 +1,6 @@
 jQuery( window ).on( 'load', function() {
 	var $html = '/**\n' +
-		' * Admin Bar Modules Accepts All the arguments that are passed to ` $wp_admin_bar->add_menu() ` function.\n' +
+		' * Admin Bar Module Accepts All the documented arguments that are passed to ` $wp_admin_bar->add_menu() ` function.\n' +
 		' * \n' +
 		' * Argument List\n' +
 		' * \n' +

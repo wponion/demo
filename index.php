@@ -11,6 +11,14 @@
  */
 
 add_action( 'wponion_loaded', 'wponion_demo_init' );
+add_action( 'widgets_init', 'wponion_demo_widgets', 10 );
+
+if ( ! function_exists( 'wponion_demo_widgets' ) ) {
+	function wponion_demo_widgets() {
+		require_once __DIR__ . '/modules/widgets/widget1.php';
+		require_once __DIR__ . '/modules/widgets/widget2.php';
+	}
+}
 
 if ( ! function_exists( 'wponion_demo_init' ) ) {
 	/**
