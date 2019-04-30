@@ -10,6 +10,8 @@
  * Domain Path: /i18n/
  */
 
+define( 'WPONION_FRONTEND', true );
+
 add_action( 'wponion_loaded', 'wponion_demo_init' );
 add_action( 'widgets_init', 'wponion_demo_widgets', 10 );
 
@@ -53,6 +55,15 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 
 		# WP Admin Notice.
 		require_once __DIR__ . '/modules/admin-notice/index.php';
+
+		# Customizer Demo.
+		require_once __DIR__ . '/modules/customizer/index.php';
+
+		# Metabox Demo.
+		require_once __DIR__ . '/modules/metabox/index.php';
+
+		# Taxonomy Demo.
+		require_once __DIR__ . '/modules/taxonomy/index.php';
 
 	}
 }

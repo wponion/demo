@@ -53,3 +53,5 @@ $outer->image( 'image', __( 'Image' ) );
 wponion_customizer( array(
 	'option_name' => '_wponion_customizer_demo',
 ), $builder );
+
+require_once __DIR__ . '/full-customizer.php';

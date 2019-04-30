@@ -29,8 +29,7 @@ if ( ! function_exists( 'wponion_demo_assets' ) ) {
 	 */
 	function wponion_demo_assets() {
 		wp_register_script( 'wponion-ajax-demo', plugin_dir_url( __FILE__ ) . '/assets/js/ajax-demo.js', array( 'wponion-core' ) );
-		wp_enqueue_script( 'wponion-adminbar-demo', plugin_dir_url( __FILE__ ) . '/assets/js/admin-bar.js', array( 'wponion-core' ) );
-
+		wp_enqueue_script( 'wponion-adminbar-demo', plugin_dir_url( __FILE__ ) . '/assets/js/admin-bar.js', array() );
 		wp_enqueue_style( 'wponion-demo', plugin_dir_url( __FILE__ ) . '/assets/css/style.css', array( 'wponion-core' ) );
 	}
 }
