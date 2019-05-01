@@ -10,7 +10,6 @@
  * Domain Path: /i18n/
  */
 
-define( 'WPONION_FRONTEND', true );
 
 add_action( 'wponion_loaded', 'wponion_demo_init' );
 add_action( 'widgets_init', 'wponion_demo_widgets', 10 );

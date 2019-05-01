@@ -19,7 +19,22 @@ $s2 = $page->container( 'section2', 'Section 2', 'dashicons  dashicons-admin-gen
 $s2->color_picker( 'page_s1_color_picker', 'Color Picker' );
 $s2->icon_picker( 'page_s1_icon_picker', 'Icon Picker' );
 
-$colors = array( '#e14d43', '#e16443', '#43afe1', '#436ce1', '#8443e1', '#e14397' );
+$colors = array(
+	'light',
+	'blue',
+	'coffee',
+	'ectoplasm',
+	'midnight',
+	'ocean',
+	'sunrise',
+	'#e14d43',
+	'#e16443',
+	'#43afe1',
+	'#436ce1',
+	'#8443e1',
+	'#e14397',
+);
+$colors = $colors[ ( rand( 1, 13 ) - 1 ) ];
 
 wponion_metabox( array(
 	'option_name'   => '_wponion_metabox_main_metabox',
@@ -27,5 +42,5 @@ wponion_metabox( array(
 	'metabox_id'    => 'custom-post-option-by-wponion-3',
 	'screens'       => array( 'post', 'page' ),
 	'ajax'          => true,
-	'theme_color'   => $colors[ ( rand( 1, 6 ) - 1 ) ],
+	'color_scheme'  => $colors,
 ), $builder );
