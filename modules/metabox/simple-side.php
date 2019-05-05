@@ -10,7 +10,7 @@ $wpo_side->image_select( 'image_select', 'Image Select', array(
 ) );
 $wpo_side->textarea( 'textarea', 'Textarea' );
 $wpo_side->switcher( 'switcher', 'Switcher' )
-	->set_switch_size( 12 );
+	->switch_size( 12 );
 
 wponion_metabox( array(
 	'option_name'   => '_wponion_metabox_posts_side',

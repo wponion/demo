@@ -5,25 +5,25 @@ $return = array();
 $return[]    = \WPO\Field::create( 'content', sprintf( __( 'WPOnion Uses %1$sflatpickr jQuery%2$s Plugin for date picker. kindly check %1$sonline documentation%2$s for more information' ), '<a href="https://flatpickr.js.org/">', '</a>' ) );
 $return[]    = \WPO\Field::create( 'date_picker', 'date_picker', __( 'Date Picker' ) );
 $return[]    = \WPO\Field::create( 'date_picker', 'date_picker_1', __( 'Date Range Picker' ) )
-	->set_range( true );
+	->range( true );
 $date_picker = \WPO\Field::create( 'date_picker', 'date_picker_2', __( 'Human-friendly Dates' ) )
-	->set_settings( array(
+	->settings( array(
 		'altInput'   => true,
 		'altFormat'  => 'F j, Y',
 		'dateFormat' => 'Y-m-d',
 	) );
-$date_picker->set_desc_field( '<strong>JS Code</strong> : ' . wponion_highlight_string( '$(".selector").flatpickr({
+$date_picker->desc_field( '<strong>JS Code</strong> : ' . wponion_highlight_string( '$(".selector").flatpickr({
 altInput:true,
 altFormat:"F j,Y",
 dateFormat:"Y-m-d"
 });' ) );
 $return[]    = $date_picker;
 $date_picker = \WPO\Field::create( 'date_picker', 'date_picker_3', __( 'minDate and maxDate' ) )
-	->set_settings( array(
+	->settings( array(
 		'minDate' => date( 'Y-m-d', strtotime( ' -5 day' ) ),
 		'maxDate' => date( 'Y-m-d', strtotime( ' +5 day' ) ),
 	) );
-$date_picker->set_desc_field( '<strong>JS Code</strong> : ' . wponion_highlight_string( '$(".selector").flatpickr({
+$date_picker->desc_field( '<strong>JS Code</strong> : ' . wponion_highlight_string( '$(".selector").flatpickr({
 minDate:"' . date( 'Y-m-d', strtotime( ' -5 day' ) ) . '",
 maxDate:"' . date( 'Y-m-d', strtotime( ' +5 day' ) ) . '"
 });' ) );

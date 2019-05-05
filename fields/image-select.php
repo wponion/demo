@@ -1,4 +1,7 @@
 <?php
+
+use WPO\Field;
+
 $options1 = array(
 	'image1' => 'https://s3.wponion.com/placeholder/75/1.jpg',
 	'image2' => 'https://s3.wponion.com/placeholder/75/2.jpg',
@@ -31,24 +34,41 @@ $return   = array();
 
 $return[] = WPO\Field::create( 'image_select', 'image_select', 'Image Select', array( 'options' => $options1 ) );
 $return[] = WPO\Field::create( 'image_select', 'image_select_1', 'Image Select Multiple', array( 'options' => $options1 ) )
-	->set_multiple( true )
-	->set_desc_field( 'Multiple Select Enabled.' );
+	->multiple( true )
+	->desc_field( 'Multiple Select Enabled.' );
 $return[] = WPO\Field::create( 'image_select', 'image_select_3', 'Image Select Group' )
-	->set_options( array(
+	->options( array(
 		__( 'Group 1' ) => $options1,
 		__( 'Group 2' ) => $options2,
 	) );
 $return[] = WPO\Field::create( 'image_select', 'image_select_4', 'Image Select Group Multiple' )
-	->set_options( array(
+	->options( array(
 		__( 'Group 1' ) => $options3,
 		__( 'Group 2' ) => $options4,
 	) )
-	->set_multiple( true )
-	->set_desc_field( 'Multiple Select Enabled.' );
+	->multiple( true )
+	->desc_field( 'Multiple Select Enabled.' );
+
+$return[] = WPO\Field::create( 'subheading', __( 'Predefined Layouts' ) );
+$return[] = WPO\Field::create( 'image_select', 'body_layout', 'Body Layout ', array(
+	'options'    => 'body_layouts',
+	'query_args' => array( 'size' => '75' ),
+	'desc_field' => __( 'Image Size is 75px. available sizes [75px, 100px, 125px, 150px, 200px] ' ),
+) );
+$return[] = WPO\Field::create( 'image_select', 'header_layout', 'Header Layout', array(
+	'options'    => 'header_layouts',
+	'desc_field' => __( 'Image Size is 100px. available sizes [75px, 100px, 125px, 150px, 200px] ' ),
+	'query_args' => array( 'size' => '100' ),
+) );
+$return[] = WPO\Field::create( 'image_select', 'sidebar_layout', 'Sidebar Layout', array(
+	'options'    => 'sidebar_layouts',
+	'desc_field' => __( 'Image Size is 200px. available sizes [75px, 100px, 125px, 150px, 200px] ' ),
+	'query_args' => array( 'size' => '200' ),
+) );
 
 $return[] = WPO\Field::create( 'subheading', __( 'Improved Options' ) );
 $return[] = WPO\Field::create( 'image_select', 'image_select_5', 'Improved Select Options' )
-	->set_options( array(
+	->options( array(
 		'image4' => 'https://s3.wponion.com/placeholder/250/4.jpg',
 		'image1' => array(
 			'label'    => 'https://s3.wponion.com/placeholder/250/1.jpg',

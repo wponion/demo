@@ -2,18 +2,18 @@
 $return = array();
 
 $return[] = WPO\Field::create( 'sorter', 'sorter', __( 'Sorter' ) )
-	->set_enabled( array(
+	->enabled( array(
 		'bmw'        => 'BMW',
 		'mercedes'   => 'Mercedes',
 		'volkswagen' => 'Volkswagen',
 	) )
-	->set_disabled( array(
+	->disabled( array(
 		'ferrari' => 'Ferrari',
 		'mustang' => 'Mustang',
 	) );
 
 $return[] = WPO\Field::create( 'sorter', 'sorter_2', __( 'Sorter With Custom Labels' ) )
-	->set_enabled( array(
+	->enabled( array(
 		'blue'   => 'Blue',
 		'green'  => 'Green',
 		'red'    => 'Red',
@@ -22,15 +22,15 @@ $return[] = WPO\Field::create( 'sorter', 'sorter_2', __( 'Sorter With Custom Lab
 		'grey'   => 'Grey',
 		'silver' => 'Silver',
 	) )
-	->set_disabled( array(
+	->disabled( array(
 		'black' => 'Black',
 		'white' => 'White',
 	) )
-	->set_enabled_title( __( 'Active Colors' ) )
-	->set_disabled_title( __( 'Inactive Colors' ) );
+	->enabled_title( __( 'Active Colors' ) )
+	->disabled_title( __( 'Inactive Colors' ) );
 
 $return[] = WPO\Field::create( 'sorter', 'sorter_3', __( 'Sorter With Single Group' ) )
-	->set_enabled( array(
+	->enabled( array(
 		'blue'   => 'Blue',
 		'green'  => 'Green',
 		'red'    => 'Red',

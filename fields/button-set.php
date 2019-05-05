@@ -2,16 +2,16 @@
 $return = array();
 
 $return[] = WPO\Field::create( 'button_set', 'button_set_1', __( 'Button Set' ) )
-	->set_multiple( false )
-	->set_desc_field( 'Any 1 button can be selected' )
-	->set_options( array(
+	->multiple( false )
+	->desc_field( 'Any 1 button can be selected' )
+	->options( array(
 		'enabled'  => __( 'Enabled' ),
 		'disabled' => __( 'Disabled' ),
 	) );
 $return[] = WPO\Field::create( 'button_set', 'button_set_2', __( 'Button Set' ) )
-	->set_multiple( true )
-	->set_desc_field( 'Works like a checkbox & any number of buttons can be active.' )
-	->set_options( array(
+	->multiple( true )
+	->desc_field( 'Works like a checkbox & any number of buttons can be active.' )
+	->options( array(
 		'option1'  => __( 'Option 1' ),
 		'option2'  => __( 'Option 2' ),
 		'option3'  => __( 'Option 3' ),
@@ -25,33 +25,33 @@ $return[] = WPO\Field::create( 'button_set', 'button_set_2', __( 'Button Set' ) 
 	) );
 $return[] = WPO\Field::create( 'subheading', __( 'Button Set Sizes' ) );
 $return[] = WPO\Field::create( 'button_set', 'button_set_3', __( 'Button Set (small)' ) )
-	->set_multiple( false )
-	->set_options( array(
+	->multiple( false )
+	->options( array(
 		'enabled'  => __( 'Enabled' ),
 		'disabled' => __( 'Disabled' ),
 	) )
-	->set_size( 'small' );
+	->size( 'small' );
 $return[] = WPO\Field::create( 'button_set', 'button_set_4', __( 'Button Set (large)' ) )
-	->set_multiple( false )
-	->set_options( array(
+	->multiple( false )
+	->options( array(
 		'enabled'  => __( 'Enabled' ),
 		'disabled' => __( 'Disabled' ),
 	) )
-	->set_size( 'large' );
+	->size( 'large' );
 $return[] = WPO\Field::create( 'subheading', __( 'Custom Styling' ) );
 $return[] = WPO\Field::create( 'button_set', 'button_set_5', __( 'Custom Style 1' ) )
-	->set_multiple( false )
-	->set_desc_field( __( 'Active button will be highlited in <code>Green</code>' ) )
-	->set_active( 'button-success' )
-	->set_options( array(
+	->multiple( false )
+	->desc_field( __( 'Active button will be highlited in <code>Green</code>' ) )
+	->active( 'button-success' )
+	->options( array(
 		'enabled'  => __( 'Enabled' ),
 		'disabled' => __( 'Disabled' ),
 	) );
 $return[] = WPO\Field::create( 'button_set', 'button_set_6', __( 'Custom Style 2' ) )
-	->set_multiple( false )
-	->set_desc_field( __( 'InActive button will be highlited in <code>dark</code>' ) )
-	->set_inactive( 'button-dark' )
-	->set_options( array(
+	->multiple( false )
+	->desc_field( __( 'InActive button will be highlited in <code>dark</code>' ) )
+	->inactive( 'button-dark' )
+	->options( array(
 		'enabled'  => __( 'Enabled' ),
 		'disabled' => __( 'Disabled' ),
 	) );

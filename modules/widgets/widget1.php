@@ -23,13 +23,13 @@ if ( class_exists( '\WPOnion\WP\Widget' ) && ! class_exists( 'WPOnion_Widget_Exa
 		public function fields() {
 			$builder = wponion_builder();
 			$builder->text( 'textfield', __( 'Text' ) )
-				->set_style( 'width:100%;' );
+				->style( 'width:100%;' );
 			$builder->text( 'textfield2', __( 'Text' ) )
-				->set_style( 'width:100%;' );
+				->style( 'width:100%;' );
 			$builder->color_picker( 'colorpicker', __( 'Color Picker' ) );
 			$builder->textarea( 'textarea', __( 'Textarea' ) )
-				->set_style( 'width:100%;' )
-				->set_help( __( 'Help Content in Tooltip' ) );
+				->style( 'width:100%;' )
+				->help( __( 'Help Content in Tooltip' ) );
 			return $builder;
 		}
 	}

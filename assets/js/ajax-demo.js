@@ -1,6 +1,7 @@
 jQuery( window ).on( 'load', function() {
 	jQuery( '.wpo-ajax-btn1' ).on( 'click', function() {
 		wponion_ajax( {
+			spinner: 'wpo-spinner-grow wpo-spinner-sm',
 			button_lock: jQuery( this ),
 			data: {
 				action: 'wponion-demo-ajax-action1',

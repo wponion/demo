@@ -15,7 +15,8 @@ $s1->text( 'page_s1_text', 'Text' );
 $s1->textarea( 'page_s1_textarea', 'Textarea' );
 $s1->switcher( 'page_s1_switcher', 'switcher' );
 
-$s2 = $page->container( 'section2', 'Section 2', 'dashicons  dashicons-admin-generic' );
+$s2 = $page->container( 'section2', 'Section 2', 'dashicons  dashicons-admin-generic' )
+	->disable();
 $s2->color_picker( 'page_s1_color_picker', 'Color Picker' );
 $s2->icon_picker( 'page_s1_icon_picker', 'Icon Picker' );
 
@@ -38,9 +39,10 @@ $colors = $colors[ ( rand( 1, 13 ) - 1 ) ];
 
 wponion_metabox( array(
 	'option_name'   => '_wponion_metabox_main_metabox',
-	'metabox_title' => __( 'Custom Post/Page Option' ),
+	'metabox_title' => __( 'Custom Post/Page Optionss' ),
 	'metabox_id'    => 'custom-post-option-by-wponion-3',
 	'screens'       => array( 'post', 'page' ),
 	'ajax'          => true,
 	'color_scheme'  => $colors,
+	'theme'         => 'wc',
 ), $builder );

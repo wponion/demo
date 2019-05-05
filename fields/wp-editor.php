@@ -3,7 +3,7 @@ $return = array();
 
 $return[] = WPO\Field::create( 'wp_editor', 'wp_editor', __( 'WP Editor' ) );
 $return[] = WPO\Field::create( 'wp_editor', 'wp_editor_1', __( 'WP Editor (No Media)' ) )
-	->set_settings( array(
+	->settings( array(
 		'media_buttons' => false,
 	) );
 

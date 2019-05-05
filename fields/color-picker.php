@@ -7,39 +7,39 @@ $return = array();
 $return[] = WPO\Field::create( 'subheading', __( 'Color Picker' ) );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker', __( 'Color Picker' ) );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker_1', __( 'Color Picker <small>(RGBA)</small>' ) )
-	->set_rgba( true );
+	->rgba( true );
 
 $return[] = WPO\Field::create( 'subheading', __( 'Color Picker As Palette' ) );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker_2', __( 'Multiple' ) )
-	->set_options( $mc )
-	->set_desc_field( 'Works As Checkbox. you can select multiple colors.' )
-	->set_multiple( true );
+	->options( $mc )
+	->desc_field( 'Works As Checkbox. you can select multiple colors.' )
+	->multiple( true );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker_3', __( 'Single' ) )
-	->set_options( $mc )
-	->set_desc_field( 'Works As Radio. you can select only 1 color.' )
-	->set_multiple( false );
+	->options( $mc )
+	->desc_field( 'Works As Radio. you can select only 1 color.' )
+	->multiple( false );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker_4', __( 'Custom Size' ) )
-	->set_options( $mc )
-	->set_size( 35 );
+	->options( $mc )
+	->size( 35 );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker_10', __( 'Large Colors' ) )
-	->set_options( $all );
+	->options( $all );
 
 $return[] = WPO\Field::create( 'subheading', __( 'Color Picker As Palette' ) );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker_5', __( 'Rounded With Shadow' ) )
-	->set_options( $mc2 )
-	->set_layout( true, false, true );
+	->options( $mc2 )
+	->layout( true, false, true );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker_6', __( 'Rounded With Margin' ) )
-	->set_options( $mc2 )
-	->set_layout( true, true );
+	->options( $mc2 )
+	->layout( true, true );
 
 $return[] = WPO\Field::create( 'color_picker', 'color_picker_7', __( 'Square' ) )
-	->set_options( $mc2 )
-	->set_layout( false, false, false );
+	->options( $mc2 )
+	->layout( false, false, false );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker_8', __( 'Square With Shadow' ) )
-	->set_options( $mc2 )
-	->set_layout( false, false, true );
+	->options( $mc2 )
+	->layout( false, false, true );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker_9', __( 'Square With Margin' ) )
-	->set_options( $mc2 )
-	->set_layout( false, true );
+	->options( $mc2 )
+	->layout( false, true );
 
 return $return;

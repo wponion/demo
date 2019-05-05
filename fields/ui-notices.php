@@ -15,11 +15,11 @@ $return[] = WPO\Field::create( 'notice_success', '<h4 class="alert-heading">Well
 $return[] = \WPO\Field::create( 'divider' );
 $return[] = \WPO\Field::create( 'subheading', __( 'Other Notice Features' ) );
 $return[] = WPO\Field::create( 'notice_success', __( 'This Notice is sticky and canno\'t be hidden / closed.' ) )
-	->set_close( false );
+	->close( false );
 $return[] = WPO\Field::create( 'notice_success', __( 'This Notice Will Close in [count] seconds' ) )
-	->set_close( false )
-	->set_autoclose( 10000 );
+	->close( false )
+	->autoclose( 10000 );
 $return[] = WPO\Field::create( 'notice_success', __( 'This Notice Will Close in (15000 / 1000 =  15) [count] seconds' ) )
-	->set_close( false )
-	->set_autoclose( 15000 );
+	->close( false )
+	->autoclose( 15000 );
 return $return;

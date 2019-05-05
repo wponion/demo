@@ -36,7 +36,7 @@ $return[] = WPO\Field::create( 'content', 'You can pass content for this field b
 	->markdown( true );
 $return[] = WPO\Field::create( 'subheading', __( 'Sample Of Markdown Render' ) );
 $return[] = WPO\Field::create( 'content' )
-	->set_content( $markdown )
+	->content( $markdown )
 	->markdown( true );
 
 return $return;
