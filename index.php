@@ -78,6 +78,9 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 		# User Profile Demo.
 		require_once __DIR__ . '/modules/user-profile/index.php';
 
+		# Dashboard Widgets
+		require_once __DIR__ . '/modules/dashboard-widgets/index.php';
+
 		# WP Pointer Demo.
 		//require_once __DIR__ . '/modules/wp_pointer/index.php';
 
