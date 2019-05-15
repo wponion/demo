@@ -1,4 +1,15 @@
 <?php
+if ( ! function_exists( 'wponion_demo_rand_theme' ) ) {
+	/**
+	 * @return mixed
+	 */
+	function wponion_demo_rand_theme() {
+		$themes = array( 'wp', 'wp_modern', 'wp_lite', 'wc' );
+		$rand   = rand( 1, count( $themes ) ) - 1;
+		return ( isset( $themes[ $rand ] ) ) ? $themes[ $rand ] : $themes[0];
+	}
+}
+
 if ( ! function_exists( 'wponion_demo_dev' ) ) {
 	/**
 	 * Checks if Demo Dev mode enabled.
