@@ -7,7 +7,7 @@ $return = array();
 /**
  * Basic Features.
  */
-$return[] = new WPO\Subheading( 'Basic Features' );
+$return[] = new WPO\Fields\Subheading( 'Basic Features' );
 $return[] = wponion_field_builder( 'text', 'basic_feature_1', __( 'Field Title Here' ) );
 $return[] = Field::create( 'text', 'basic_feature_2', __( 'Custom Class' ), array(
 	'class' => 'wponion-custom-class',
@@ -33,14 +33,14 @@ $return[] = Field::create( 'text', 'basic_feature_6', __( 'Custom Inline Styling
 $return[] = Field::create( 'text', 'basic_feature_7', __( 'Horizontal Layout' ) )
 	->horizontal( true );
 
-$text = new \WPO\Text( 'basic_feature_8', __( 'Field With Default Value' ) );
-$text->default( __( 'Default Value Here..' ) );
+$text = new \WPO\Fields\Text( 'basic_feature_8', __( 'Field With Default Value' ) );
+$text->field_default( __( 'Default Value Here..' ) );
 $return[] = $text;
 
 /**
  * Element & Wrap Attributes.
  */
-$return[] = new \WPO\Subheading( __( 'Wrap & Field Attributes' ) );
+$return[] = new \WPO\Fields\Subheading( __( 'Wrap & Field Attributes' ) );
 
 $return[] = Field::create( 'text', 'basic_feature_attribute_1', __( 'Custom Input Attribute' ) )
 	->attributes( array(
@@ -73,9 +73,9 @@ $return[] = Field::create( 'text', 'basic_feature_attribute_3', __( 'Custom Inpu
  * Field Description.
  */
 $return[] = Field::create( 'subheading', __( 'Description Placement' ) );
-$return[] = new \WPO\Text( 'basic_feature_description_1', __( 'Description Below Title' ), array( 'desc' => __( 'Simple Description Below Field Title.' ) ) );
-$return[] = new \WPO\Text( 'basic_feature_description_2', __( 'Description Below Field' ), array( 'desc' => __( 'Simple Description Below Field.' ) ) );
-$return[] = new \WPO\Text( 'basic_feature_description_3', __( 'Description In Both Places' ), array(
+$return[] = new \WPO\Fields\Text( 'basic_feature_description_1', __( 'Description Below Title' ), array( 'desc' => __( 'Simple Description Below Field Title.' ) ) );
+$return[] = new \WPO\Fields\Text( 'basic_feature_description_2', __( 'Description Below Field' ), array( 'desc' => __( 'Simple Description Below Field.' ) ) );
+$return[] = new \WPO\Fields\Text( 'basic_feature_description_3', __( 'Description In Both Places' ), array(
 	'desc'       => __( 'Simple Description Below Field Title.' ),
 	'desc_field' => __( 'Simple Description Below Field.' ),
 ) );
@@ -162,7 +162,7 @@ $return[] = Field::create( 'text', 'basic_feature_tooltip_wrap_2', __( 'Field Wr
  */
 $return[] = Field::create( 'subheading', __( 'Column / Grid Layout' ) );
 
-$return[] = new \WPO\Content( __( '<code>col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4</code> Gird class has been used. for more details please refer <a href="https://evgenyrodionov.github.io/flexboxgrid2/">flexboxgrid2</a>' ) );
+$return[] = new \WPO\Fields\Content( __( '<code>col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4</code> Gird class has been used. for more details please refer <a href="https://evgenyrodionov.github.io/flexboxgrid2/">flexboxgrid2</a>' ) );
 
 $return[] = Field::create( 'text', 'basic_feature_grid_1', __( 'Simple Field' ) )
 	->wrap_class( 'col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4' )

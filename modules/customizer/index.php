@@ -15,7 +15,7 @@ $overview->upload( 'upload', __( 'Upload' ) );
 $overview->switcher( 'switcher', __( 'switcher' ) );
 $overview->color_picker( 'color_picker', __( 'Color Picker' ) );
 $overview->checkbox( 'checkbox', __( 'Checkbox' ) )
-	->set_label( 'The label text of the checkbox' );
+	->label( 'The label text of the checkbox' );
 $overview->radio( 'radio', 'Radio', array(
 	'options' => array(
 		'Yes Please.'  => 'Yes Please.',

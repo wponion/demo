@@ -10,7 +10,18 @@
  * Domain Path: /i18n/
  */
 
-
+/*
+add_action( 'wp', function () {
+	if ( ! is_admin() ) {
+		require_once __DIR__ . '/../wp-conditional-logic/src/functions.php';
+		require_once __DIR__ . '/../wp-conditional-logic/src/WP_Conditional_Logic.php';
+		$builder = wp_conditional_logic_builder( 'and' );
+		$builder->user_meta( 'freshs', '=', 'admin_color' );
+		wp_conditional_logic( $builder );
+		var_dump( $builder );
+		exit;
+	}
+} );*/
 add_action( 'wponion_loaded', 'wponion_demo_init' );
 add_action( 'widgets_init', 'wponion_demo_widgets', 10 );
 

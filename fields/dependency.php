@@ -21,7 +21,7 @@ $return[] = WPO\Field::create( 'notice_success', __( 'You Either Checked (checkb
 
 $return[] = WPO\Field::create( 'subheading', '(!==) Condition' );
 $return[] = WPO\Field::create( 'text', 'field3', '!= Condition' )
-	->default( 'WordPress' )
+	->field_default( 'WordPress' )
 	->desc_field( 'Type Any Other Word Than <code>WordPress</code> in the field above.' );
 $return[] = WPO\Field::create( 'notice_success', __( 'Awesome You Found The Hidden Field !!' ) )
 	->dependency( array( 'field3', '!=', 'WordPress' ) );

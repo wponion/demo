@@ -107,7 +107,7 @@ $wpo[] = $user_inputs;
  */
 //@todo create cloner demo.
 //@todo create tab demo.
-$advanced = WPO\Container::create( 'Advanced_fields', __( 'Advanced Fields' ), 'dashicons dashicons-admin-plugins' );
+$advanced = WPO\Container::create( 'advanced_fields', __( 'Advanced Fields' ), 'dashicons dashicons-admin-plugins' );
 $advanced->container( 'sorter', __( 'Sorter' ) )
 	->set_fields( $wpof['sorter'] );
 $advanced->container( 'key_value', __( 'Key Value' ) )

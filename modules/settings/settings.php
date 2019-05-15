@@ -54,9 +54,14 @@ $args   = array(
 	'option_name'     => '_wponion_demo_settings',
 	'framework_title' => __( 'WPOnion Demo Framework' ),
 	'framework_desc'  => __( 'This demo plugin shows WPOnion\'s full capability' ),
-	'theme'           => 'wp_modern',
+	'theme'           => 'wp',
+	'ajax'            => array(
+		'toast' => true,
+		'title' => __( 'Settings Saved' ),
+		'text'  => __( 'Settings Successfuly Updated. Please Clear WPCache if installed' ),
+	),
 	'color_scheme'    => $colors,
-	'is_single_page'  => false,
+	'is_single_page'  => true,
 	'menu'            => array(
 		'menu_title' => __( 'WPOnion Settings Demo' ),
 		'menu_slug'  => 'wponion-settings-demo',
