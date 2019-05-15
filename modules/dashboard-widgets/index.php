@@ -18,5 +18,5 @@ wponion_dashboard_widgets( array(
 	},
 ), $builder );
 
-require_once __DIR__ . 'network-and-site-widget2.php';
-require_once __DIR__ . 'network-only.php';
+require_once __DIR__ . '/network-and-site-widget.php';
+require_once __DIR__ . '/network-only.php';
