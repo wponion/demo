@@ -87,8 +87,11 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 		# Admin Columns
 		require_once __DIR__ . '/modules/admin-columns/index.php';
 
-		# Medial Fields.
+		# Media Fields.
 		require_once __DIR__ . '/modules/media-fields/index.php';
+
+		# Help Tabs
+		require_once __DIR__ . '/modules/help-tabs/index.php';
 
 		# WP Pointer Demo.
 		//require_once __DIR__ . '/modules/wp_pointer/index.php';
