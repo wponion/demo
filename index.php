@@ -93,6 +93,9 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 		# Help Tabs
 		require_once __DIR__ . '/modules/help-tabs/index.php';
 
+		# WooCommerce
+		require_once __DIR__ . '/modules/woocommerce/index.php';
+
 		# WP Pointer Demo.
 		//require_once __DIR__ . '/modules/wp_pointer/index.php';
 
