@@ -74,7 +74,7 @@ $return[] = Field::create( 'text', 'basic_feature_attribute_3', __( 'Custom Inpu
  */
 $return[] = Field::create( 'subheading', __( 'Description Placement' ) );
 $return[] = new \WPO\Fields\Text( 'basic_feature_description_1', __( 'Description Below Title' ), array( 'desc' => __( 'Simple Description Below Field Title.' ) ) );
-$return[] = new \WPO\Fields\Text( 'basic_feature_description_2', __( 'Description Below Field' ), array( 'desc' => __( 'Simple Description Below Field.' ) ) );
+$return[] = new \WPO\Fields\Text( 'basic_feature_description_2', __( 'Description Below Field' ), array( 'desc_field' => __( 'Simple `Description` Below Field.' ) ) );
 $return[] = new \WPO\Fields\Text( 'basic_feature_description_3', __( 'Description In Both Places' ), array(
 	'desc'       => __( 'Simple Description Below Field Title.' ),
 	'desc_field' => __( 'Simple Description Below Field.' ),
@@ -100,7 +100,7 @@ $return[] = Field::create( 'text', 'basic_feature_9', __( 'Debug View Enabled.' 
 $return[] = Field::create( 'subheading', __( 'Before & After Contents' ) );
 
 $return[] = Field::create( 'text', 'basic_feature_before_1', __( 'Element Before Content.' ) )
-	->before( '<i>' . __( 'Custom Element Before Text With HTML Support.' ) . '</i>' );
+	->before( '<i>' . __( 'Custom Element Before Text With `HTML` Support.' ) . '</i>' );
 
 $return[] = Field::create( 'text', 'basic_feature_after_1', __( 'Element After Content.' ) )
 	->after( '<i>' . __( 'Custom Element After Text With HTML Support.' ) . '</i>' );
