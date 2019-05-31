@@ -22,6 +22,8 @@ add_action( 'wp', function () {
 		exit;
 	}
 } );*/
+
+
 add_action( 'wponion_loaded', 'wponion_demo_init' );
 add_action( 'widgets_init', 'wponion_demo_widgets', 10 );
 
@@ -48,8 +50,19 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 			'page_title' => __( 'Sample Page ' ),
 			'menu_slug'  => 'wponion-demo',
 			'render'     => function () {
+				echo '<div class="wponion-framework">';
+				$con = 'You can style the subtitle with the below css class<br>Global <code class="red">product-subtitle</code><br>Product Specific  <code class="red">subtitle-{product-id}</code><br><br><strong>Example CSS </strong><br>Below Applies for all product subtitles<br><pre>.product-subtitle{color:green;}</pre>';
+				echo wponion_tooltip_faq( $con, array(), '<h2 style="display: inline-block; width:500px; text-align: center;">How Do I Style Subtitles ?</h2>' );
+
+				echo wponion_tooltip_faq( $con, array(), '<h2 style="display: inline-block; width:500px; text-align: center;">How Do I Style Subtitles 2 ?</h2>' );
+				echo wponion_tooltip_faq( $con, array(), '<h2 style="display: inline-block; width:500px; text-align: center;">How Do I Style Subtitles 3 ?</h2>' );
+				echo wponion_tooltip_faq( $con, array(), '<h2 style="display: inline-block; width:500px; text-align: center;">How Do I Style Subtitles 4 ?</h2>' );
+				echo '</div>';
 			},
 		) );
+
+		# Custom Admin Page.
+		require_once __DIR__ . '/modules/cpt/index.php';
 
 		# Custom Admin Page.
 		require_once __DIR__ . '/modules/admin-page/index.php';
@@ -95,6 +108,9 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 
 		# WooCommerce
 		require_once __DIR__ . '/modules/woocommerce/index.php';
+
+		# WooCommerce
+		require_once __DIR__ . '/modules/page-actions/index.php';
 
 		# WP Pointer Demo.
 		//require_once __DIR__ . '/modules/wp_pointer/index.php';
