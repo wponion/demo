@@ -67,6 +67,7 @@ $wpof['ui_notices']    = wponion_field_file( 'ui-notices.php' );
 $wpof['ui_wp_notices'] = wponion_field_file( 'ui-wp-notices.php' );
 $wpof['divider']       = wponion_field_file( 'divider.php' );
 $wpof['markdown']      = wponion_field_file( 'markdown.php' );
+$wpof['faq']           = wponion_field_file( 'faq.php' );
 
 /**
  * Others
@@ -189,6 +190,8 @@ $ui_fields->container( 'wp-notices', __( 'WP Notices' ) )
 	->set_fields( $wpof['ui_wp_notices'] );
 $ui_fields->container( 'divider', __( 'Divider' ) )
 	->set_fields( $wpof['divider'] );
+$ui_fields->container( 'faq', __( 'FAQ' ) )
+	->set_fields( $wpof['faq'] );
 $ui_fields->container( 'markdown', __( 'Markdown' ) )
 	->set_fields( $wpof['markdown'] );
 

@@ -17,7 +17,8 @@ $customtab->image( 'product_image', __( 'Product 2nd Image' ), array(
 $customtab->icon_picker( 'product_icon', __( 'Variation Icon' ), array(
 	'variation'  => 'only',
 	'desc_field' => __( 'This Field Will Show in only variation' ),
-) );
+) )
+	->validate( 'wponion_is_required' );
 
 wponion_wc_product( array(
 	'option_name' => '_wponion_demo_wc',

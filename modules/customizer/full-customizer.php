@@ -8,7 +8,7 @@ if ( wponion_is_debug() ) {
 	$cb = wponion_builder();
 
 	foreach ( $wpo as $_data ) {
-		$data = $_data->_clone();
+		$data = clone( $_data );
 		$data->set_title( __( 'WPOnion' ) . ' ' . $data->title() );
 		$data->set_slug( 'wponion_' . $data->slug() );
 		$cb->container( $data );

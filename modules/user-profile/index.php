@@ -3,7 +3,8 @@ $theme   = wponion_demo_rand_theme();
 $builder = wponion_builder();
 
 $container = $builder->container( 'page1', 'Page 1' );
-$container->text( 'profile', __( 'Profile Field' ) );
+$container->text( 'profile', __( 'Profile Field' ) )
+	->validate( 'wponion_is_required' );
 $container->textarea( 'profilefield2', __( 'Profile Field 2' ) )
 	->field_default( 'OOOO' );
 $container->image_select( 'image_select', __( 'Image Select Options' ) )

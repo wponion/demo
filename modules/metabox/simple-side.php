@@ -8,7 +8,8 @@ $wpo_side->image_select( 'image_select', 'Image Select', array(
 		'image3' => 'https://s3.wponion.com/placeholder/75/3.jpg',
 	),
 ) );
-$wpo_side->textarea( 'textarea', 'Textarea' );
+$wpo_side->textarea( 'textarea', 'Textarea' )
+	->validate( 'wponion_is_required' );
 $wpo_side->switcher( 'switcher', 'Switcher' )
 	->switch_size( 12 );
 

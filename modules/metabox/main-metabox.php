@@ -15,8 +15,7 @@ $s1->text( 'page_s1_text', 'Text' );
 $s1->textarea( 'page_s1_textarea', 'Textarea' );
 $s1->switcher( 'page_s1_switcher', 'switcher' );
 
-$s2 = $page->container( 'section2', 'Section 2', 'dashicons  dashicons-admin-generic' )
-	->disable();
+$s2 = $page->container( 'section2', 'Section 2', 'dashicons  dashicons-admin-generic' );
 $s2->color_picker( 'page_s1_color_picker', 'Color Picker' );
 $s2->icon_picker( 'page_s1_icon_picker', 'Icon Picker' );
 

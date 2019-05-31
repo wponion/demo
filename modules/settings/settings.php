@@ -8,6 +8,7 @@ foreach ( $wpo as $container ) {
 }
 
 $builder->container( 'system-info', __( 'System Tool/Info' ), 'dashicons dashicons-info' )
+	->set_var( 'developer', 'your-emailid@email.com' )
 	->set_callback( 'wponion_sysinfo' );
 
 
@@ -55,13 +56,9 @@ $args   = array(
 	'framework_title' => __( 'WPOnion Demo Framework' ),
 	'framework_desc'  => __( 'This demo plugin shows WPOnion\'s full capability' ),
 	'theme'           => 'wp',
-	'ajax'            => array(
-		'toast' => true,
-		'title' => __( 'Settings Saved' ),
-		'text'  => __( 'Settings Successfuly Updated. Please Clear WPCache if installed' ),
-	),
+	'ajax'            => false,
 	'color_scheme'    => $colors,
-	'is_single_page'  => true,
+	'is_single_page'  => false,
 	'menu'            => array(
 		'menu_title' => __( 'WPOnion Settings Demo' ),
 		'menu_slug'  => 'wponion-settings-demo',
