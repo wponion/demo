@@ -8,7 +8,7 @@ $return = array();
  * Basic Features.
  */
 $return[] = new WPO\Fields\Subheading( 'Basic Features' );
-$return[] = wponion_field_builder( 'text', 'basic_feature_1', __( 'Field Title Here' ) );
+$return[] = wpo_field( 'text', 'basic_feature_1', __( 'Field Title Here' ) );
 $return[] = Field::create( 'text', 'basic_feature_2', __( 'Custom Class' ), array(
 	'class' => 'wponion-custom-class',
 ) );
