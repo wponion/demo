@@ -9,13 +9,13 @@ foreach ( $wpo as $container ) {
 
 $builder->container( 'system-info', __( 'System Tool/Info' ), 'dashicons dashicons-info' )
 	->set_var( 'developer', 'your-emailid@email.com' )
-	->set_callback( 'wponion_sysinfo' );
+	->callback( 'wponion_sysinfo' );
 
 
 $builder->separator( 'separator', 'Custom Seperator', 'dashicons dashicons-admin-generic' );
 
 $builder->container( 'custom_page', __( 'Custom Page' ) )
-	->set_callback( function () {
+	->callback( function () {
 		echo '<div class="col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
 	} );
 
@@ -23,17 +23,17 @@ $builder->separator( 'separator2' );
 
 $subpages = $builder->container( 'custom_subpages', __( 'Custom Subpages' ) );
 $subpages->container( 'page1', __( 'Page 1' ) )
-	->set_callback( function () {
+	->callback( function () {
 		echo '<div class="col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
 	} );
 $subpages->container( 'page2', __( 'Page 2' ) )
-	->set_callback( function () {
+	->callback( function () {
 		echo '<div class="col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
 	} );
 
 
 $builder->container( 'support', __( 'Support' ), 'dashicons-info dashicons' )
-	->set_href( 'https://github.com/wponion/' );
+	->href( 'https://github.com/wponion/' );
 
 $colors = array(
 	'light',
@@ -55,8 +55,9 @@ $args   = array(
 	'option_name'     => '_wponion_demo_settings',
 	'framework_title' => __( 'WPOnion Demo Framework' ),
 	'framework_desc'  => __( 'This demo plugin shows WPOnion\'s full capability' ),
-	'theme'           => 'wp_modern',
+	'theme'           => 'wp',
 	'ajax'            => false,
+	'search'          => true,
 	'color_scheme'    => $colors,
 	'is_single_page'  => 'submenu',
 	'menu'            => array(

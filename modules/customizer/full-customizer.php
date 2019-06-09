@@ -9,8 +9,8 @@ if ( wponion_is_debug() ) {
 
 	foreach ( $wpo as $_data ) {
 		$data = clone( $_data );
-		$data->set_title( __( 'WPOnion' ) . ' ' . $data->title() );
-		$data->set_slug( 'wponion_' . $data->slug() );
+		$data->title( __( 'WPOnion' ) . ' ' . $data->title() );
+		$data->slug( 'wponion_' . $data->slug() );
 		$cb->container( $data );
 	}
 
