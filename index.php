@@ -108,7 +108,10 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 		# WooCommerce
 		require_once __DIR__ . '/modules/woocommerce/index.php';
 
-		# WooCommerce
+		# Bulk Edit.
+		require_once __DIR__ . '/modules/bulk-edit/index.php';
+
+		# Page Actions.
 		require_once __DIR__ . '/modules/page-actions/index.php';
 
 		# WP Pointer Demo.
