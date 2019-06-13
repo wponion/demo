@@ -80,6 +80,15 @@ $return[] = new \WPO\Fields\Text( 'basic_feature_description_3', __( 'Descriptio
 	'desc_field' => __( 'Simple Description Below Field.' ),
 ) );
 
+$return[] = new \WPO\Fields\Text( 'basic_feature_description_4', __( 'Description In Both Places With Long' ), array(
+	'desc'       => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+	
+Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s
+',
+	'desc_field' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
+) );
+
 
 /**
  * Field Debug Options.
