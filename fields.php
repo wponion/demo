@@ -32,6 +32,7 @@ $wpof['fieldset']    = wponion_field_file( 'fieldset.php' );
 $wpof['accordion']   = wponion_field_file( 'accordion.php' );
 $wpof['group']       = wponion_field_file( 'group.php' );
 $wpof['modal']       = wponion_field_file( 'modal.php' );
+$wpof['code_editor'] = wponion_field_file( 'code-editor.php' );
 
 /**
  * Picker Fields.
@@ -129,6 +130,8 @@ $advanced->container( 'group', __( 'Group' ), 'dashicons dashicons-admin-setting
 	->set_fields( $wpof['group'] );
 $advanced->container( 'modalfields', __( 'Modal Fields' ) )
 	->set_fields( $wpof['modal'] );
+$advanced->container( 'codeeditor', __( 'Code Editor' ) )
+	->set_fields( $wpof['code_editor'] );
 
 $wpo[] = $advanced;
 
