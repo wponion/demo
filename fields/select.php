@@ -67,6 +67,7 @@ $return[] = WPO\Field::create( 'select', 'select_8_1', __( 'Custom Callback ' ),
 $return[] = WPO\Field::create( 'select', 'select_8_2', __( 'Custom Callback (Ajax) ' ), array(
 	'select2' => true,
 	'ajax'    => true,
+	'style'   => 'width:50%',
 	'options' => 'wponion_demo_select_options',
 ) );
 

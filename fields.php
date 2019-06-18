@@ -29,6 +29,7 @@ $wpof['input_group'] = wponion_field_file( 'input-group.php' );
 $wpof['fieldset']    = wponion_field_file( 'fieldset.php' );
 $wpof['accordion']   = wponion_field_file( 'accordion.php' );
 $wpof['group']       = wponion_field_file( 'group.php' );
+$wpof['modal']       = wponion_field_file( 'modal.php' );
 
 /**
  * Picker Fields.
@@ -75,7 +76,6 @@ $wpof['faq']           = wponion_field_file( 'faq.php' );
 $wpof['js-validation']  = wponion_field_file( 'js-validation.php' );
 $wpof['php-validation'] = wponion_field_file( 'php-validation.php' );
 $wpof['dependency']     = wponion_field_file( 'dependency.php' );
-
 /**
  * Basic Features.
  */
@@ -121,6 +121,8 @@ $advanced->container( 'accordion', __( 'Accordion' ), 'dashicons dashicons-admin
 	->set_fields( $wpof['accordion'] );
 $advanced->container( 'group', __( 'Group' ), 'dashicons dashicons-admin-settings' )
 	->set_fields( $wpof['group'] );
+$advanced->container( 'modalfields', __( 'Modal Fields' ) )
+	->set_fields( $wpof['modal'] );
 
 $wpo[] = $advanced;
 
