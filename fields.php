@@ -19,6 +19,7 @@ $wpof['radio']      = wponion_field_file( 'radio.php' );
 $wpof['select']     = wponion_field_file( 'select.php' );
 $wpof['switcher']   = wponion_field_file( 'switcher.php' );
 $wpof['button_set'] = wponion_field_file( 'button-set.php' );
+$wpof['spinner']    = wponion_field_file( 'spinner.php' );
 
 /**
  * Advanced Fields.
@@ -100,6 +101,8 @@ $user_inputs->container( 'switcher', __( 'Switcher' ), 'dashicons dashicons-yes'
 	->set_fields( $wpof['switcher'] );
 $user_inputs->container( 'button_set', __( 'Button Set' ), 'dashicons dashicons-editor-kitchensink' )
 	->set_fields( $wpof['button_set'] );
+$user_inputs->container( 'spinner', __( 'Spinner' ), 'dashicons dashicons-image-rotate' )
+	->set_fields( $wpof['spinner'] );
 
 $wpo[] = $user_inputs;
 
