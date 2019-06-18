@@ -7,8 +7,11 @@ foreach ( $wpo as $container ) {
 	$builder->container( $container );
 }
 
+$builder->container( 'import-export', __( 'Import / Export' ) )
+	->field( 'import_export' );
+
 $builder->container( 'system-info', __( 'System Tool/Info' ), 'dashicons dashicons-info' )
-	->set_var( 'developer', 'your-emailid@email.com' )
+	->set_var( 'developer', 'your-emailemail.com' )
 	->callback( 'wponion_sysinfo' );
 
 
@@ -56,10 +59,10 @@ $args   = array(
 	'framework_title' => __( 'WPOnion Demo Framework' ),
 	'framework_desc'  => __( 'This demo plugin shows WPOnion\'s full capability' ),
 	'theme'           => 'wp',
-	'ajax'            => false,
+	'ajax'            => true,
 	'search'          => true,
 	'color_scheme'    => $colors,
-	'is_single_page'  => 'submenu',
+	'is_single_page'  => false,
 	'menu'            => array(
 		'menu_title' => __( 'WPOnion Settings Demo' ),
 		'menu_slug'  => 'wponion-settings-demo',
