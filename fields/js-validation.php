@@ -16,7 +16,8 @@ $return[] = WPO\Field::create( 'checkbox', 'checkbox', __( 'Required Checkbox *'
 $return[] = WPO\Field::create( 'switcher', 'switcher', __( 'Required Switcher *' ) )
 	->js_validate( 'required' );
 
-$return[] = WPO\Field::create( 'key_value', 'key_value', __( 'Required Key Value *' ) )
-	->js_validate( 'required' );
-
+/* @var \WPO\Fields\Key_Value $keyval */
+$keyval   = WPO\Field::create( 'key_value', 'key_value', __( 'Required Key Value *' ) )
+	->js_validate( array( 'key' => 'required' ) );
+$return[] = $keyval;
 return $return;
