@@ -74,6 +74,7 @@ $return[] = WPO\Field::create( 'select', 'select_8_2', __( 'Custom Callback (Aja
 $return[] = WPO\Field::create( 'select', 'select_8_3', __( 'Query Args With Custom Output Template' ), array(
 	'select2'    => true,
 	'ajax'       => true,
+	'style'      => 'width:50%',
 	'options'    => 'category',
 	'query_args' => array(
 		'taxonomy'     => 'product_cat',
