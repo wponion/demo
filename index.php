@@ -135,6 +135,9 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 		# Page Actions.
 		require_once __DIR__ . '/modules/page-actions/index.php';
 
+		# Page Actions.
+		require_once __DIR__ . '/modules/quick-edit/index.php';
+
 		# WP Pointer Demo.
 		//require_once __DIR__ . '/modules/wp_pointer/index.php';
 
