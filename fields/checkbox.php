@@ -73,7 +73,7 @@ $improved_options = \WPO\Field::create( 'checkbox', 'checkbox_5', __( 'Checkbox 
 	) )
 	->option( 'option2', array(
 		'label'    => __( 'Disabled Option' ),
-		'disbaled' => true,
+		'disabled' => true,
 	) )
 	->option( 'option3', array(
 		'label'   => __( 'Option With Tooltip' ),
