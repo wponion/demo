@@ -49,8 +49,26 @@ $return = array();
 
 $return[] = WPO\Field::create( 'subheading', __( 'Color Picker' ) );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker', __( 'Color Picker' ) );
-$return[] = WPO\Field::create( 'color_picker', 'color_picker_1', __( 'Color Picker <small>(RGBA)</small>' ) )
-	->rgba( true );
+$return[] = WPO\Field::create( 'color_picker', 'color_picker_1', __( 'Inline Color Picker' ) )
+	->settings( array( 'inline' => true ) );
+
+$return[] = WPO\Field::create( 'subheading', __( 'Color Picker Themes' ) );
+$return[] = WPO\Field::create( 'color_picker', 'color_picker_classic', __( 'Classic Theme' ) )
+	->settings( array(
+		'inline' => true,
+		'theme'  => 'classic',
+	) );
+$return[] = WPO\Field::create( 'color_picker', 'color_picker_monolith', __( 'Monolith Theme' ) )
+	->settings( array(
+		'inline' => true,
+		'theme'  => 'monolith',
+	) );
+$return[] = WPO\Field::create( 'color_picker', 'color_picker_nano', __( 'nano Theme' ) )
+	->settings( array(
+		'inline' => true,
+		'theme'  => 'nano',
+	) );
+
 
 $return[] = WPO\Field::create( 'subheading', __( 'Color Picker As Palette' ) );
 $return[] = WPO\Field::create( 'color_picker', 'color_picker_2', __( 'Multiple' ) )
