@@ -79,6 +79,7 @@ $wpof['faq']           = wponion_field_file( 'faq.php' );
 $wpof['js-validation']  = wponion_field_file( 'js-validation.php' );
 $wpof['php-validation'] = wponion_field_file( 'php-validation.php' );
 $wpof['dependency']     = wponion_field_file( 'dependency.php' );
+$wpof['field_badge']     = wponion_field_file( 'field-badge.php' );
 /**
  * Basic Features.
  */

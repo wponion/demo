@@ -1,5 +1,5 @@
 <?php
-global $wpo;
+global $wpo, $wpof;
 
 $builder = wponion_builder();
 
@@ -35,6 +35,8 @@ $subpages->container( 'page2', __( 'Page 2' ) )
 	} );
 
 
+$builder->container( 'field_badge', __( 'Field Badge' ) )
+	->set_fields( $wpof['field_badge'] );
 $builder->container( 'support', __( 'Support' ), 'dashicons-info dashicons' )
 	->href( 'https://github.com/wponion/' );
 
@@ -61,7 +63,7 @@ $args   = array(
 	'theme'           => 'wp',
 	'ajax'            => true,
 	'search'          => true,
-	'color_scheme'    => $colors,
+	//'color_scheme'    => $colors,
 	'is_single_page'  => false,
 	'menu'            => array(
 		'menu_title' => __( 'WPOnion Settings Demo' ),
