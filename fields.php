@@ -33,6 +33,7 @@ $wpof['accordion']   = wponion_field_file( 'accordion.php' );
 $wpof['group']       = wponion_field_file( 'group.php' );
 $wpof['modal']       = wponion_field_file( 'modal.php' );
 $wpof['code_editor'] = wponion_field_file( 'code-editor.php' );
+$wpof['cloner']      = wponion_field_file( 'cloner.php' );
 
 /**
  * Picker Fields.
@@ -41,6 +42,7 @@ $wpof['color_picker'] = wponion_field_file( 'color-picker.php' );
 $wpof['icon_picker']  = wponion_field_file( 'icon-picker.php' );
 $wpof['font_picker']  = wponion_field_file( 'font-picker.php' );
 $wpof['date_picker']  = wponion_field_file( 'date-picker.php' );
+$wpof['time_picker']  = wponion_field_file( 'time-picker.php' );
 $wpof['image_select'] = wponion_field_file( 'image-select.php' );
 
 /**
@@ -57,11 +59,14 @@ $wpof['oembed']    = wponion_field_file( 'oembed.php' );
  * Design Fields.
  */
 //$wpof['color_palette'] = wponion_field_file( 'color-palette.php' );
-$wpof['background']  = wponion_field_file( 'background.php' );
-$wpof['color_group'] = wponion_field_file( 'color-group.php' );
-$wpof['link_color']  = wponion_field_file( 'link-color.php' );
-$wpof['spacing']     = wponion_field_file( 'spacing.php' );
-$wpof['dimensions']  = wponion_field_file( 'dimensions.php' );
+$wpof['background']    = wponion_field_file( 'background.php' );
+$wpof['typography']    = wponion_field_file( 'typography.php' );
+$wpof['color_group']   = wponion_field_file( 'color-group.php' );
+$wpof['link_color']    = wponion_field_file( 'link-color.php' );
+$wpof['spacing']       = wponion_field_file( 'spacing.php' );
+$wpof['dimensions']    = wponion_field_file( 'dimensions.php' );
+$wpof['css_shadow']    = wponion_field_file( 'css-shadow.php' );
+$wpof['visual_editor'] = wponion_field_file( 'visual-editor.php' );
 
 /**
  * UI Fields.
@@ -79,7 +84,7 @@ $wpof['faq']           = wponion_field_file( 'faq.php' );
 $wpof['js-validation']  = wponion_field_file( 'js-validation.php' );
 $wpof['php-validation'] = wponion_field_file( 'php-validation.php' );
 $wpof['dependency']     = wponion_field_file( 'dependency.php' );
-$wpof['field_badge']     = wponion_field_file( 'field-badge.php' );
+$wpof['field_badge']    = wponion_field_file( 'field-badge.php' );
 /**
  * Basic Features.
  */
@@ -133,6 +138,8 @@ $advanced->container( 'modalfields', __( 'Modal Fields' ) )
 	->set_fields( $wpof['modal'] );
 $advanced->container( 'codeeditor', __( 'Code Editor' ) )
 	->set_fields( $wpof['code_editor'] );
+$advanced->container( 'cloner', __( 'Cloner' ) )
+	->set_fields( $wpof['cloner'] );
 
 $wpo[] = $advanced;
 
@@ -148,6 +155,8 @@ $pickers->container( 'font_picker', __( 'Font Picker' ), 'dashicons dashicons-ed
 	->set_fields( $wpof['font_picker'] );
 $pickers->container( 'date_picker', __( 'Date Picker' ), 'dashicons dashicons-calendar-alt' )
 	->set_fields( $wpof['date_picker'] );
+$pickers->container( 'time_picker', __( 'Time Picker' ), 'dashicons dashicons-clock' )
+	->set_fields( $wpof['time_picker'] );
 $pickers->container( 'image_select', __( 'Image Select' ), 'dashicons dashicons-format-image' )
 	->set_fields( $wpof['image_select'] );
 
@@ -176,17 +185,23 @@ $wpo[] = $wp_fields;
  * Design Fields.
  */
 //@todo Create Color Palette Field.
-$design = WPO\Container::create( 'design_fields', __( 'Design Fields' ) );
+$design = WPO\Container::create( 'design_fields', __( 'Design Fields' ), 'dashicons dashicons-art' );
 $design->container( 'background', __( 'Background' ) )
 	->set_fields( $wpof['background'] );
+$design->container( 'typography', __( 'Typography' ) )
+	->set_fields( $wpof['typography'] );
 $design->container( 'color_group', __( 'Color Group' ) )
 	->set_fields( $wpof['color_group'] );
-$design->container( 'link_color', __( 'Link Group' ) )
+$design->container( 'link_color', __( 'Link Color Group' ) )
 	->set_fields( $wpof['link_color'] );
 $design->container( 'spacing', __( 'Spacing' ) )
 	->set_fields( $wpof['spacing'] );
 $design->container( 'dimensions', __( 'Dimensions' ) )
 	->set_fields( $wpof['dimensions'] );
+$design->container( 'css_shadow', __( 'CSS Shadow' ) )
+	->set_fields( $wpof['css_shadow'] );
+$design->container( 'visual_editor', __( 'Visual Editor' ) )
+	->set_fields( $wpof['visual_editor'] );
 
 $wpo[] = $design;
 
