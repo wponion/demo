@@ -42,7 +42,8 @@ $return[] = WPO\Field::create( 'subheading', __( 'Custom Styling' ) );
 $return[] = WPO\Field::create( 'button_set', 'button_set_5', __( 'Custom Style 1' ) )
 	->multiple( false )
 	->desc_field( __( 'Active button will be highlited in <code>Green</code>' ) )
-	->active( 'button-success' )
+	->active( 'wpo-btn wpo-btn-success' )
+	->inactive( 'wpo-btn wpo-btn-secondary' )
 	->options( array(
 		'enabled'  => __( 'Enabled' ),
 		'disabled' => __( 'Disabled' ),
@@ -50,7 +51,8 @@ $return[] = WPO\Field::create( 'button_set', 'button_set_5', __( 'Custom Style 1
 $return[] = WPO\Field::create( 'button_set', 'button_set_6', __( 'Custom Style 2' ) )
 	->multiple( false )
 	->desc_field( __( 'InActive button will be highlited in <code>dark</code>' ) )
-	->inactive( 'button-dark' )
+	->active( 'wpo-btn wpo-btn-primary' )
+	->inactive( 'wpo-btn wpo-btn-dark' )
 	->options( array(
 		'enabled'  => __( 'Enabled' ),
 		'disabled' => __( 'Disabled' ),

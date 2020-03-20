@@ -10,6 +10,9 @@ $customtab = $builder->container( 'custom-tab', __( 'WPonion Custom Tab' ) );
 $customtab->textarea( 'textareafield', __( 'Custom Textarea' ) )
 	->horizontal( true );
 
+$customtab              = $customtab->accordion( 'myacc' );
+$customtab['variation'] = 'only';
+
 $customtab->image( 'product_image', __( 'Product 2nd Image' ), array(
 	'variation'  => true,
 	'desc_field' => __( 'This Field Will Show in both variation & this tab' ),
