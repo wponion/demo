@@ -36,6 +36,11 @@ wponion_admin_page( array(
 			'name'   => 'contextual',
 			'render' => 'wponion_bootstrap_list_table_demo',
 		),
+		array(
+			'title'  => __( 'Sortable Columns' ),
+			'name'   => 'sortable',
+			'render' => 'wponion_bootstrap_list_table_demo',
+		),
 	),
 ) );
 /**+
@@ -103,6 +108,24 @@ function wponion_bootstrap_list_table_demo( $page ) {
 					return '';
 				},
 			);
+			break;
+		case 'sortable':
+			$main_style             = 'background:white;border:1px solid #ddd;';
+			$settings['sortable'] = array(
+				'contact-number' => 'contact-number',
+				'name'           => array( 'name', true ),
+			);
+			$table->data( function () {
+				global $wpo_list_table_content;
+				usort( $wpo_list_table_content, function ( $a, $b ) {
+					$orderby = ( ! empty( $_GET['orderby'] ) ) ? $_GET['orderby'] : 'contact-number';
+					$order   = ( ! empty( $_GET['order'] ) ) ? $_GET['order'] : 'asc';
+					$result  = strcmp( $a[ $orderby ], $b[ $orderby ] );
+					return ( 'asc' === $order ) ? $result : -$result;
+				} );
+
+				return $wpo_list_table_content;
+			} );
 			break;
 
 	}
