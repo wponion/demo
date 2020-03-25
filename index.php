@@ -141,5 +141,8 @@ if ( ! function_exists( 'wponion_demo_init' ) ) {
 		# WP Pointer Demo.
 		//require_once __DIR__ . '/modules/wp_pointer/index.php';
 
+		# WP List Table.
+		require_once __DIR__ . '/modules/wp-list-table/index.php';
+
 	}
 }
