@@ -5,7 +5,7 @@ $e       = wponion_tooltip( array(
 	'element' => $element,
 	'content' => __( 'ToolTip Content' ),
 ) );
-$b       = wponion_inline_ajax( array(), $e->element() );
+
 
 
 wpo_tooltip( __( 'Click To View Large Image' ), array(
