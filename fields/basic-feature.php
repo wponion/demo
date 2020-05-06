@@ -171,18 +171,18 @@ $return[] = Field::create( 'text', 'basic_feature_tooltip_wrap_2', __( 'Field Wr
  */
 $return[] = Field::create( 'subheading', __( 'Column / Grid Layout' ) );
 
-$return[] = new \WPO\Fields\Content( __( '<code>col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4</code> Gird class has been used. for more details please refer <a href="https://evgenyrodionov.github.io/flexboxgrid2/">flexboxgrid2</a>' ) );
+$return[] = new \WPO\Fields\Content( __( '<code>wpo-col-xs-12 wpo-col-sm-12 wpo-col-md-12 wpo-col-lg-6 wpo-col-xl-4</code> Gird class has been used. for more details please refer <a href="https://evgenyrodionov.github.io/flexboxgrid2/">flexboxgrid2</a>' ) );
 
 $return[] = Field::create( 'text', 'basic_feature_grid_1', __( 'Simple Field' ) )
-	->wrap_class( 'col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4' )
+	->wrap_class( 'wpo-col-xs-12 wpo-col-sm-12 wpo-col-md-12 wpo-col-lg-6 wpo-col-xl-4' )
 	->horizontal( true );
 
 $return[] = Field::create( 'text', 'basic_feature_grid_2', __( 'Simple Field' ) )
-	->wrap_class( 'col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4' )
+	->wrap_class( 'wpo-col-xs-12 wpo-col-sm-12 wpo-col-md-12 wpo-col-lg-6 wpo-col-xl-4' )
 	->horizontal( true );
 
 $return[] = Field::create( 'text', 'basic_feature_grid_3', __( 'Simple Field' ) )
-	->wrap_class( 'col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4' )
+	->wrap_class( 'wpo-col-xs-12 wpo-col-sm-12 wpo-col-md-12 wpo-col-lg-6 wpo-col-xl-4' )
 	->horizontal( true );
 
 return $return;
