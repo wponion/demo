@@ -19,7 +19,7 @@ $builder->separator( 'separator', 'Custom Seperator', 'dashicons dashicons-admin
 
 $builder->container( 'custom_page', __( 'Custom Page' ), 'dashicons dashicons-text-page' )
 	->callback( function () {
-		echo '<div class="col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
+		echo '<div class="wpo-col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
 	} );
 
 $builder->separator( 'separator2' );
@@ -27,11 +27,11 @@ $builder->separator( 'separator2' );
 $subpages = $builder->container( 'custom_subpages', __( 'Custom Subpages' ), 'dashicons dashicons-admin-page' );
 $subpages->container( 'page1', __( 'Page 1' ) )
 	->callback( function () {
-		echo '<div class="col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
+		echo '<div class="wpo-col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
 	} );
 $subpages->container( 'page2', __( 'Page 2' ) )
 	->callback( function () {
-		echo '<div class="col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
+		echo '<div class="wpo-col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
 	} );
 
 
