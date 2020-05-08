@@ -49,6 +49,6 @@ function wponion_admin_notice_demo() {
 		wponion_upgrade_admin_notice( 'Simple Upgrade Notice', 'Upgrade With A Title' );
 
 		$notice = wponion_admin_notice( 'success', 'Simple Sticky Notice <p><button class="button button-secondary wpo-stick-dismiss">Close & Remove Notice</button></p>', '' );
-		$notice->setSticky( true );
+		$notice->set_sticky( true );
 	}
 }
