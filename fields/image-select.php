@@ -53,17 +53,17 @@ $return[] = WPO\Field::create( 'subheading', __( 'Predefined Layouts' ) );
 $return[] = WPO\Field::create( 'image_select', 'body_layout', 'Body Layout ', array(
 	'options'    => 'body_layouts',
 	'query_args' => array( 'size' => '75' ),
-	'desc_field' => __( 'Image Size is 75px. available sizes [75px, 100px, 125px, 150px, 200px] ' ),
+	'desc_field' => __( 'Image Size is 75px. available sizes [75px, 100px, 125px ] ' ),
 ) );
 $return[] = WPO\Field::create( 'image_select', 'header_layout', 'Header Layout', array(
 	'options'    => 'header_layouts',
-	'desc_field' => __( 'Image Size is 100px. available sizes [75px, 100px, 125px, 150px, 200px] ' ),
+	'desc_field' => __( 'Image Size is 100px. available sizes [75px, 100px, 125px ] ' ),
 	'query_args' => array( 'size' => '100' ),
 ) );
 $return[] = WPO\Field::create( 'image_select', 'sidebar_layout', 'Sidebar Layout', array(
 	'options'    => 'sidebar_layouts',
-	'desc_field' => __( 'Image Size is 200px. available sizes [75px, 100px, 125px, 150px, 200px] ' ),
-	'query_args' => array( 'size' => '200' ),
+	'desc_field' => __( 'Image Size is 100px. available sizes [75px, 100px, 125px ] ' ),
+	'query_args' => array( 'size' => '100' ),
 ) );
 
 $return[] = WPO\Field::create( 'subheading', __( 'Improved Options' ) );
