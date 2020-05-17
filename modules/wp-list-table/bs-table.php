@@ -110,7 +110,7 @@ function wponion_bootstrap_list_table_demo( $page ) {
 			);
 			break;
 		case 'sortable':
-			$main_style             = 'background:white;border:1px solid #ddd;';
+			$main_style           = 'background:white;border:1px solid #ddd;';
 			$settings['sortable'] = array(
 				'contact-number' => 'contact-number',
 				'name'           => array( 'name', true ),
