@@ -1,8 +1,10 @@
 <?php
-$builder = wponion_builder();
-$builder->text( 'your-name', __( 'Your Name' ) )
-	->validate( 'wponion_is_required' );
-$builder->image( 'image', __( 'Image Select' ) );
+function wponion_dashboard_widget_1() {
+	$builder = wponion_builder();
+	$builder->text( 'your-name', __( 'Your Name' ) )->validate( 'wponion_is_required' );
+	$builder->image( 'image', __( 'Image Select' ) );
+	return $builder;
+}
 
 /**
  * Below Widgets Shows only in Single site.
@@ -20,7 +22,7 @@ wponion_dashboard_widgets( array(
 		echo '<p>You Have Selected Below Image</p>';
 		echo wp_get_attachment_image( $dashboard['image'], 'medium' );
 	},
-), $builder );
+), 'wponion_dashboard_widget_1' );
 
 require_once __DIR__ . '/network-and-site-widget.php';
 require_once __DIR__ . '/network-only.php';

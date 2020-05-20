@@ -5,7 +5,7 @@ $builder->text( 'title', 'title' )
 	->validate( 'wponion_is_required' );
 $builder->icon_picker( 'icon', __( 'Icon' ) );
 
-wponion_taxonomy( array(
+$taxonomy = wponion_taxonomy( array(
 	'option_name' => '_wponion_taxonomy',
 	'theme'       => 'wp_modern',
 	'elementor'   => __( 'WPOnion Taxonomy Integration' ),

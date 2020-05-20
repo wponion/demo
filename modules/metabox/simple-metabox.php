@@ -1,8 +1,11 @@
 <?php
-$wpo_mp = wponion_builder();
-$wpo_mp->text( 'text', __( 'TextField' ) );
-$wpo_mp->textarea( 'textarea', __( 'Textarea' ) );
-$wpo_mp->switcher( 'switcher', __( 'Switcher' ) );
+function wponion_demo_simple_metabox() {
+	$wpo_mp = wponion_builder();
+	$wpo_mp->text( 'text', __( 'TextField' ) );
+	$wpo_mp->textarea( 'textarea', __( 'Textarea' ) );
+	$wpo_mp->switcher( 'switcher', __( 'Switcher' ) );
+	return $wpo_mp;
+}
 
 wponion_metabox( array(
 	'option_name'   => '_wponion_metabox_posts',
@@ -12,4 +15,4 @@ wponion_metabox( array(
 	'context'       => 'normal',
 	'ajax'          => true,
 	'theme'         => 'wp_modern',
-), $wpo_mp );
+), 'wponion_demo_simple_metabox' );

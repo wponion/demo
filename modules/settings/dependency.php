@@ -1,7 +1,11 @@
 <?php
-global $wpof;
-$builder = new WPO\Builder();
-$builder->set_fields( $wpof['dependency'] );
+function wponion_demo_settings_dep() {
+	global $wpof;
+	$builder = new WPO\Builder();
+	$builder->set_fields( $wpof['dependency'] );
+	return $builder;
+}
+
 $args = array(
 	'option_name'     => '_wponion_demo_settings_dependency',
 	'framework_title' => __( 'WPOnion dependency Demo' ),
@@ -15,4 +19,4 @@ $args = array(
 	),
 );
 
-$instance = wponion_settings( $args, $builder );
+$instance = wponion_settings( $args, 'wponion_demo_settings_dep' );

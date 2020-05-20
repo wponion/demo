@@ -1,10 +1,14 @@
 <?php
-global $wpof;
-$builder = new WPO\Builder();
-$builder->container( 'jsvalidation', __( 'JS Validation' ), 'dashicons-admin-generic dashicons' )
-	->set_fields( $wpof['js-validation'] );
-$builder->container( 'phpvalidation', __( 'PHP Validation' ), 'dashicons-admin-generic dashicons' )
-	->set_fields( $wpof['php-validation'] );
+function wponion_demo_validation() {
+	global $wpof;
+	$builder = new WPO\Builder();
+	$builder->container( 'jsvalidation', __( 'JS Validation' ), 'dashicons-admin-generic dashicons' )
+		->set_fields( $wpof['js-validation'] );
+	$builder->container( 'phpvalidation', __( 'PHP Validation' ), 'dashicons-admin-generic dashicons' )
+		->set_fields( $wpof['php-validation'] );
+	return $builder;
+}
+
 $args = array(
 	'option_name'     => '_wponion_demo_settings_validation',
 	'framework_title' => __( 'WPOnion Validation Demo' ),
@@ -18,4 +22,4 @@ $args = array(
 	),
 );
 
-$instance = wponion_settings( $args, $builder );
+$instance = wponion_settings( $args, 'wponion_demo_validation' );

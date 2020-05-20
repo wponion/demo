@@ -1,44 +1,40 @@
 <?php
-global $wpo, $wpof;
+function wponion_demo_settings_simple() {
 
-$builder = wponion_builder();
+	global $wpo, $wpof;
 
-foreach ( $wpo as $container ) {
-	$builder->container( $container );
+	$builder = wponion_builder();
+
+	foreach ( $wpo as $container ) {
+		$builder->container( $container );
+	}
+
+	$builder->container( 'import-export', __( 'Import / Export' ), 'dashicons dashicons-upload' )
+		->field( 'import_export' );
+	$builder->container( 'system-info', __( 'System Info' ), 'dashicons dashicons-info' )
+		->set_var( 'developer', 'your-emailemail.com' )
+		->callback( 'wponion_sysinfo' );
+	$builder->separator( 'separator', 'Custom Seperator', 'dashicons dashicons-admin-generic' );
+	$builder->container( 'custom_page', __( 'Custom Page' ), 'dashicons dashicons-text-page' )->callback( function () {
+		echo '<div class="wpo-col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
+	} );
+
+	$builder->separator( 'separator2' );
+
+	$subpages = $builder->container( 'custom_subpages', __( 'Custom Subpages' ), 'dashicons dashicons-admin-page' );
+	$subpages->container( 'page1', __( 'Page 1' ) )->callback( function () {
+		echo '<div class="wpo-col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
+	} );
+	$subpages->container( 'page2', __( 'Page 2' ) )->callback( function () {
+		echo '<div class="wpo-col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
+	} );
+
+	$builder->container( 'field_badge', __( 'Field Badge' ), 'dashicons dashicons-tag' )
+		->set_fields( $wpof['field_badge'] );
+	$builder->container( 'support', __( 'Support' ), 'dashicons-info dashicons' )
+		->href( 'https://github.com/wponion/' );
+	return $builder;
 }
-
-$builder->container( 'import-export', __( 'Import / Export' ), 'dashicons dashicons-upload' )
-	->field( 'import_export' );
-
-$builder->container( 'system-info', __( 'System Info' ), 'dashicons dashicons-info' )
-	->set_var( 'developer', 'your-emailemail.com' )
-	->callback( 'wponion_sysinfo' );
-
-
-$builder->separator( 'separator', 'Custom Seperator', 'dashicons dashicons-admin-generic' );
-
-$builder->container( 'custom_page', __( 'Custom Page' ), 'dashicons dashicons-text-page' )
-	->callback( function () {
-		echo '<div class="wpo-col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
-	} );
-
-$builder->separator( 'separator2' );
-
-$subpages = $builder->container( 'custom_subpages', __( 'Custom Subpages' ), 'dashicons dashicons-admin-page' );
-$subpages->container( 'page1', __( 'Page 1' ) )
-	->callback( function () {
-		echo '<div class="wpo-col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
-	} );
-$subpages->container( 'page2', __( 'Page 2' ) )
-	->callback( function () {
-		echo '<div class="wpo-col-xs-12"><h1>Hello World. This is a custom page with custom content rendered</h1></div>';
-	} );
-
-
-$builder->container( 'field_badge', __( 'Field Badge' ), 'dashicons dashicons-tag' )
-	->set_fields( $wpof['field_badge'] );
-$builder->container( 'support', __( 'Support' ), 'dashicons-info dashicons' )
-	->href( 'https://github.com/wponion/' );
 
 $colors = array(
 	'light',
@@ -72,4 +68,4 @@ $args   = array(
 	),
 );
 
-$instance = wponion_settings( $args, $builder );
+$instance = wponion_settings( $args, 'wponion_demo_settings_simple' );
