@@ -23,5 +23,7 @@ wponion_user_profile( array(
 	'theme'       => wponion_demo_rand_theme(),
 	'option_name' => '_wponion_user_profile',
 ), function () {
-	return wponion_builder()->set_fields( wponion_demo_userprofile_1()->fields() );
+	$builder = wponion_builder();
+	$builder->set_fields( wponion_demo_userprofile_1()->container( 'page1' )->fields() );
+	return $builder;
 } );
