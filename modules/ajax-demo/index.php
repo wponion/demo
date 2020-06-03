@@ -4,9 +4,9 @@ add_action( 'wp_ajax_wponion-demo-ajax-action1', function () {
 } );
 add_action( 'wp_ajax_wponion-demo-ajax-action3', function () {
 	if ( 1 === rand( 0, 1 ) ) {
-		wp_send_json_success( array( 'msg' => '<strong> Response From Ajax Success</strong>' ) );
+		wp_send_json_success( array( 'msg' => '<strong class="wpo-text-success"> Response From Ajax Success</strong>' ) );
 	} else {
-		wp_send_json_error( array( 'msg' => '<strong> Response From Ajax Error</strong>' ) );
+		wp_send_json_error( array( 'msg' => '<strong class="wpo-text-danger"> Response From Ajax Error</strong>' ) );
 	}
 } );
 add_action( 'wp_ajax_wponion-demo-ajax-action4', function () {
