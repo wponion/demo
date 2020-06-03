@@ -50,7 +50,7 @@ function wponion_bootstrap_list_table_demo( $page ) {
 	global $wpo_list_table_content, $wpo_list_table_columns;
 	$settings = array(
 		'columns'     => $wpo_list_table_columns,
-		'table_style' => 'bootstrap',
+		'table_style' => 'wponion',
 	);
 	$table    = wpo_field( 'wp_list_table' );
 	$table->data( $wpo_list_table_content );
@@ -61,26 +61,26 @@ function wponion_bootstrap_list_table_demo( $page ) {
 			$main_style = 'background:white;border:1px solid #ddd;';
 			break;
 		case 'dark':
-			$settings['html_class'] = array( 'table' => 'table-dark' );
+			$settings['html_class'] = array( 'table' => 'wpo-table-dark' );
 			break;
 		case 'head-footer':
 			$main_style             = 'background:white;border:1px solid #ddd;';
 			$settings['html_class'] = array(
-				'thead' => 'table-dark',
-				'tfoot' => 'table-secondary',
+				'thead' => 'wpo-table-dark',
+				'tfoot' => 'wpo-table-secondary',
 				'table' => 'wpo-text-left',
 			);
 			break;
 		case 'bordered':
 			$main_style             = 'background:white;border:1px solid #ddd;';
 			$settings['html_class'] = array(
-				'table' => 'wpo-text-left table-bordered',
+				'table' => 'wpo-text-left wpo-table-bordered',
 			);
 			break;
 		case 'borderless':
 			$main_style             = 'background:white;border:1px solid #ddd;';
 			$settings['html_class'] = array(
-				'table' => 'table-borderless',
+				'table' => 'wpo-table-borderless',
 			);
 			break;
 		case 'contextual':
@@ -102,7 +102,7 @@ function wponion_bootstrap_list_table_demo( $page ) {
 					foreach ( $content as $class ) {
 						if ( ! isset( $sent_class[ $class ] ) ) {
 							$sent_class[ $class ] = true;
-							return 'table-' . $class;
+							return 'wpo-table-' . $class;
 						}
 					}
 					return '';
