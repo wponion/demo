@@ -22,13 +22,15 @@ $return[] = \WPO\Field::create( 'modal', 'modal', __( 'Simple Swal Modal' ), arr
 /**
  * Just WP Modal With Fields.
  */
+$field1k = wpo_field( 'text', 'textfield2', __( 'Text Field2' ) );
+$field1k->dependency( 'textfield', '=', 'hello' );
 $return[] = \WPO\Field::create( 'modal', 'wp_modal_single', __( 'WP Modal With Fields' ), array(
 	'fields'     => array(
 		wpo_field( 'text', 'textfield', __( 'Text Field' ) ),
+		$field1k,
 	),
 	'modal_type' => 'wp',
-) )
-	->desc( 'Just WP Modal With Fields.' );
+) )->desc( 'Just WP Modal With Fields.' );
 
 
 /**
@@ -43,8 +45,7 @@ $mpg_section2->icon_picker( 'icon_picker_big', __( 'Simple Icon Picker' ) );
 $return[] = \WPO\Field::create( 'modal', 'wp_modal_sections', __( 'WP Modal With Sub Section' ), array(
 	'fields'     => $modal_page,
 	'modal_type' => 'wp',
-) )
-	->desc( 'Single Main Container With 2 Sub Container.' );
+) )->desc( 'Single Main Container With 2 Sub Container.' );
 
 /**
  * Just Containers & Field.
@@ -54,8 +55,7 @@ $just_container->color_picker( 'color_picker', __( 'Big Modal Color Picker' ) );
 $return[] = \WPO\Field::create( 'modal', 'wp_modal_single_container', __( 'WP Modal With Title & Fields' ), array(
 	'fields'     => $just_container,
 	'modal_type' => 'wp',
-) )
-	->desc( 'Just Single Container With Just Fields.' );
+) )->desc( 'Just Single Container With Just Fields.' );
 
 /**
  * With Containers , Sub Containers
@@ -72,8 +72,7 @@ $return[] = \WPO\Field::create( 'modal', 'wp_modal_containers_sections', __( 'WP
 	'fields'       => $modal_builder,
 	'modal_config' => array( 'size' => 'default' ),
 	'modal_type'   => 'wp',
-) )
-	->desc( 'Full Functions.' );
+) )->desc( 'Full Functions.' );
 
 
 return $return;
